@@ -13,6 +13,51 @@ length is not a defect.
 
 ---
 
+## 2026-09-15T07:55:00Z: the references were wrong, and one was missing
+
+**Record:** [`TODO/PROGRESS.md`](TODO/PROGRESS.md).
+**Review:** [`docs/history/reviews/2026-09-15.md`](docs/history/reviews/2026-09-15.md).
+**Deployed:** no version bump and no deploy.
+
+The operator named the canonical sources for three harness references. All three
+corrections are in
+[`docs/history/README.md`](docs/history/README.md)'s withdrawn-claims table,
+which had been empty.
+
+- **The harness was pinned to a mirror.** ⭐ Every quotation is still verbatim
+  correct: both clones resolve to one commit and the cited files are
+  byte-identical. ⛔ The provenance was wrong, not the claim.
+- **One project's source was its README**, when it publishes an index for agents
+  that pins raw documentation to a release.
+- ⛔ **One reference was never swept.** It carries an auth broker and gateway
+  that already do the provider half of what four entries planned to build:
+  OAuth refreshes performed server-side, a snapshot in which every refresh token
+  is replaced by a sentinel, and a proxy whose clients never see the access
+  token.
+
+⭐ **T-042 now evaluates and drives that broker rather than rebuilding it**, and
+the sweep records the division of labour: it brokers provider credentials and
+does not bound the network, so it composes with this project's boundary rather
+than replacing it. T-044, T-045 and T-120 changed with it.
+
+Filed T-048, the fourth P0: that fork's tool approval mode defaults to approving
+every call, which is reasonable for a person at a terminal and wrong for a
+session nobody is watching. 59 entries total.
+
+Added its secret obfuscation to [`docs/limits.md`](docs/limits.md) as a useful
+mitigation that is explicitly not a boundary.
+
+### ⚠ What the review pass says about itself
+
+⛔ **None of the three lenses found any of this**, and the review now records
+why: a reference that was never cited is not in the tree for a door sweep to
+enumerate, there is no guard that a source is canonical, and ⭐ **a claim audit
+against the wrong source confirms the wrong source.** The pass this session did
+not take was "what did I look at and then drop", and the missing reference had
+appeared in a search result and been written down nowhere.
+
+---
+
 ## 2026-09-15T07:20:00Z: the scope ruling, and the surfaces
 
 **Record:** [`TODO/PROGRESS.md`](TODO/PROGRESS.md).

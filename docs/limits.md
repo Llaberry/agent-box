@@ -36,6 +36,7 @@ class of it and the honest sentence is the narrow one.
 | **egress content scanning** | ⛔ **theatre, for this threat.** The agent chooses the encoding. Anything a scanner matches, an agent can avoid. It is useful as telemetry about honest mistakes and useless against an adversary. |
 | **asking a model whether a request looks like exfiltration** | ⛔ **theatre.** The thing being defended against is a model that has been prompt-injected, and the defence is a model reading the same untrusted input. |
 | **masking secrets in output** | ⛔ **not a boundary**, and this is settled rather than arguable. It loses to trivial encoding. Keep it as damage control on honest logging, and never count it. |
+| **obfuscating secrets before they reach the model** | useful, and ⛔ **not a boundary either.** The harness fork implements it: values matching configured entries are replaced with deterministic placeholders before text reaches a provider, and restored in model-authored tool arguments before execution. ⚠ **Its own design shows why the weaker claim is the true one**: anything that can call a tool sees the real value. ⭐ It stops a secret reaching the model, which is a different and real problem from stopping the agent leaking one. |
 
 **The general form of the problem is an authorization-execution lifetime
 mismatch**: a session is granted what its whole task might need, and keeps it

@@ -9,9 +9,9 @@ before any entry here.**
 
 ---
 
-## T-042: The provider slot pool
+## T-042: Provider slots, on top of a broker that already exists
 
-**Source:** the operator, 2026-09-15; `badlogic/pi-mono` `packages/coding-agent/docs/providers.md` and `custom-provider.md` (`f9bcd35`).
+**Source:** the operator, 2026-09-15; `can1357/oh-my-pi` `docs/auth-broker-gateway.md` (`6f2c14b`); `earendil-works/pi` `packages/coding-agent/docs/custom-provider.md` (`f9bcd35`).
 **Category:** provider
 **Priority:** P1
 **Effort:** M
@@ -33,12 +33,40 @@ concurrent sessions per provider, automatic fallback to the next available
 provider, manual selection by a user, and users wait their turn until a slot
 frees or the provider's usage window resets.
 
-READ, for the mechanism: the harness declares a custom provider with a
-`baseUrl` (`custom-provider.md`), so pointing it at the broker needs **no patch
-to the harness**. ⚠ Read, not exercised, and the harness's documentation was
-read without its code.
+⛔ **READ, and this entry was rewritten because a reference was missed.** A fork
+of the harness ships an auth broker and an auth gateway that already do the
+provider half: a credential vault, OAuth refreshes performed server-side, a
+forward proxy that resolves the credential so that **clients never see the
+access token**, per-credential rate-limit blocks, and usage APIs.
+[`../docs/history/references/harnesses/findings.md`](../docs/history/references/harnesses/findings.md)
+has the detail and the division of labour.
+
+⚠ **Everything known about it is read from one documentation page.** Whether it
+behaves as described, how it performs, and what it does under failure are all
+unestablished. ⛔ **Establishing that is this entry's first job**, before any
+code is written.
+
+READ, for the seam: the harness declares a custom provider with a `baseUrl`, so
+pointing it at anything needs **no patch to the harness**.
 
 ### Approach
+
+⛔ **Evaluate before building.** Three questions, answered in this entry and
+written down:
+
+1. **does the existing broker do what its page says**, under this deployment's
+   shape: several subscriptions, a small slot count, and a refresh while a
+   session is mid-turn;
+2. **what does it not do**, checked rather than assumed. The sweep's reading is
+   that it brokers provider credentials and does not bound which hosts a session
+   may reach at all, does not bind a credential to a proven peer identity, and
+   ⛔ **leaves transport security between its own parts to the operator**;
+3. **what does this project own after that.** The sweep's answer: the network
+   boundary, every non-provider credential, the injection gate, and the slot
+   accounting on top.
+
+⭐ **If the answers hold, drive it and do not rebuild it.** The slot pool then
+sits above it, and this entry builds only the part nobody else has:
 
 In `box-broker`, a pool owned by the daemon and never visible to a session:
 
@@ -63,7 +91,25 @@ ProviderSlot { provider, index, credential, state }
 environment where the choice was automatic. ⚠ A session that can read which
 subscription it landed on can time its requests to starve another user's.
 
+⛔ **And it must not leave the upstream broker reachable from anywhere this
+project did not bound.** That page says transport security between its parts is
+the operator's to provide. ⭐ **Here the operator is this project**, so the
+broker binds loopback or a socket, and the session's namespace has no route to
+it except through this project's own gate.
+
 ### Decision
+
+**Drive the existing broker, or build one.**
+
+⭐ **Recommendation: drive it, and keep the network boundary here.** It already
+does the part that is easy to get wrong and hard to test, including the refresh
+flow, and rebuilding it would be
+[`../docs/conventions/forbidden-patterns.md`](../docs/conventions/forbidden-patterns.md)'s
+"rebuilding something the tree already does", one repository over.
+
+⚠ **The cost is a dependency inside the credential path**, which is the most
+sensitive place to have one. ⛔ **So the evaluation above is not optional**, and
+a negative answer to question 1 reopens this decision with evidence.
 
 **Whether a user may name a provider, and what happens if it is busy.**
 
@@ -231,7 +277,7 @@ Not closed.
 
 ## T-045: A vendor CLI as a provider, in its own sandbox
 
-**Source:** the operator, 2026-09-15; `badlogic/pi-mono` `packages/coding-agent/docs/providers.md` (`f9bcd35`); `pingdotgg/t3code` `README.md` (`9ea892e`).
+**Source:** the operator, 2026-09-15; `earendil-works/pi` `packages/coding-agent/docs/providers.md` (`f9bcd35`); `pingdotgg/t3code` `README.md` (`9ea892e`).
 **Category:** provider
 **Priority:** P2
 **Effort:** L
@@ -292,7 +338,9 @@ than a header, is out of reach.
 3. ⛔ **the refresh flow is brokered too.** A subscription credential is an
    access token, a refresh token and a token endpoint. A broker that injects the
    access token and lets the tool keep the refresh token has brokered the cheap
-   half;
+   half. ⭐ **T-042's broker already does this**, with a sentinel standing in for
+   every refresh token in the snapshot a client loads and the refresh performed
+   server-side. Drive that rather than writing it;
 4. **the shim speaks one model API**, so the agent side is unchanged whichever
    vendor is behind it.
 
@@ -331,7 +379,7 @@ Not closed.
 
 ## T-046: Pin the harness's project-trust setting
 
-**Source:** `badlogic/pi-mono` `packages/coding-agent/docs/security.md` (`f9bcd35`).
+**Source:** `earendil-works/pi` `packages/coding-agent/docs/security.md` (`f9bcd35`).
 **Category:** provider
 **Priority:** P0
 **Effort:** S
@@ -407,7 +455,7 @@ Not closed.
 
 ## T-047: The harness adapter, and its framing
 
-**Source:** `badlogic/pi-mono` `packages/coding-agent/docs/rpc.md` (`f9bcd35`).
+**Source:** `earendil-works/pi` `packages/coding-agent/docs/rpc.md` (`f9bcd35`).
 **Category:** provider
 **Priority:** P1
 **Effort:** M
@@ -466,6 +514,95 @@ value contains `U+2028`**, asserted to survive the round trip as one record.
 Plus: `\r\n` accepted, a record split across three reads reassembled, a record
 over the bound refused rather than buffered, and out-of-order correlation
 identifiers matched correctly.
+
+### Closing
+
+Not closed.
+
+---
+
+## T-048: Pin the harness's tool approval mode
+
+**Source:** `can1357/oh-my-pi` `docs/approval-mode.md` (`6f2c14b`).
+**Category:** provider
+**Priority:** P0
+**Effort:** S
+**Status:** open
+**Blocked by:** T-040
+
+---
+
+### Problem
+
+⛔ **The harness decides for itself which tool calls need a human, and its
+default is to need none.**
+
+### Premise
+
+READ, from the harness fork's own page, and ⚠ **not verified against its code.**
+
+Approval has three tiers a tool may declare, `read`, `write` and `exec`, and
+three modes:
+
+| mode | auto-approves | prompts for |
+| --- | --- | --- |
+| `always-ask` | `read` | `write`, `exec` |
+| `write` | `read`, `write` | `exec` |
+| ⛔ **`yolo`, the default** | `read`, `write`, `exec` | **none** |
+
+⭐ **One default on that page is safe and the other is not.** A tool that
+declares no tier is treated as `exec`, which the page calls the safe default for
+unknown custom tools and is right. The mode's own default auto-approves
+everything, and two flags force it.
+
+⚠ **For an interactive user at a terminal, `yolo` is a reasonable default.** The
+person is watching, and every prompt they dismiss is friction. ⛔ **For a session
+started by a message in a public channel, nobody is watching**, and the default
+was not chosen for that case.
+
+⭐ **This is the same shape as T-046**, one layer over: a setting the harness
+reads, whose safe value this project must write rather than inherit.
+
+### Approach
+
+- ⛔ **Write the mode explicitly into the settings this project places in the
+  session's agent home**, every session, whatever the host has.
+- ⛔ **Refuse an operator configuration that sets it to the permissive mode**,
+  and refuse the flags that force it. This is not a knob.
+- ⭐ **The startup report names the mode in force**, beside the writable grants
+  and the project-trust setting, so an operator reading what a session was given
+  sees all three together.
+
+⚠ **And this is where the ruling in T-042 and the sandbox meet.** A confined
+session with no route off the host except a gated broker can be given a wider
+approval mode than an unconfined one, ⛔ **but that is an argument the entry that
+widens it has to make with evidence**, not a default anybody inherits.
+
+### Decision
+
+**Which mode a confined session runs in.**
+
+⭐ **Recommendation: the middle one, auto-approving reads and writes and
+prompting for execution, with the prompt routed to the thread.** In this
+deployment the person who asked is in the thread, so a prompt has somewhere to
+go, and execution is the tier where the sandbox is doing the most work.
+
+⚠ **The alternative is the permissive mode plus the sandbox**, on the argument
+that confinement is the real control and a prompt nobody reads is theatre.
+⛔ **That argument is not wrong and it is not this entry's to settle**: it needs
+the driven pass in T-064 first, so the sandbox's claims are measured rather than
+assumed before anything is relaxed on the strength of them.
+
+### Prove
+
+```bash
+cargo test -p box-session harness_approval::
+```
+
+Passing: exit 0, and ⛔ **mutation-proved**: an operator configuration setting
+the permissive mode is refused at load naming the key; each forcing flag is
+refused; the written settings carry the chosen mode; and the startup report
+names it.
 
 ### Closing
 

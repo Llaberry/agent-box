@@ -8,7 +8,7 @@ What runs inside the sandbox, and how it reaches a model.
 
 ## T-040: Drive the harness, own the protocol boundary
 
-**Source:** the operator, ruled 2026-09-15; `badlogic/pi-mono` `packages/coding-agent/docs/` (`f9bcd35`).
+**Source:** the operator, ruled 2026-09-15; `earendil-works/pi` `packages/coding-agent/docs/` (`f9bcd35`).
 **Category:** agent
 **Priority:** P1
 **Effort:** S

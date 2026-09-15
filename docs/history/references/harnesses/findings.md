@@ -1,8 +1,9 @@
 # harnesses: findings
 
-Three projects this one **drives** rather than ports: `badlogic/pi-mono` (the
-agent harness that runs inside a sandbox), `herdrdev/herdr` and
-`pingdotgg/t3code` (control surfaces that drive vendor agent CLIs).
+Four projects this one **drives** rather than ports: `earendil-works/pi` (the
+agent harness that runs inside a sandbox), `can1357/oh-my-pi` (a fork of it with
+a credential broker already built), `herdrdev/herdr` and `pingdotgg/t3code`
+(control surfaces that drive vendor agent CLIs).
 
 ⛔ **This sweep read documentation only.** These are dependencies, not designs
 to reimplement or patch. At most this project writes a wrapper around one, so
@@ -23,7 +24,15 @@ is the commits.
   a protocol detail below can be wrong by the time an entry implements it.
 - **`herdr` and `t3code` were read from a README and a handful of pages**, not
   from their full documentation sets.
-- ⛔ **This is revision 1. Assume more claims are wrong than have been found.**
+- ⚠ **`oh-my-pi` has about 80 documentation pages and four were read.** The
+  conclusions below are drawn from those four.
+- ⛔ **This is revision 2, and revision 1 got two of the four references
+  wrong.** It pinned a mirror instead of the canonical repository, read one
+  project's README instead of the documentation index it publishes for agents,
+  and ⛔ **did not sweep `oh-my-pi` at all**, which turned out to carry a
+  credential broker four entries were planning to build.
+  [`../../README.md`](../../README.md) carries all three withdrawals.
+  ⭐ **That is the honest estimate of how much of revision 2 is still wrong.**
 
 ## ⚠ The claims here that are weakest
 
@@ -31,7 +40,11 @@ is the commits.
    most likely to be stale. ⭐ **Re-read the published documentation before
    writing an adapter**, and treat this page as a map rather than a
    specification.
-2. **"herdr and t3code are not needed here" is this sweep's judgement**, argued
+2. ⛔ **Everything about `oh-my-pi`'s broker is read from one page**, and that
+   page describes intent. Whether it behaves as described, how it performs, and
+   what it does under failure are all unestablished, and T-042's first job is to
+   find out.
+3. **"herdr and t3code are not needed here" is this sweep's judgement**, argued
    below, not anybody's position.
 
 ---
@@ -149,18 +162,131 @@ as a finding rather than as noise. T-120.
 
 ---
 
+## ⭐ The finding that changed four entries: a credential broker already exists
+
+**`can1357/oh-my-pi`, `docs/auth-broker-gateway.md`.** A fork of the harness
+above, carrying two cooperating services:
+
+| service | does |
+| --- | --- |
+| `omp auth-broker serve` | holds the credential vault, performs OAuth refreshes, and exposes snapshot, credential, block, usage and health APIs |
+| `omp auth-gateway serve` | a forward proxy accepting several model API shapes, resolving the broker-backed credential and dispatching. ⭐ **"Clients... never see the access token."** |
+
+⭐ **Four mechanisms this project had written entries to build, already built:**
+
+1. ⛔ **The refresh flow is brokered, not just the access token.** Clients load a
+   redacted snapshot in which every refresh field is replaced by a sentinel;
+   when an access token expires the client asks the broker and **the refresh
+   happens server-side**. The client store rejects local mutation outright.
+   ⭐ **That is exactly the rule this project wrote as "a broker that injects the
+   access token and lets the tool keep the refresh token has brokered the cheap
+   half"**, and it is somebody else's shipped code rather than this project's
+   prose.
+2. **Per-credential rate-limit blocks**, with a recorded cause, and endpoints to
+   set and clear them. That is the usage-window state T-044 describes.
+3. **Usage APIs**, including one for usage a client observed and one summarising
+   client-observed usage. T-120's accounting.
+4. **Generation-based conditional snapshot polling**, where a client sends the
+   generation it holds and gets either a new snapshot or nothing.
+   ⭐ **Independently the same mechanism as a sandbox project's credential vault**,
+   which is the strongest evidence available that it is the right shape.
+
+Plus the small things that are easy to get wrong: a timing-safe token
+comparison, a token file at mode `0600` under a `0700` directory, and a
+background refresher with a configurable skew ahead of expiry.
+
+### ⛔ What it does not do, and this is the division of labour
+
+⚠ **It is a provider credential broker, not a network boundary.** Read carefully,
+it solves one half:
+
+| | `oh-my-pi`'s broker | this project's broker |
+| --- | --- | --- |
+| model provider credentials | ⭐ **yes, including refresh** | defers to it |
+| a repository token, or any other upstream | no | ⭐ yes |
+| which hosts a session may reach at all | no | ⭐ yes, and it is the namespace rather than a setting |
+| binding a credential to a proven peer identity | not described | ⭐ yes, the SNI gate |
+| what happens to traffic that is not a model call | not its concern | ⭐ refused |
+| transport security between the parts | ⛔ **"delegated to the operator"** | inside one process and one host |
+
+⭐ **So they compose rather than compete**, and the honest plan is to drive it
+for provider credentials and keep the network boundary here. ⛔ **Four entries
+change from "build this" to "evaluate and drive this", and saying so is cheaper
+than discovering it during implementation.**
+
+⚠ **And one caution its own page states:** transport security between operator,
+broker and gateway is the operator's to provide. A broker reachable over a
+network this project did not bound is a credential store reachable over a
+network this project did not bound.
+
+## ⛔ A second setting that defaults permissive
+
+`can1357/oh-my-pi`, `docs/approval-mode.md`. Tool approval has three tiers,
+`read`, `write` and `exec`, and three modes:
+
+| mode | auto-approves | prompts for |
+| --- | --- | --- |
+| `always-ask` | `read` | `write`, `exec` |
+| `write` | `read`, `write` | `exec` |
+| ⛔ **`yolo` (default)** | `read`, `write`, `exec` | **none** |
+
+⭐ **One default is safe and the other is not, in the same document.** A tool
+with no declared tier is treated as `exec`, which the page calls "the safe
+default for unknown custom tools" and is right. The mode's own default
+auto-approves everything.
+
+⚠ **For an interactive user at a terminal that is a reasonable default.** For a
+session started by a message in a public channel it is not, and ⛔ **this project
+pins it rather than inheriting it**, exactly as it pins project trust. T-048.
+
+## ⚠ Secret obfuscation: a mitigation, and not a boundary
+
+`can1357/oh-my-pi`, `docs/secrets.md`. Values matching configured entries and
+credential-shaped patterns are replaced with deterministic placeholders before
+text reaches a provider, and restored in model-authored tool arguments before
+execution.
+
+⭐ **The direction is worth noticing**: it stops a secret reaching the model,
+which is a different problem from stopping the agent leaking one. It is useful,
+and it is off by default.
+
+⛔ **It is not a boundary and this project must not count it as one.** The
+settled position in [`../../../limits.md`](../../../limits.md) holds: masking
+loses to trivial encoding. ⚠ Its own design shows why the weaker claim is the
+true one: placeholders are restored before a tool runs, so anything that can
+call a tool can see the real value.
+
+---
+
 ## herdr and t3code: read, and not adopted
 
 ⭐ **Both are control surfaces for vendor agent CLIs, and both solve a problem
 this project does not have.**
 
 **`herdrdev/herdr`** describes itself as "the runtime your coding agents live
-on". One Rust binary. It keeps terminals running in a background server across
-disconnects, restores a saved layout after a restart, marks every pane working,
-blocked or idle, and exposes a CLI and socket API that agents themselves drive.
-⭐ Its own positioning is the reason it is not a fit: "**herdr doesn't wrap or
-replace them; it owns their terminals**." This project's boundary is a network
-namespace and a credential broker, not a terminal.
+on". One Rust binary. It keeps terminals running across disconnects, restores a
+saved layout after a restart, marks every pane working, blocked or idle, and
+exposes a CLI and socket API that agents themselves drive. ⭐ Its own positioning
+is the reason it is not a fit: "**herdr doesn't wrap or replace them; it owns
+their terminals**." This project's boundary is a network namespace and a
+credential broker, not a terminal.
+
+⭐ **One thing in it is worth taking anyway, and it is a design posture rather
+than a mechanism.** Its state detection is authoritative where an integration
+reports lifecycle hooks and falls back to reading the terminal otherwise, and
+its own page states the rule for the ambiguous case:
+
+> Blocked detection is deliberately strict... If no manifest rule matches for a
+> known agent, Herdr falls back to `idle`... The misclassification affects only
+> the visible status and waits. It should not make Herdr send input or take
+> destructive action.
+
+⛔ **A state this project derives is used to surface and never to act**, which is
+T-122's recommendation reached independently by somebody with the detection
+problem in production.
+
+⚠ **And its integration list names sixteen agent tools it can detect**, which is
+a measure of how many harnesses exist rather than a list this project needs.
 
 **`pingdotgg/t3code`** is an "agent harness control surface" that drives Codex,
 Claude Code, Cursor, Grok Build, OpenCode and Antigravity **using the
@@ -198,7 +324,15 @@ transferable to this project's web surface:
 
 | subject | verdict | where it lands |
 | --- | --- | --- |
-| pi, as the harness inside the sandbox | ⭐ **adopt**, as a dependency | T-040, now settled |
+| the harness, inside the sandbox | ⭐ **adopt**, as a dependency | T-040, now settled |
+| ⭐ **the fork's auth broker and gateway, for provider credentials** | **adopt**, as a dependency, and ⛔ **not rebuilt** | T-042, and it changes T-044, T-045 and T-120 |
+| the refresh-token sentinel, and a client store that refuses local mutation | **confirms** this project's own rule, in shipped code | T-045 |
+| generation-based conditional snapshot polling | **confirms**, independently of a second reference | T-026 |
+| pinning the tool approval mode rather than inheriting `yolo` | ⭐ **adopt** | T-048 |
+| secret obfuscation before text reaches a provider | ⚠ **honest limit**, useful and not a boundary | [`../../../limits.md`](../../../limits.md) |
+| ⛔ transport security between broker parts left to the operator | **anti-pattern exhibit** for this deployment | T-042 bounds it rather than inheriting it |
+| the fork's own container definitions and bot orchestrator | **filed elsewhere** | ⚠ close to what this project is for, and read only as a name. Worth a sweep of its own. |
+| herdr's "surface a state, never act on it" | **confirms** | T-122 |
 | `--mode rpc` and its JSONL framing rule | **adopt** | T-047 |
 | pinning `defaultProjectTrust` rather than inheriting it | ⭐ **adopt** | T-046 |
 | a fresh agent home per session, never the operator's | **confirms** what errand already does | T-012 |

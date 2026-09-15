@@ -9,7 +9,7 @@ numbers are shown; this is where they come from.
 
 ## T-120: Usage accounting at the broker
 
-**Source:** the operator, 2026-09-15; `badlogic/pi-mono` `packages/coding-agent/docs/usage.md` (`f9bcd35`).
+**Source:** the operator, 2026-09-15; `earendil-works/pi` `packages/coding-agent/docs/usage.md` (`f9bcd35`).
 **Category:** metrics
 **Priority:** P1
 **Effort:** M

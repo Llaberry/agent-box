@@ -51,10 +51,10 @@ unblock it.
 
 ## The ordering, and the argument behind it
 
-⭐ **Three entries come before everything, and none of them is the broker.**
+⭐ **Four entries come before everything, and none of them is the broker.**
 
-**T-030, T-031 and T-046 are P0**, and what they share is that each is about
-code running where it should not:
+**T-030, T-031, T-046 and T-048 are P0**, and what they share is that each is
+about code running where it should not, or running unwatched:
 
 - **T-030**, the daemon running a tool against state the agent controls, which
   was measured to be host code execution as the daemon's user with no sandbox
@@ -62,11 +62,15 @@ code running where it should not:
 - **T-031**, a trusted event stream the session can write to, which made forged
   events reach a transcript as genuine agent output;
 - **T-046**, the harness loading TypeScript extensions out of the repository it
-  is working on, which runs with the harness's own permissions.
+  is working on, which runs with the harness's own permissions;
+- **T-048**, the harness's tool approval mode defaulting to approving every
+  call, which is reasonable for a person at a terminal and wrong for a session
+  nobody is watching.
 
-⛔ **All three are shape decisions**, so building anything else first means
-rebuilding it. Two were measured against a running deployment and the third is
-stated by the harness's own security page.
+⛔ **All four are shape decisions**, so building anything else first means
+rebuilding it. Two were measured against a running deployment; the other two are
+stated by the harness's own documentation, which is why reading a dependency's
+security page counts as research rather than as reading a manual.
 
 **Then the workspace, then the sandbox contract, then the broker.** T-001 to
 T-003 exist so there is somewhere to put code. T-010 to T-013 are the
@@ -120,15 +124,15 @@ implementation.
 
 ## Counts
 
-**58 items. 56 open, 0 partial, 0 blocked, 2 done.**
+**59 items. 57 open, 0 partial, 0 blocked, 2 done.**
 
 | priority | open | partial | blocked | done | total |
 | --- | --- | --- | --- | --- | --- |
-| P0 | 3 | 0 | 0 | 0 | 3 |
+| P0 | 4 | 0 | 0 | 0 | 4 |
 | P1 | 27 | 0 | 0 | 2 | 29 |
 | P2 | 22 | 0 | 0 | 0 | 22 |
 | P3 | 4 | 0 | 0 | 0 | 4 |
-| **All** | 56 | 0 | 0 | 2 | 58 |
+| **All** | 57 | 0 | 0 | 2 | 59 |
 
 ---
 
@@ -163,12 +167,13 @@ implementation.
 | [T-033](session.md) | P2 | session | open | Diagnostics good enough to work without kernel audit |
 | [T-040](agent.md) | P1 | agent | done | Drive the harness, own the protocol boundary |
 | [T-041](agent.md) | P2 | agent | open | A generated model catalogue |
-| [T-042](provider.md) | P1 | provider | open | The provider slot pool |
+| [T-042](provider.md) | P1 | provider | open | Provider slots, on top of a broker that already exists |
 | [T-043](provider.md) | P1 | provider | open | Admission, the queue, and telling a user where they are in it |
 | [T-044](provider.md) | P2 | provider | open | Usage windows, and knowing when one resets |
 | [T-045](provider.md) | P2 | provider | open | A vendor CLI as a provider, in its own sandbox |
 | [T-046](provider.md) | P0 | provider | open | Pin the harness's project-trust setting |
 | [T-047](provider.md) | P1 | provider | open | The harness adapter, and its framing |
+| [T-048](provider.md) | P0 | provider | open | Pin the harness's tool approval mode |
 | [T-050](tooling.md) | P1 | tooling | open | `cargo xtask doctor` |
 | [T-051](tooling.md) | P1 | tooling | open | `cargo xtask gate` |
 | [T-052](tooling.md) | P1 | tooling | open | The document and structure checks |

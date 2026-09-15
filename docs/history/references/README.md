@@ -29,7 +29,7 @@ not fetched; read it before citing anything here.
 | [`brokers/`](brokers/) | `agent-vault`, `OpenSandbox`, `CubeSandbox` | ⭐ only the TLS SNI is an endpoint identity the peer must prove; `Host` is input from the sandbox |
 | [`orchestration/`](orchestration/) | `agent-sandbox`, `kage`, `flue` | ⭐ brokering closes credential theft and does not close exfiltration through authorized channels, and that is open at every reference |
 | [`windows/`](windows/) | `talaria0101/malaria` | ⭐ the containment flags close the podman machine, not Windows, and the hop beyond is invisible from inside |
-| [`harnesses/`](harnesses/) | `pi-mono`, `herdr`, `t3code` | ⭐ the harness has no sandbox on purpose and says real isolation must come from outside it, so this project is the missing row in its own table. ⛔ Documentation only: these are driven, not ported. |
+| [`harnesses/`](harnesses/) | `pi`, `oh-my-pi`, `herdr`, `t3code` | ⭐ the harness has no sandbox on purpose and says real isolation must come from outside it, so this project is the missing row in its own table. ⛔ Documentation only: these are driven, not ported. |
 
 ⚠ **A seventh reference, `talaria0101/egi`, was read and produced no sweep of its
 own.** It is a prior attempt at this same work, and what it taught is recorded
@@ -40,8 +40,8 @@ adopt.
 
 ## What the sweep changed
 
-Six things that were believed at the start of this project and are not believed
-now. ⭐ **This list is the honest measure of how much the reading was
+Eight things that were believed at the start of this project and are not
+believed now. ⭐ **This list is the honest measure of how much the reading was
 worth, and it is also the best estimate of how much is still wrong.**
 
 1. **"errand leaks secrets to agents by design" is half right.** The provider
@@ -64,10 +64,22 @@ worth, and it is also the best estimate of how much is still wrong.**
    harness's permissions, and the headless modes decide by a setting rather than
    a prompt. [`harnesses/findings.md`](harnesses/findings.md). It is the same
    class as finding 2, one layer in.
+7. ⛔ **A provider credential broker already exists, in a fork of that harness**,
+   and the plan had four entries to build one. It performs OAuth refreshes
+   server-side, hands clients a snapshot with every refresh token replaced by a
+   sentinel, and its proxy resolves the credential so clients never see the
+   access token. ⭐ **It brokers provider credentials and does not bound the
+   network**, so it composes with this project rather than replacing it.
+   [`harnesses/findings.md`](harnesses/findings.md).
+8. ⚠ **The same fork's tool approval mode defaults to approving everything.**
+   Reasonable for a person at a terminal, wrong for a session nobody is
+   watching. T-048 pins it.
 
-⛔ **Assume more remain.** No claim in these six sweeps has been corrected yet,
-and that is a statement about how much checking has happened rather than about
-how much is right.
+⛔ **Assume more remain.** Three claims have been withdrawn so far, all three in
+the harness sweep and all three found by the operator rather than by a review
+pass. ⭐ **That is the honest signal**: the sweeps found real defects in other
+people's work and missed a whole reference in their own.
+[`../README.md`](../README.md) carries the withdrawals.
 
 ---
 

@@ -36,7 +36,9 @@ believed, what was measured, and the date.
 
 | date | the claim | what took it away |
 | --- | --- | --- |
-| - | - | - |
+| 2026-09-15 | **The agent harness was pinned as `earendil-works/pi`.** Eighteen quotations were cited to it. | The operator named `earendil-works/pi` as the canonical repository. ⭐ **Every quotation is still verbatim correct**: both clones resolve to commit `f9bcd351dc3cedf989bc5fc0f8aa012db5737df2` and the five cited files are byte-identical. ⛔ **What was wrong was the provenance, not the claim.** A citation naming a repository nobody goes to is uncheckable where people actually look, so the pin now names the canonical one. |
+| 2026-09-15 | **`herdrdev/herdr` was read from its README at a branch tip.** | The operator named its documentation index, which points at raw sources pinned to release `v0.9.0`. ⭐ **A project that publishes an index for agents, at a pinned revision, has said where it wants to be read from**, and reading its README instead is reading the marketing page. The verdict did not change; the source did. |
+| 2026-09-15 | **"OMP" was identified from a search result and never swept.** | The operator named `can1357/oh-my-pi`. ⛔ **It has an auth broker and auth gateway that already do the provider half of what four entries planned to build**, and the plan said nothing about it. That is the most expensive miss in this session's research. |
 
 ---
 

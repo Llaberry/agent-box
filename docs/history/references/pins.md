@@ -31,17 +31,23 @@ fetched with the script named under "How this was fetched" below.
 | `TencentCloud/CubeSandbox` | `eaddce3a0e2ed76b246ef42996cf5f9ed671aeac` | 2026-09-15 | tree trimmed to `CubeEgress/`, `docs/`, plus tracker (54 open plus 199 closed issues, 72 open plus 675 closed pull requests, 1000 comments, 1000 review comments, both capped). `docs/guide/network-hardening.md` read; items 1410, 1426, 1458, 1697 read in full. |
 | `kubernetes-sigs/agent-sandbox` | `4b63868f0d67e4ee0fa690bb14cb5722b78d679d` | 2026-09-15 | tree trimmed to `docs/`, `site/`, `examples/`, plus tracker (97 open plus 112 closed issues, 76 open plus 715 closed pull requests, 1000 comments, 1000 review comments, both capped). `README.md` read; item 1580 read in full. ⚠ The controller source was deleted from the corpus: this was swept as an orchestrator design, not as code to port. |
 | `withastro/flue` | `a20ef15d8e91e1bf371f0d1d7c736fc56e3dae09` | 2026-09-15 | tree trimmed to `apps/`, `packages/`, plus tracker (34 open plus 239 closed issues, 4 open plus 222 closed pull requests, 632 comments, 14 review comments). `apps/docs/src/content/docs/guide/sandboxes.md` read end to end. |
-| `badlogic/pi-mono` | `f9bcd351dc3cedf989bc5fc0f8aa012db5737df2` | 2026-09-15 | ⛔ **documentation only, by decision.** `packages/coding-agent/docs/`: `security.md` and `containerization.md` read end to end, `rpc.md`, `providers.md`, `custom-provider.md` and `usage.md` read for the interface. No tracker, no code. |
-| `herdrdev/herdr` | `052779c4159ed851ae78ed1271130811986d1166` | 2026-09-15 | ⛔ **documentation only.** `README.md` read end to end. No tracker, no code. Read to decide whether it is a fit, and it is not. |
+| `earendil-works/pi` | `f9bcd351dc3cedf989bc5fc0f8aa012db5737df2` | 2026-09-15 | ⛔ **documentation only, by decision.** `packages/coding-agent/docs/`: `index.md`, `security.md` and `containerization.md` read end to end; `rpc.md`, `providers.md`, `custom-provider.md` and `usage.md` read for the interface. No tracker, no code. ⚠ **Corrected**: first pinned as a mirror, `earendil-works/pi`, which resolves to the same commit with byte-identical files. [`../README.md`](../README.md) carries the withdrawal. |
+| `can1357/oh-my-pi` | `6f2c14b3e4cc065139789da893e4f86f3d72958c` | 2026-09-15 | ⛔ **documentation only.** A fork of the above. `docs/auth-broker-gateway.md` read end to end; `docs/secrets.md`, `docs/approval-mode.md` and the container definition read for the mechanism. ⚠ **Its doc set is 80 pages and 4 were read.** No tracker, no code. |
+| `herdrdev/herdr` | release `v0.9.0`, via its published documentation index | 2026-09-15 | ⛔ **documentation only.** `index`, `agents`, `socket-api`, `agent-automation` and `integrations` read from the raw sources the index pins. ⚠ **Corrected**: first read from the README at a branch tip. The verdict did not change; the source did. |
 | `pingdotgg/t3code` | `9ea892e3b365faff31eed294ac38f70d122656b2` | 2026-09-15 | ⛔ **documentation only.** `README.md` and `docs/internals/environment-auth.md` read end to end. No tracker, no code. |
 
 ⚠ **The short forms are not used here on purpose.** A public repository must
 not carry a hexadecimal string long enough to look like a credential, and a
-commit is the one place where the full value is worth more than the risk. All
-fourteen are full 40-character SHAs, which is what `git cat-file -t` takes
-without ambiguity.
+commit is the one place where the full value is worth more than the risk.
+Fourteen of the fifteen are full 40-character SHAs, which is what
+`git cat-file -t` takes without ambiguity.
 
-⭐ **The last three are a different kind of reference and the table says so.**
+⚠ **One reference is pinned by release rather than by commit**, because it
+publishes a documentation index for agents that names raw sources at that
+release. ⭐ **A project that has said where it wants to be read from is read
+there**, and its tag is the provenance it offers.
+
+⭐ **The last four are a different kind of reference and the table says so.**
 They are tools this project drives, not designs it ports, so the sweep read
 what they publish and stopped. ⛔ **That is a deliberate and narrower depth, not
 a gap the next session should close by reading their code.**
@@ -57,12 +63,13 @@ exactly like a source that had nothing in it.
 
 | gap | which references | why it matters |
 | --- | --- | --- |
-| **discussions** | all eleven that had a tracker fetched | The credential-free route is REST and discussions are GraphQL only. Several projects keep the design argument that never became an issue there. ⛔ Treat any question these sweeps leave open as possibly answered in a discussion nobody here read. |
+| **discussions** | all eleven that had a tracker fetched |
+| ⚠ **76 of 80 documentation pages** | `oh-my-pi` | Its doc set covers providers, tools, sandboxing, memory, extensions and a great deal more, and four pages were read. ⛔ **Treat any question about it as probably answered in a page nobody here opened.** | The credential-free route is REST and discussions are GraphQL only. Several projects keep the design argument that never became an issue there. ⛔ Treat any question these sweeps leave open as possibly answered in a discussion nobody here read. |
 | **comments past 1000** | `OpenSandbox`, `CubeSandbox`, `agent-sandbox` | The fetch caps at 1000 records per source. Where the count reads exactly 1000 the source is truncated, and the oldest or newest end is missing depending on the endpoint's order. |
 | **review comments past 1000** | the same three | The densest technical content a project produces is line-level argument on a change. On these three it is partial. |
 | **the trimmed subtrees** | `CubeSandbox`, `OpenSandbox`, `agent-sandbox`, `flue` | Named per reference in the depth column and in each `PROVENANCE.md`. A citation into a deleted subtree cannot be checked without re-cloning. |
 | **the `git` history** | `CubeSandbox`, `OpenSandbox`, `agent-sandbox`, `flue`, `agent-vault` | The clones were shallow and their git directories were removed after the commit was captured. Archaeology on these five needs a fresh full clone. |
-| ⛔ **the tracker and the code, entirely** | `pi-mono`, `herdr`, `t3code` | By decision, not by obstacle. ⚠ A published document is evidence of what a maintainer intends, never of what the code does, so every interface claim taken from these three is unverified against an implementation. ⭐ **Re-read the published documentation before writing an adapter**, and expect flag names and protocol details to have moved. |
+| ⛔ **the tracker and the code, entirely** | `pi`, `oh-my-pi`, `herdr`, `t3code` | By decision, not by obstacle. ⚠ A published document is evidence of what a maintainer intends, never of what the code does, so every interface claim taken from these three is unverified against an implementation. ⭐ **Re-read the published documentation before writing an adapter**, and expect flag names and protocol details to have moved. |
 
 ---
 

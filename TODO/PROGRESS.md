@@ -41,7 +41,7 @@ stated four ways: this project has documents and no code. ⭐ **The six that do
 pass were run by a throwaway checker, not by this project's own gate**, which
 does not exist. T-052 is what makes them repeatable.
 
-**58 entries: 2 done, 0 partial, 0 blocked, 56 open.**
+**59 entries: 2 done, 0 partial, 0 blocked, 57 open.**
 
 ---
 
@@ -53,7 +53,7 @@ then took a scope ruling that roughly doubled it.**
 - Took the methodology, the conventions and the security rules from the template
   in [`../docs/history/references/pins.md`](../docs/history/references/pins.md).
   ⛔ **Did not take its shell scripts**: the checks are Rust here.
-- Mined fourteen references. Eleven with tree and tracker; ⭐ **three with
+- Mined fifteen references. Eleven with tree and tracker; ⭐ **four with
   documentation only, by decision**, because they are tools this project drives
   rather than designs it ports.
 - Wrote six sweeps under
@@ -61,13 +61,42 @@ then took a scope ruling that roughly doubled it.**
   what it did not establish and its weakest claims.
 - Wrote the technical reference, the broker design, the sandbox model and the
   limits page.
-- Filed 58 entries across twelve categories.
+- Filed 59 entries across twelve categories.
 - Ran the three review lenses. ⭐ **Findings below.**
 
 ### ⛔ Premises a measurement disproved, or a reading corrected
 
-Seven. The first three changed the plan; the last three were found by reviewing
-this session's own work.
+Ten, in three groups. ⛔ **The first group is the one worth reading**, because it
+is the group a review pass did not find.
+
+#### Group 1: what the operator's correction found
+
+The operator named the canonical sources for three harness references. All three
+are in
+[`../docs/history/README.md`](../docs/history/README.md)'s withdrawn-claims
+table:
+
+1. **The harness was pinned to a mirror.** ⭐ Every quotation is still verbatim
+   correct, and both clones resolve to the same commit with byte-identical
+   files. ⛔ **What was wrong was the provenance**: a citation naming a
+   repository nobody goes to is uncheckable where people actually look.
+2. **One project was read from its README** when it publishes a documentation
+   index for agents, pinned to a release. ⭐ **A project that has said where it
+   wants to be read from is read there.**
+3. ⛔ **One reference was never swept at all**, identified from a search result
+   and left. It carries an **auth broker and gateway that already do the
+   provider half of what four entries planned to build**: OAuth refreshes
+   performed server-side, a snapshot in which every refresh token is replaced by
+   a sentinel, and a proxy whose clients never see the access token. ⭐ **That is
+   the most expensive miss in this session's research**, and T-042 now evaluates
+   and drives it rather than rebuilding it.
+
+⚠ **Two further findings came out of the same reading**: that fork's tool
+approval mode defaults to approving every call, which is now the fourth P0
+(T-048), and its secret obfuscation is a useful mitigation that
+[`../docs/limits.md`](../docs/limits.md) must not count as a boundary.
+
+#### Group 2: what the reading of the other references found
 
 1. **"The project this replaces leaks secrets to agents by design" is half
    right.** The provider credential has been brokered behind a per-run nonce, by
@@ -82,6 +111,9 @@ this session's own work.
    T-046, and it is the third P0.
 4. **Short-lived per-execution credential minting is not a solved problem to
    port.** Open at the two references furthest along. T-028 says so.
+
+#### Group 3: what reviewing this session's own work found
+
 5. ⛔ **The orphan-page check did not fire on a planted orphan.** A link to a
    directory was marking every file inside it as linked. Found by lens 2, which
    is exactly the failure that lens exists to catch, and fixed.
@@ -98,9 +130,11 @@ this session's own work.
 range off by four, one off by seventeen. ⭐ **Thirty-one other citations were
 checked and confirmed.**
 
-⚠ **No claim in this session's work has been checked a second time**, and
-[`../docs/history/README.md`](../docs/history/README.md)'s withdrawn-claims table
-is still empty.
+⛔ **Three claims have been withdrawn, and a review pass found none of them.**
+The operator did. ⭐ **That is the honest reading of how much checking this
+session's own work has had**: the sweeps found real defects in other people's
+projects and missed an entire reference of their own.
+[`../docs/history/README.md`](../docs/history/README.md) carries the three.
 
 ### What the operator ruled, 2026-09-15
 
@@ -127,6 +161,10 @@ Six rulings, all in [`RULES.md`](RULES.md) section 5 with their dates:
 
 ⭐ **This is the work order and it lives nowhere else.**
 
+0. ⛔ **Read [`../docs/history/references/harnesses/findings.md`](../docs/history/references/harnesses/findings.md)
+   before anything else.** It was rewritten after the plan was filed, and four
+   entries changed from "build this" to "evaluate and drive this". A session
+   that implements T-042 from the old reading rebuilds something that exists.
 1. **T-001**, [`workspace.md`](workspace.md). The Cargo workspace. ⛔ **It
    carries the one decision still open** (async or synchronous, and where), and
    T-020 cannot start without it. ⚠ **The scope ruling changes the
@@ -142,10 +180,11 @@ Six rulings, all in [`RULES.md`](RULES.md) section 5 with their dates:
 4. **T-054**, [`tooling.md`](tooling.md). The record check.
 5. **T-010**, [`sandbox.md`](sandbox.md). The backend trait. Small, and five
    entries depend on it.
-6. **T-030, T-031 and T-046**, the three P0 entries. ⚠ They are sixth rather than
-   first because all three are rules that need somewhere to be enforced, and
-   T-052 is what enforces two of them. ⛔ **Nothing that spawns a process, reads
-   the agent's output, or launches a harness may be written before they land.**
+6. **T-030, T-031, T-046 and T-048**, the four P0 entries. ⚠ They come sixth
+   rather than first because all four are rules that need somewhere to be
+   enforced, and T-052 is what enforces two of them. ⛔ **Nothing that spawns a
+   process, reads the agent's output, or launches a harness may be written
+   before they land.**
 
 ⚠ **If a session has budget for exactly one thing, do T-001**, because nothing
 else can start without it.
@@ -174,6 +213,11 @@ told otherwise, so an unattended session is not stuck.**
 4. **T-045's first vendor.** Recommendation: whichever subscription the operator
    already pays for, exactly one, and the entry's deliverable includes a written
    list of what refused to be brokered.
+5. ⚠ **T-048's approval mode for a confined session.** Recommendation: the
+   middle one, prompting for execution, with the prompt routed to the thread.
+   ⛔ **The alternative, relying on the sandbox and approving freely, is not a
+   wrong argument** and it needs T-064's measurements first, so it is not
+   settled here.
 
 ---
 
