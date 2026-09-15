@@ -1,0 +1,612 @@
+[
+ {
+  "name": "v0.39.3",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.39.3",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.39.3",
+  "commit": {
+   "sha": "e9515fef8bbec2744344b0c8e9e80f79e2651a1d",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/e9515fef8bbec2744344b0c8e9e80f79e2651a1d"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzkuMw"
+ },
+ {
+  "name": "v0.39.2",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.39.2",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.39.2",
+  "commit": {
+   "sha": "c85688800805c78526adb8d76160db98f17d66b6",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/c85688800805c78526adb8d76160db98f17d66b6"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzkuMg"
+ },
+ {
+  "name": "v0.39.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.39.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.39.1",
+  "commit": {
+   "sha": "10743832e3dd362afd30c6e9b26b1732ed0d2766",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/10743832e3dd362afd30c6e9b26b1732ed0d2766"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzkuMQ"
+ },
+ {
+  "name": "v0.39.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.39.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.39.0",
+  "commit": {
+   "sha": "3bd0c1e9c08b1b1d41a7d95e95222e0461b1bead",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/3bd0c1e9c08b1b1d41a7d95e95222e0461b1bead"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzkuMA"
+ },
+ {
+  "name": "v0.38.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.38.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.38.0",
+  "commit": {
+   "sha": "3e4f57d682a9d859d846928baebb35d3c9f7dd99",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/3e4f57d682a9d859d846928baebb35d3c9f7dd99"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzguMA"
+ },
+ {
+  "name": "v0.37.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.37.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.37.1",
+  "commit": {
+   "sha": "102206dfc6bde163a028dd9786b9b1ce629e280a",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/102206dfc6bde163a028dd9786b9b1ce629e280a"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzcuMQ"
+ },
+ {
+  "name": "v0.37.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.37.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.37.0",
+  "commit": {
+   "sha": "26b68d5bb50aebcd6c6fc237b14c8e6e3925f26f",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/26b68d5bb50aebcd6c6fc237b14c8e6e3925f26f"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzcuMA"
+ },
+ {
+  "name": "v0.36.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.36.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.36.1",
+  "commit": {
+   "sha": "1a440364853ca7ab99583bcfc60a6ead2257c1bf",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/1a440364853ca7ab99583bcfc60a6ead2257c1bf"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzYuMQ"
+ },
+ {
+  "name": "v0.36.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.36.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.36.0",
+  "commit": {
+   "sha": "c17d1a1b2214c19715707a51fa71e75f06f236fc",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/c17d1a1b2214c19715707a51fa71e75f06f236fc"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzYuMA"
+ },
+ {
+  "name": "v0.35.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.35.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.35.1",
+  "commit": {
+   "sha": "30ff25ce8f3c8cfd855e4e2d3e7713bb0b007eed",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/30ff25ce8f3c8cfd855e4e2d3e7713bb0b007eed"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzUuMQ"
+ },
+ {
+  "name": "v0.35.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.35.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.35.0",
+  "commit": {
+   "sha": "735d53f52583a110465aeb7f6d7938f5a7429933",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/735d53f52583a110465aeb7f6d7938f5a7429933"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzUuMA"
+ },
+ {
+  "name": "v0.34.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.34.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.34.0",
+  "commit": {
+   "sha": "5e340cd5765b07539d872ec49fc079e6a4dbb79e",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/5e340cd5765b07539d872ec49fc079e6a4dbb79e"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzQuMA"
+ },
+ {
+  "name": "v0.33.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.33.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.33.0",
+  "commit": {
+   "sha": "d03c1e3e7fe17b85c0fad84e554a2c5123c51803",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/d03c1e3e7fe17b85c0fad84e554a2c5123c51803"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzMuMA"
+ },
+ {
+  "name": "v0.32.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.32.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.32.0",
+  "commit": {
+   "sha": "e01a9258109b9896e67a7f06c873ebb83e2e9b73",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/e01a9258109b9896e67a7f06c873ebb83e2e9b73"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzIuMA"
+ },
+ {
+  "name": "v0.31.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.31.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.31.0",
+  "commit": {
+   "sha": "486cec5d681e176b9dc767c9a117263d896bcb6f",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/486cec5d681e176b9dc767c9a117263d896bcb6f"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzEuMA"
+ },
+ {
+  "name": "v0.30.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.30.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.30.0",
+  "commit": {
+   "sha": "10af8539a5e802f9f8cfc05fa8475f30bada0720",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/10af8539a5e802f9f8cfc05fa8475f30bada0720"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMzAuMA"
+ },
+ {
+  "name": "v0.29.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.29.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.29.0",
+  "commit": {
+   "sha": "149a32347efd43e7df09248805f42994ca5676bb",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/149a32347efd43e7df09248805f42994ca5676bb"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjkuMA"
+ },
+ {
+  "name": "v0.28.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.28.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.28.0",
+  "commit": {
+   "sha": "234dbf0d27d4749b35690c91713fd2789c810cd7",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/234dbf0d27d4749b35690c91713fd2789c810cd7"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjguMA"
+ },
+ {
+  "name": "v0.27.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.27.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.27.0",
+  "commit": {
+   "sha": "6954d545fa0d5395d9f2c6218eab1b851ff625be",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/6954d545fa0d5395d9f2c6218eab1b851ff625be"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjcuMA"
+ },
+ {
+  "name": "v0.26.2",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.26.2",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.26.2",
+  "commit": {
+   "sha": "3beca996847868bd26970e9493fb43cb608606fc",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/3beca996847868bd26970e9493fb43cb608606fc"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjYuMg"
+ },
+ {
+  "name": "v0.26.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.26.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.26.1",
+  "commit": {
+   "sha": "e3ade6567ba6e717f66998bec98a0a3de317412c",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/e3ade6567ba6e717f66998bec98a0a3de317412c"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjYuMQ"
+ },
+ {
+  "name": "v0.26.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.26.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.26.0",
+  "commit": {
+   "sha": "e1f6f187106ebd16951178eab89ec7213dfb2dec",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/e1f6f187106ebd16951178eab89ec7213dfb2dec"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjYuMA"
+ },
+ {
+  "name": "v0.25.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.25.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.25.0",
+  "commit": {
+   "sha": "fb435700feb5fde4329580f77c84a4515fd1475d",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/fb435700feb5fde4329580f77c84a4515fd1475d"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjUuMA"
+ },
+ {
+  "name": "v0.24.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.24.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.24.1",
+  "commit": {
+   "sha": "e6b6d2e9bc577ef3ae049d51e33cd4213bfd4ce9",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/e6b6d2e9bc577ef3ae049d51e33cd4213bfd4ce9"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjQuMQ"
+ },
+ {
+  "name": "v0.24.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.24.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.24.0",
+  "commit": {
+   "sha": "42fb8de74a1cb1840261dc231fad8c164077df1c",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/42fb8de74a1cb1840261dc231fad8c164077df1c"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjQuMA"
+ },
+ {
+  "name": "v0.23.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.23.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.23.0",
+  "commit": {
+   "sha": "7d60bbaac800f805148604abce4e4af732dccbd6",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/7d60bbaac800f805148604abce4e4af732dccbd6"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjMuMA"
+ },
+ {
+  "name": "v0.22.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.22.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.22.0",
+  "commit": {
+   "sha": "d3b08a730469f93f060311458e01c7b0ab6c4dd3",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/d3b08a730469f93f060311458e01c7b0ab6c4dd3"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjIuMA"
+ },
+ {
+  "name": "v0.21.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.21.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.21.1",
+  "commit": {
+   "sha": "47de1f21ecb994c1ecfcead2e39f43bdab6000e7",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/47de1f21ecb994c1ecfcead2e39f43bdab6000e7"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjEuMQ"
+ },
+ {
+  "name": "v0.21.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.21.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.21.0",
+  "commit": {
+   "sha": "fa888ca6ecac50064ae0e62fca4150442fa09fde",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/fa888ca6ecac50064ae0e62fca4150442fa09fde"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjEuMA"
+ },
+ {
+  "name": "v0.20.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.20.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.20.1",
+  "commit": {
+   "sha": "c669efbb61957d47ca43f296eb9e02f94262ad30",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/c669efbb61957d47ca43f296eb9e02f94262ad30"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjAuMQ"
+ },
+ {
+  "name": "v0.20.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.20.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.20.0",
+  "commit": {
+   "sha": "98f9b76d7735e37fc1c3ebae651f50dde1aa7544",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/98f9b76d7735e37fc1c3ebae651f50dde1aa7544"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMjAuMA"
+ },
+ {
+  "name": "v0.19.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.19.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.19.0",
+  "commit": {
+   "sha": "c9af12953326030bbee9ecd3a2d19d771151ee6b",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/c9af12953326030bbee9ecd3a2d19d771151ee6b"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMTkuMA"
+ },
+ {
+  "name": "v0.18.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.18.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.18.0",
+  "commit": {
+   "sha": "7044521e2e4f4f1eca1e4917f53e7f9f1ba38d9e",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/7044521e2e4f4f1eca1e4917f53e7f9f1ba38d9e"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMTguMA"
+ },
+ {
+  "name": "v0.17.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.17.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.17.0",
+  "commit": {
+   "sha": "b4a832ad262636edf46a4cc4ce96f1540da08f12",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/b4a832ad262636edf46a4cc4ce96f1540da08f12"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMTcuMA"
+ },
+ {
+  "name": "v0.16.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.16.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.16.0",
+  "commit": {
+   "sha": "f25703e7f927c931b53623fed9b3d70a1bbbb394",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/f25703e7f927c931b53623fed9b3d70a1bbbb394"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMTYuMA"
+ },
+ {
+  "name": "v0.15.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.15.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.15.0",
+  "commit": {
+   "sha": "7a107de3e300b7396e7ef9c09ff95c68d6714835",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/7a107de3e300b7396e7ef9c09ff95c68d6714835"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMTUuMA"
+ },
+ {
+  "name": "v0.14.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.14.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.14.0",
+  "commit": {
+   "sha": "a3ecfa0e6beb69d5f34a0c9d4a636e64fc816cd5",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/a3ecfa0e6beb69d5f34a0c9d4a636e64fc816cd5"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMTQuMA"
+ },
+ {
+  "name": "v0.13.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.13.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.13.0",
+  "commit": {
+   "sha": "5ff0a57b0a4268bdbc4d86bb527e4b21fd8d61c0",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/5ff0a57b0a4268bdbc4d86bb527e4b21fd8d61c0"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMTMuMA"
+ },
+ {
+  "name": "v0.12.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.12.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.12.0",
+  "commit": {
+   "sha": "7f53eecc9c267ca26438f978ed2436605d3d6d65",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/7f53eecc9c267ca26438f978ed2436605d3d6d65"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMTIuMA"
+ },
+ {
+  "name": "v0.11.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.11.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.11.0",
+  "commit": {
+   "sha": "f9872e3f02c2a1be99c7fe41fc4ed15fda0bb5c0",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/f9872e3f02c2a1be99c7fe41fc4ed15fda0bb5c0"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMTEuMA"
+ },
+ {
+  "name": "v0.10.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.10.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.10.0",
+  "commit": {
+   "sha": "2b8e020270fdb6499c81ab8c0fef0a94caeb5aa1",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/2b8e020270fdb6499c81ab8c0fef0a94caeb5aa1"
+  },
+  "node_id": "REF_kwDORyvZnLFyZWZzL3RhZ3MvdjAuMTAuMA"
+ },
+ {
+  "name": "v0.9.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.9.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.9.0",
+  "commit": {
+   "sha": "df9a76d5956faedeb0ec48abbfd66cabcd60d209",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/df9a76d5956faedeb0ec48abbfd66cabcd60d209"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuOS4w"
+ },
+ {
+  "name": "v0.8.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.8.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.8.0",
+  "commit": {
+   "sha": "9b96b80b2cc96a3df81706bf4585b134e69776c6",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/9b96b80b2cc96a3df81706bf4585b134e69776c6"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuOC4w"
+ },
+ {
+  "name": "v0.7.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.7.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.7.0",
+  "commit": {
+   "sha": "79b3aa4c108fefaccb773601eb7183dd4cf0b2dc",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/79b3aa4c108fefaccb773601eb7183dd4cf0b2dc"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuNy4w"
+ },
+ {
+  "name": "v0.6.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.6.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.6.0",
+  "commit": {
+   "sha": "fcdb003808e548e6c7f7ab77113b9aa3c2623585",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/fcdb003808e548e6c7f7ab77113b9aa3c2623585"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuNi4w"
+ },
+ {
+  "name": "v0.5.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.5.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.5.1",
+  "commit": {
+   "sha": "51c01cfa1f402dc7ffcce1fdf892d3e54268ef7f",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/51c01cfa1f402dc7ffcce1fdf892d3e54268ef7f"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuNS4x"
+ },
+ {
+  "name": "v0.5.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.5.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.5.0",
+  "commit": {
+   "sha": "0ce90f1a2dac1289550ec4e70eea2a08fd1a468d",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/0ce90f1a2dac1289550ec4e70eea2a08fd1a468d"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuNS4w"
+ },
+ {
+  "name": "v0.4.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.4.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.4.0",
+  "commit": {
+   "sha": "341231868364d3f0c4f97a9e0ee2750bae757ebe",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/341231868364d3f0c4f97a9e0ee2750bae757ebe"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuNC4w"
+ },
+ {
+  "name": "v0.3.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.3.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.3.1",
+  "commit": {
+   "sha": "c2dc99b98b8a932576dbcf6665d3b1cfcaa6bbb4",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/c2dc99b98b8a932576dbcf6665d3b1cfcaa6bbb4"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuMy4x"
+ },
+ {
+  "name": "v0.3.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.3.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.3.0",
+  "commit": {
+   "sha": "ad5947597d85510a8b7610bb416c238d3fad5cc6",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/ad5947597d85510a8b7610bb416c238d3fad5cc6"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuMy4w"
+ },
+ {
+  "name": "v0.2.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.2.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.2.1",
+  "commit": {
+   "sha": "6e2ad72a7dc10305828176856aaf9a280417c895",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/6e2ad72a7dc10305828176856aaf9a280417c895"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuMi4x"
+ },
+ {
+  "name": "v0.2.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.2.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.2.0",
+  "commit": {
+   "sha": "a21ab6c2839f9b15bb00343c3732a0bc08646f72",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/a21ab6c2839f9b15bb00343c3732a0bc08646f72"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuMi4w"
+ },
+ {
+  "name": "v0.1.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.1.1",
+  "commit": {
+   "sha": "660c5569dfbe0cc8352548912d8ad9aa484b2ee0",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/660c5569dfbe0cc8352548912d8ad9aa484b2ee0"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuMS4x"
+ },
+ {
+  "name": "v0.1.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/v0.1.0",
+  "commit": {
+   "sha": "ecc9b030c4fda164ebe1b61dd8e2ed1a5243ca62",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/ecc9b030c4fda164ebe1b61dd8e2ed1a5243ca62"
+  },
+  "node_id": "REF_kwDORyvZnLByZWZzL3RhZ3MvdjAuMS4w"
+ },
+ {
+  "name": "node-sdk/v0.7.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/node-sdk/v0.7.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/node-sdk/v0.7.0",
+  "commit": {
+   "sha": "c9af12953326030bbee9ecd3a2d19d771151ee6b",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/c9af12953326030bbee9ecd3a2d19d771151ee6b"
+  },
+  "node_id": "REF_kwDORyvZnLlyZWZzL3RhZ3Mvbm9kZS1zZGsvdjAuNy4w"
+ },
+ {
+  "name": "node-sdk/v0.6.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/node-sdk/v0.6.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/node-sdk/v0.6.0",
+  "commit": {
+   "sha": "7044521e2e4f4f1eca1e4917f53e7f9f1ba38d9e",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/7044521e2e4f4f1eca1e4917f53e7f9f1ba38d9e"
+  },
+  "node_id": "REF_kwDORyvZnLlyZWZzL3RhZ3Mvbm9kZS1zZGsvdjAuNi4w"
+ },
+ {
+  "name": "node-sdk/v0.5.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/node-sdk/v0.5.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/node-sdk/v0.5.0",
+  "commit": {
+   "sha": "ed73b3248a5ee563539bf4182071c5e536133847",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/ed73b3248a5ee563539bf4182071c5e536133847"
+  },
+  "node_id": "REF_kwDORyvZnLlyZWZzL3RhZ3Mvbm9kZS1zZGsvdjAuNS4w"
+ },
+ {
+  "name": "node-sdk/v0.4.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/node-sdk/v0.4.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/node-sdk/v0.4.0",
+  "commit": {
+   "sha": "e98fddf44017e28b46f24ff330d700057ddfbac5",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/e98fddf44017e28b46f24ff330d700057ddfbac5"
+  },
+  "node_id": "REF_kwDORyvZnLlyZWZzL3RhZ3Mvbm9kZS1zZGsvdjAuNC4w"
+ },
+ {
+  "name": "node-sdk/v0.3.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/node-sdk/v0.3.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/node-sdk/v0.3.0",
+  "commit": {
+   "sha": "a3ecfa0e6beb69d5f34a0c9d4a636e64fc816cd5",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/a3ecfa0e6beb69d5f34a0c9d4a636e64fc816cd5"
+  },
+  "node_id": "REF_kwDORyvZnLlyZWZzL3RhZ3Mvbm9kZS1zZGsvdjAuMy4w"
+ },
+ {
+  "name": "node-sdk/v0.2.0",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/node-sdk/v0.2.0",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/node-sdk/v0.2.0",
+  "commit": {
+   "sha": "f0f281db761130ebac288b2a376dd7d690e8a400",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/f0f281db761130ebac288b2a376dd7d690e8a400"
+  },
+  "node_id": "REF_kwDORyvZnLlyZWZzL3RhZ3Mvbm9kZS1zZGsvdjAuMi4w"
+ },
+ {
+  "name": "node-sdk/v0.1.1",
+  "zipball_url": "https://api.github.com/repos/Infisical/agent-vault/zipball/refs/tags/node-sdk/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/Infisical/agent-vault/tarball/refs/tags/node-sdk/v0.1.1",
+  "commit": {
+   "sha": "99545ea0d0daeba5212534e8557039a4eacb51a8",
+   "url": "https://api.github.com/repos/Infisical/agent-vault/commits/99545ea0d0daeba5212534e8557039a4eacb51a8"
+  },
+  "node_id": "REF_kwDORyvZnLlyZWZzL3RhZ3Mvbm9kZS1zZGsvdjAuMS4x"
+ }
+]

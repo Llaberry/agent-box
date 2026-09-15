@@ -1,0 +1,973 @@
+[
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3182476637",
+  "pull_request_review_id": 4221143900,
+  "id": 3182476637,
+  "node_id": "PRRC_kwDORLED8869sL1d",
+  "diff_hunk": "@@ -159,7 +159,10 @@ export interface AgentConfig {\n \t/** Provider runtime settings applied when resolving models. */\n \tproviders?: ProvidersConfig;\n \t/** Resolve model config to a Model instance. Throws on invalid model strings. */\n-\tresolveModel: (model: ModelConfig | undefined, providers?: ProvidersConfig) => Model<any> | undefined;\n+\tresolveModel: (",
+  "path": "packages/sdk/src/types.ts",
+  "commit_id": "44688ce61b2fcd8c3d0024f15219a95a0bb19293",
+  "original_commit_id": "aa66f7acae42d173a39a1d3545b0ade1d5efd8a7",
+  "user": {
+   "login": "tunnckoCore",
+   "id": 5038030,
+   "node_id": "MDQ6VXNlcjUwMzgwMzA=",
+   "avatar_url": "https://avatars.githubusercontent.com/u/5038030?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/tunnckoCore",
+   "html_url": "https://github.com/tunnckoCore",
+   "followers_url": "https://api.github.com/users/tunnckoCore/followers",
+   "following_url": "https://api.github.com/users/tunnckoCore/following{/other_user}",
+   "gists_url": "https://api.github.com/users/tunnckoCore/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/tunnckoCore/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/tunnckoCore/subscriptions",
+   "organizations_url": "https://api.github.com/users/tunnckoCore/orgs",
+   "repos_url": "https://api.github.com/users/tunnckoCore/repos",
+   "events_url": "https://api.github.com/users/tunnckoCore/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/tunnckoCore/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "that was formatting thing cuz my editor.. haha.",
+  "created_at": "2026-05-04T15:01:41Z",
+  "updated_at": "2026-05-04T15:01:41Z",
+  "html_url": "https://github.com/withastro/flue/pull/48#discussion_r3182476637",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/48",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3182476637"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/48#discussion_r3182476637"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/48"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3182476637/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": 162,
+  "original_line": 162,
+  "side": "RIGHT",
+  "author_association": "CONTRIBUTOR",
+  "original_position": 5,
+  "position": 5,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3183032349",
+  "pull_request_review_id": 4221780094,
+  "id": 3183032349,
+  "node_id": "PRRC_kwDORLED8869uTgd",
+  "diff_hunk": "@@ -0,0 +1,138 @@\n+# Connect a Daytona Sandbox\n+\n+This guide takes a working Flue agent and connects it to a [Daytona](https://www.daytona.io/) remote sandbox so each session gets a fully isolated Linux environment \u2014 git, Node.js, Python, system packages, the lot.\n+\n+## Prerequisites\n+\n+You should already have a Flue project that builds and runs. If you don't yet, start with one of the deploy guides \u2014 whichever target you're using or prefer:\n+\n+- [Deploy on Node.js](./deploy-node.md)\n+- [Deploy on GitHub Actions](./deploy-github-actions.md)\n+- [Deploy on GitLab CI/CD](./deploy-gitlab-ci.md)\n+- [Deploy on Cloudflare](./deploy-cloudflare.md)\n+\n+Each leaves you with a working Hello World agent, a verified run loop, and no remote sandbox wired up yet. That's the starting point.\n+\n+## Sign up for Daytona\n+\n+Sign up at [daytona.io](https://www.daytona.io/) and grab an API key from your dashboard. Then set `DAYTONA_API_KEY` in the same place you already set your model provider key (your `.env` file, your CI secrets, or your Cloudflare secrets bundle \u2014 whichever the prerequisite guide had you set up).\n+\n+The SDK also reads optional `DAYTONA_API_URL` and `DAYTONA_TARGET` if you need them \u2014 see [Daytona's environment configuration docs](https://www.daytona.io/docs/en/configuration/).\n+\n+## Install the connector\n+\n+Install the Daytona connector with `flue add`. Always pass `--print` \u2014 it's the safe default whether you're a human pasting the output into your coding agent of choice, or an agent running this command yourself:\n+\n+```bash\n+# Print the install instructions and let your agent (or you) handle the rest\n+flue add daytona --print\n+\n+# Or pipe directly to a coding agent\n+flue add daytona --print | claude\n+```\n+\n+This drops a `connectors/daytona.ts` file into your workspace (under `.flue/connectors/` if you're using the `.flue/` layout, or `connectors/` at the project root otherwise) and reminds you to install Daytona's TypeScript SDK:\n+\n+```bash\n+npm install @daytona/sdk\n+```\n+\n+The connector is a TypeScript adapter that wraps a Daytona sandbox into Flue's `SandboxFactory` interface \u2014 see the [sandbox connector spec](./sandbox-connector-spec.md) for the contract.\n+\n+## Use Daytona in your agent\n+\n+Instead of letting `init()` spin up a default virtual sandbox, create a Daytona sandbox yourself and pass it to `init()`. Three things change in your agent file:\n+\n+1. Import `Daytona` from `@daytona/sdk` and `daytona` from your connector file.\n+2. Create a Daytona client and sandbox.\n+3. Pass `sandbox: daytona(sandbox)` to `init()`.\n+\n+Applied to the Hello World agent from the deploy guides:\n+\n+```typescript\n+import type { FlueContext } from '@flue/sdk/client';\n+import { Daytona } from '@daytona/sdk';\n+import { daytona } from '../connectors/daytona';\n+\n+export const triggers = { webhook: true };\n+\n+export default async function ({ init, env }: FlueContext) {\n+  const client = new Daytona({ apiKey: env.DAYTONA_API_KEY });\n+  const sandbox = await client.create();\n+\n+  const agent = await init({\n+    sandbox: daytona(sandbox, { cleanup: true }),\n+    model: 'anthropic/claude-sonnet-4-6',\n+  });\n+  const session = await agent.session();\n+\n+  return await session.shell('uname -a');\n+}\n+```\n+",
+  "path": "docs/connect-daytona.md",
+  "commit_id": "12d7673318eef10de59f89c2b8b071c3c8910e03",
+  "original_commit_id": "0ebb8896831b3a5bafdb1d5f603eef8a60e839db",
+  "user": {
+   "login": "mu-hashmi",
+   "id": 105992724,
+   "node_id": "U_kgDOBlFSFA",
+   "avatar_url": "https://avatars.githubusercontent.com/u/105992724?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/mu-hashmi",
+   "html_url": "https://github.com/mu-hashmi",
+   "followers_url": "https://api.github.com/users/mu-hashmi/followers",
+   "following_url": "https://api.github.com/users/mu-hashmi/following{/other_user}",
+   "gists_url": "https://api.github.com/users/mu-hashmi/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/mu-hashmi/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/mu-hashmi/subscriptions",
+   "organizations_url": "https://api.github.com/users/mu-hashmi/orgs",
+   "repos_url": "https://api.github.com/users/mu-hashmi/repos",
+   "events_url": "https://api.github.com/users/mu-hashmi/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/mu-hashmi/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "small lifecycle correction: `cleanup: true` wires Daytona deletion into agent.destroy(), but it doesn't run automatically when the session/request finishes. I tested this in a real Flue project with a Daytona API key: the current snippet successfully runs uname -a, but after flue run exits the sandbox is still running. wrapping the session work in try/finally { await agent.destroy(); } cleans it up as expected.\n\n\n```suggestion\nexport default async function ({ init, env }: FlueContext) {\n  const client = new Daytona({ apiKey: env.DAYTONA_API_KEY });\n  const sandbox = await client.create();\n\n  const agent = await init({\n    sandbox: daytona(sandbox, { cleanup: true }),\n    model: 'anthropic/claude-sonnet-4-6',\n  });\n\n  try {\n    const session = await agent.session();\n    return await session.shell('uname -a');\n  } finally { \n    await agent.destroy();\n  }\n}\n```",
+  "created_at": "2026-05-04T16:43:44Z",
+  "updated_at": "2026-05-04T16:43:44Z",
+  "html_url": "https://github.com/withastro/flue/pull/42#discussion_r3183032349",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/42",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3183032349"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/42#discussion_r3183032349"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/42"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3183032349/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": 59,
+  "original_start_line": 59,
+  "start_side": "RIGHT",
+  "line": 72,
+  "original_line": 72,
+  "side": "RIGHT",
+  "author_association": "NONE",
+  "original_position": 72,
+  "position": 72,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3183035525",
+  "pull_request_review_id": 4221783394,
+  "id": 3183035525,
+  "node_id": "PRRC_kwDORLED8869uUSF",
+  "diff_hunk": "@@ -0,0 +1,138 @@\n+# Connect a Daytona Sandbox\n+\n+This guide takes a working Flue agent and connects it to a [Daytona](https://www.daytona.io/) remote sandbox so each session gets a fully isolated Linux environment \u2014 git, Node.js, Python, system packages, the lot.\n+\n+## Prerequisites\n+\n+You should already have a Flue project that builds and runs. If you don't yet, start with one of the deploy guides \u2014 whichever target you're using or prefer:\n+\n+- [Deploy on Node.js](./deploy-node.md)\n+- [Deploy on GitHub Actions](./deploy-github-actions.md)\n+- [Deploy on GitLab CI/CD](./deploy-gitlab-ci.md)\n+- [Deploy on Cloudflare](./deploy-cloudflare.md)\n+\n+Each leaves you with a working Hello World agent, a verified run loop, and no remote sandbox wired up yet. That's the starting point.\n+\n+## Sign up for Daytona\n+\n+Sign up at [daytona.io](https://www.daytona.io/) and grab an API key from your dashboard. Then set `DAYTONA_API_KEY` in the same place you already set your model provider key (your `.env` file, your CI secrets, or your Cloudflare secrets bundle \u2014 whichever the prerequisite guide had you set up).\n+\n+The SDK also reads optional `DAYTONA_API_URL` and `DAYTONA_TARGET` if you need them \u2014 see [Daytona's environment configuration docs](https://www.daytona.io/docs/en/configuration/).\n+\n+## Install the connector\n+\n+Install the Daytona connector with `flue add`. Always pass `--print` \u2014 it's the safe default whether you're a human pasting the output into your coding agent of choice, or an agent running this command yourself:\n+\n+```bash\n+# Print the install instructions and let your agent (or you) handle the rest\n+flue add daytona --print\n+\n+# Or pipe directly to a coding agent\n+flue add daytona --print | claude\n+```\n+\n+This drops a `connectors/daytona.ts` file into your workspace (under `.flue/connectors/` if you're using the `.flue/` layout, or `connectors/` at the project root otherwise) and reminds you to install Daytona's TypeScript SDK:\n+\n+```bash\n+npm install @daytona/sdk\n+```\n+\n+The connector is a TypeScript adapter that wraps a Daytona sandbox into Flue's `SandboxFactory` interface \u2014 see the [sandbox connector spec](./sandbox-connector-spec.md) for the contract.\n+\n+## Use Daytona in your agent\n+\n+Instead of letting `init()` spin up a default virtual sandbox, create a Daytona sandbox yourself and pass it to `init()`. Three things change in your agent file:\n+\n+1. Import `Daytona` from `@daytona/sdk` and `daytona` from your connector file.\n+2. Create a Daytona client and sandbox.\n+3. Pass `sandbox: daytona(sandbox)` to `init()`.\n+\n+Applied to the Hello World agent from the deploy guides:\n+\n+```typescript\n+import type { FlueContext } from '@flue/sdk/client';\n+import { Daytona } from '@daytona/sdk';\n+import { daytona } from '../connectors/daytona';\n+\n+export const triggers = { webhook: true };\n+\n+export default async function ({ init, env }: FlueContext) {\n+  const client = new Daytona({ apiKey: env.DAYTONA_API_KEY });\n+  const sandbox = await client.create();\n+\n+  const agent = await init({\n+    sandbox: daytona(sandbox, { cleanup: true }),\n+    model: 'anthropic/claude-sonnet-4-6',\n+  });\n+  const session = await agent.session();\n+\n+  return await session.shell('uname -a');\n+}\n+```\n+\n+`cleanup: true` tells Flue to delete the sandbox when the session ends. The default is `false` (you manage the lifecycle), and you can also pass a function for custom teardown.",
+  "path": "docs/connect-daytona.md",
+  "commit_id": "0ebb8896831b3a5bafdb1d5f603eef8a60e839db",
+  "original_commit_id": "0ebb8896831b3a5bafdb1d5f603eef8a60e839db",
+  "user": {
+   "login": "mu-hashmi",
+   "id": 105992724,
+   "node_id": "U_kgDOBlFSFA",
+   "avatar_url": "https://avatars.githubusercontent.com/u/105992724?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/mu-hashmi",
+   "html_url": "https://github.com/mu-hashmi",
+   "followers_url": "https://api.github.com/users/mu-hashmi/followers",
+   "following_url": "https://api.github.com/users/mu-hashmi/following{/other_user}",
+   "gists_url": "https://api.github.com/users/mu-hashmi/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/mu-hashmi/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/mu-hashmi/subscriptions",
+   "organizations_url": "https://api.github.com/users/mu-hashmi/orgs",
+   "repos_url": "https://api.github.com/users/mu-hashmi/repos",
+   "events_url": "https://api.github.com/users/mu-hashmi/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/mu-hashmi/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "```suggestion\n`cleanup: true` tells Flue to delete the sandbox when `agent.destroy()` is called. Use try/finally for request-scoped sandboxes so cleanup runs even if the session work throws. The default is false (you manage the lifecycle), and you can also pass a function for custom teardown.\n```",
+  "created_at": "2026-05-04T16:44:23Z",
+  "updated_at": "2026-05-04T16:44:23Z",
+  "html_url": "https://github.com/withastro/flue/pull/42#discussion_r3183035525",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/42",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3183035525"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/42#discussion_r3183035525"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/42"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3183035525/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": null,
+  "original_line": 73,
+  "side": "RIGHT",
+  "author_association": "NONE",
+  "original_position": 73,
+  "position": 1,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3183061487",
+  "pull_request_review_id": 4221812647,
+  "id": 3183061487,
+  "node_id": "PRRC_kwDORLED8869uanv",
+  "diff_hunk": "@@ -0,0 +1,138 @@\n+# Connect a Daytona Sandbox\n+\n+This guide takes a working Flue agent and connects it to a [Daytona](https://www.daytona.io/) remote sandbox so each session gets a fully isolated Linux environment \u2014 git, Node.js, Python, system packages, the lot.\n+\n+## Prerequisites\n+\n+You should already have a Flue project that builds and runs. If you don't yet, start with one of the deploy guides \u2014 whichever target you're using or prefer:\n+\n+- [Deploy on Node.js](./deploy-node.md)\n+- [Deploy on GitHub Actions](./deploy-github-actions.md)\n+- [Deploy on GitLab CI/CD](./deploy-gitlab-ci.md)\n+- [Deploy on Cloudflare](./deploy-cloudflare.md)\n+\n+Each leaves you with a working Hello World agent, a verified run loop, and no remote sandbox wired up yet. That's the starting point.\n+\n+## Sign up for Daytona\n+\n+Sign up at [daytona.io](https://www.daytona.io/) and grab an API key from your dashboard. Then set `DAYTONA_API_KEY` in the same place you already set your model provider key (your `.env` file, your CI secrets, or your Cloudflare secrets bundle \u2014 whichever the prerequisite guide had you set up).\n+\n+The SDK also reads optional `DAYTONA_API_URL` and `DAYTONA_TARGET` if you need them \u2014 see [Daytona's environment configuration docs](https://www.daytona.io/docs/en/configuration/).\n+\n+## Install the connector\n+\n+Install the Daytona connector with `flue add`. Always pass `--print` \u2014 it's the safe default whether you're a human pasting the output into your coding agent of choice, or an agent running this command yourself:\n+\n+```bash\n+# Print the install instructions and let your agent (or you) handle the rest\n+flue add daytona --print\n+\n+# Or pipe directly to a coding agent\n+flue add daytona --print | claude\n+```\n+\n+This drops a `connectors/daytona.ts` file into your workspace (under `.flue/connectors/` if you're using the `.flue/` layout, or `connectors/` at the project root otherwise) and reminds you to install Daytona's TypeScript SDK:\n+\n+```bash\n+npm install @daytona/sdk\n+```\n+\n+The connector is a TypeScript adapter that wraps a Daytona sandbox into Flue's `SandboxFactory` interface \u2014 see the [sandbox connector spec](./sandbox-connector-spec.md) for the contract.\n+\n+## Use Daytona in your agent\n+\n+Instead of letting `init()` spin up a default virtual sandbox, create a Daytona sandbox yourself and pass it to `init()`. Three things change in your agent file:\n+\n+1. Import `Daytona` from `@daytona/sdk` and `daytona` from your connector file.\n+2. Create a Daytona client and sandbox.\n+3. Pass `sandbox: daytona(sandbox)` to `init()`.\n+\n+Applied to the Hello World agent from the deploy guides:\n+\n+```typescript\n+import type { FlueContext } from '@flue/sdk/client';\n+import { Daytona } from '@daytona/sdk';\n+import { daytona } from '../connectors/daytona';\n+\n+export const triggers = { webhook: true };\n+\n+export default async function ({ init, env }: FlueContext) {\n+  const client = new Daytona({ apiKey: env.DAYTONA_API_KEY });\n+  const sandbox = await client.create();\n+\n+  const agent = await init({\n+    sandbox: daytona(sandbox, { cleanup: true }),\n+    model: 'anthropic/claude-sonnet-4-6',\n+  });\n+  const session = await agent.session();\n+\n+  return await session.shell('uname -a');\n+}\n+```\n+\n+`cleanup: true` tells Flue to delete the sandbox when the session ends. The default is `false` (you manage the lifecycle), and you can also pass a function for custom teardown.\n+\n+## Advanced: Sharing a sandbox across sessions\n+\n+If your agent needs the sandbox in a specific state before prompting \u2014 a repo cloned, dependencies installed, config files written \u2014 do the setup in one session, then spin up a second `init()` for the working session with the right `cwd`:\n+\n+```typescript\n+import type { FlueContext } from '@flue/sdk/client';\n+import { Daytona } from '@daytona/sdk';\n+import { daytona } from '../connectors/daytona';\n+\n+export const triggers = { webhook: true };\n+\n+export default async function ({ init, payload, env }: FlueContext) {\n+  const client = new Daytona({ apiKey: env.DAYTONA_API_KEY });\n+  const sandbox = await client.create();\n+\n+  // Setup session \u2014 clone the repo and install dependencies.\n+  const setupAgent = await init({\n+    sandbox: daytona(sandbox, { cleanup: true }),\n+    model: 'anthropic/claude-sonnet-4-6',\n+  });\n+  const setup = await setupAgent.session();\n+  await setup.shell(`git clone ${payload.repo} /workspace/project`);\n+  await setup.shell('npm install', { cwd: '/workspace/project' });\n+\n+  // Working session \u2014 same sandbox, but rooted at the project directory.\n+  const projectAgent = await init({\n+    id: 'project',\n+    sandbox: daytona(sandbox),\n+    cwd: '/workspace/project',\n+    model: 'anthropic/claude-sonnet-4-6',\n+  });\n+  const session = await projectAgent.session();\n+\n+  return await session.prompt(payload.prompt);\n+}\n+```\n+\n+Both `init()` calls share the same Daytona sandbox. Only the first carries `cleanup: true` so the sandbox is torn down when the working session ends. The second passes `cwd` so the agent's tools operate inside the project directory.",
+  "path": "docs/connect-daytona.md",
+  "commit_id": "0ebb8896831b3a5bafdb1d5f603eef8a60e839db",
+  "original_commit_id": "0ebb8896831b3a5bafdb1d5f603eef8a60e839db",
+  "user": {
+   "login": "mu-hashmi",
+   "id": 105992724,
+   "node_id": "U_kgDOBlFSFA",
+   "avatar_url": "https://avatars.githubusercontent.com/u/105992724?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/mu-hashmi",
+   "html_url": "https://github.com/mu-hashmi",
+   "followers_url": "https://api.github.com/users/mu-hashmi/followers",
+   "following_url": "https://api.github.com/users/mu-hashmi/following{/other_user}",
+   "gists_url": "https://api.github.com/users/mu-hashmi/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/mu-hashmi/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/mu-hashmi/subscriptions",
+   "organizations_url": "https://api.github.com/users/mu-hashmi/orgs",
+   "repos_url": "https://api.github.com/users/mu-hashmi/repos",
+   "events_url": "https://api.github.com/users/mu-hashmi/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/mu-hashmi/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "same cleanup issue here, but there's an extra ownership wrinkle because this example creates two Flue agents over the same Daytona sandbox. `cleanup: true`is attached to the first setupAgent, not to \"the working session,\" so projectAgent.destroy() would not clean up the sandbox as written.\n\nI think this example should either:\n1. explicitly call await setupAgent.destroy() in a finally, since that's the agent that owns connector cleanup, or\n2. manage the shared sandbox directly with the Daytona SDK in finally { await sandbox.delete(); }.\n\nseparately, for truly throwaway/request-scoped Daytona sandboxes, users can also choose Daytona lifecycle options like `ephemeral: true` / `autoDeleteInterval`, but maybe not necessary to include for this basic connector example.",
+  "created_at": "2026-05-04T16:49:00Z",
+  "updated_at": "2026-05-04T16:49:50Z",
+  "html_url": "https://github.com/withastro/flue/pull/42#discussion_r3183061487",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/42",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3183061487"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/42#discussion_r3183061487"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/42"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3183061487/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": null,
+  "original_line": 112,
+  "side": "RIGHT",
+  "author_association": "NONE",
+  "original_position": 112,
+  "position": 1,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3187729071",
+  "pull_request_review_id": 4227180452,
+  "id": 3187729071,
+  "node_id": "PRRC_kwDORLED886-AOKv",
+  "diff_hunk": "@@ -0,0 +1,138 @@\n+# Connect a Daytona Sandbox\n+\n+This guide takes a working Flue agent and connects it to a [Daytona](https://www.daytona.io/) remote sandbox so each session gets a fully isolated Linux environment \u2014 git, Node.js, Python, system packages, the lot.\n+\n+## Prerequisites\n+\n+You should already have a Flue project that builds and runs. If you don't yet, start with one of the deploy guides \u2014 whichever target you're using or prefer:\n+\n+- [Deploy on Node.js](./deploy-node.md)\n+- [Deploy on GitHub Actions](./deploy-github-actions.md)\n+- [Deploy on GitLab CI/CD](./deploy-gitlab-ci.md)\n+- [Deploy on Cloudflare](./deploy-cloudflare.md)\n+\n+Each leaves you with a working Hello World agent, a verified run loop, and no remote sandbox wired up yet. That's the starting point.\n+\n+## Sign up for Daytona\n+\n+Sign up at [daytona.io](https://www.daytona.io/) and grab an API key from your dashboard. Then set `DAYTONA_API_KEY` in the same place you already set your model provider key (your `.env` file, your CI secrets, or your Cloudflare secrets bundle \u2014 whichever the prerequisite guide had you set up).\n+\n+The SDK also reads optional `DAYTONA_API_URL` and `DAYTONA_TARGET` if you need them \u2014 see [Daytona's environment configuration docs](https://www.daytona.io/docs/en/configuration/).\n+\n+## Install the connector\n+\n+Install the Daytona connector with `flue add`. Always pass `--print` \u2014 it's the safe default whether you're a human pasting the output into your coding agent of choice, or an agent running this command yourself:\n+\n+```bash\n+# Print the install instructions and let your agent (or you) handle the rest\n+flue add daytona --print\n+\n+# Or pipe directly to a coding agent\n+flue add daytona --print | claude\n+```\n+\n+This drops a `connectors/daytona.ts` file into your workspace (under `.flue/connectors/` if you're using the `.flue/` layout, or `connectors/` at the project root otherwise) and reminds you to install Daytona's TypeScript SDK:\n+\n+```bash\n+npm install @daytona/sdk\n+```\n+\n+The connector is a TypeScript adapter that wraps a Daytona sandbox into Flue's `SandboxFactory` interface \u2014 see the [sandbox connector spec](./sandbox-connector-spec.md) for the contract.\n+\n+## Use Daytona in your agent\n+\n+Instead of letting `init()` spin up a default virtual sandbox, create a Daytona sandbox yourself and pass it to `init()`. Three things change in your agent file:\n+\n+1. Import `Daytona` from `@daytona/sdk` and `daytona` from your connector file.\n+2. Create a Daytona client and sandbox.\n+3. Pass `sandbox: daytona(sandbox)` to `init()`.\n+\n+Applied to the Hello World agent from the deploy guides:\n+\n+```typescript\n+import type { FlueContext } from '@flue/sdk/client';\n+import { Daytona } from '@daytona/sdk';\n+import { daytona } from '../connectors/daytona';\n+\n+export const triggers = { webhook: true };\n+\n+export default async function ({ init, env }: FlueContext) {\n+  const client = new Daytona({ apiKey: env.DAYTONA_API_KEY });\n+  const sandbox = await client.create();\n+\n+  const agent = await init({\n+    sandbox: daytona(sandbox, { cleanup: true }),\n+    model: 'anthropic/claude-sonnet-4-6',\n+  });\n+  const session = await agent.session();\n+\n+  return await session.shell('uname -a');\n+}\n+```\n+",
+  "path": "docs/connect-daytona.md",
+  "commit_id": "12d7673318eef10de59f89c2b8b071c3c8910e03",
+  "original_commit_id": "0ebb8896831b3a5bafdb1d5f603eef8a60e839db",
+  "user": {
+   "login": "FredKSchott",
+   "id": 622227,
+   "node_id": "MDQ6VXNlcjYyMjIyNw==",
+   "avatar_url": "https://avatars.githubusercontent.com/u/622227?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/FredKSchott",
+   "html_url": "https://github.com/FredKSchott",
+   "followers_url": "https://api.github.com/users/FredKSchott/followers",
+   "following_url": "https://api.github.com/users/FredKSchott/following{/other_user}",
+   "gists_url": "https://api.github.com/users/FredKSchott/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/FredKSchott/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/FredKSchott/subscriptions",
+   "organizations_url": "https://api.github.com/users/FredKSchott/orgs",
+   "repos_url": "https://api.github.com/users/FredKSchott/repos",
+   "events_url": "https://api.github.com/users/FredKSchott/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/FredKSchott/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "Good catch \u2014 fixed. Wrapped the session work in try/finally with agent.destroy() in the new commit.",
+  "created_at": "2026-05-05T10:30:13Z",
+  "updated_at": "2026-05-05T10:30:14Z",
+  "html_url": "https://github.com/withastro/flue/pull/42#discussion_r3187729071",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/42",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3187729071"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/42#discussion_r3187729071"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/42"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3187729071/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": 59,
+  "original_start_line": 59,
+  "start_side": "RIGHT",
+  "line": 72,
+  "original_line": 72,
+  "side": "RIGHT",
+  "in_reply_to_id": 3183032349,
+  "author_association": "MEMBER",
+  "original_position": 72,
+  "position": 72,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3187729574",
+  "pull_request_review_id": 4227181026,
+  "id": 3187729574,
+  "node_id": "PRRC_kwDORLED886-AOSm",
+  "diff_hunk": "@@ -0,0 +1,138 @@\n+# Connect a Daytona Sandbox\n+\n+This guide takes a working Flue agent and connects it to a [Daytona](https://www.daytona.io/) remote sandbox so each session gets a fully isolated Linux environment \u2014 git, Node.js, Python, system packages, the lot.\n+\n+## Prerequisites\n+\n+You should already have a Flue project that builds and runs. If you don't yet, start with one of the deploy guides \u2014 whichever target you're using or prefer:\n+\n+- [Deploy on Node.js](./deploy-node.md)\n+- [Deploy on GitHub Actions](./deploy-github-actions.md)\n+- [Deploy on GitLab CI/CD](./deploy-gitlab-ci.md)\n+- [Deploy on Cloudflare](./deploy-cloudflare.md)\n+\n+Each leaves you with a working Hello World agent, a verified run loop, and no remote sandbox wired up yet. That's the starting point.\n+\n+## Sign up for Daytona\n+\n+Sign up at [daytona.io](https://www.daytona.io/) and grab an API key from your dashboard. Then set `DAYTONA_API_KEY` in the same place you already set your model provider key (your `.env` file, your CI secrets, or your Cloudflare secrets bundle \u2014 whichever the prerequisite guide had you set up).\n+\n+The SDK also reads optional `DAYTONA_API_URL` and `DAYTONA_TARGET` if you need them \u2014 see [Daytona's environment configuration docs](https://www.daytona.io/docs/en/configuration/).\n+\n+## Install the connector\n+\n+Install the Daytona connector with `flue add`. Always pass `--print` \u2014 it's the safe default whether you're a human pasting the output into your coding agent of choice, or an agent running this command yourself:\n+\n+```bash\n+# Print the install instructions and let your agent (or you) handle the rest\n+flue add daytona --print\n+\n+# Or pipe directly to a coding agent\n+flue add daytona --print | claude\n+```\n+\n+This drops a `connectors/daytona.ts` file into your workspace (under `.flue/connectors/` if you're using the `.flue/` layout, or `connectors/` at the project root otherwise) and reminds you to install Daytona's TypeScript SDK:\n+\n+```bash\n+npm install @daytona/sdk\n+```\n+\n+The connector is a TypeScript adapter that wraps a Daytona sandbox into Flue's `SandboxFactory` interface \u2014 see the [sandbox connector spec](./sandbox-connector-spec.md) for the contract.\n+\n+## Use Daytona in your agent\n+\n+Instead of letting `init()` spin up a default virtual sandbox, create a Daytona sandbox yourself and pass it to `init()`. Three things change in your agent file:\n+\n+1. Import `Daytona` from `@daytona/sdk` and `daytona` from your connector file.\n+2. Create a Daytona client and sandbox.\n+3. Pass `sandbox: daytona(sandbox)` to `init()`.\n+\n+Applied to the Hello World agent from the deploy guides:\n+\n+```typescript\n+import type { FlueContext } from '@flue/sdk/client';\n+import { Daytona } from '@daytona/sdk';\n+import { daytona } from '../connectors/daytona';\n+\n+export const triggers = { webhook: true };\n+\n+export default async function ({ init, env }: FlueContext) {\n+  const client = new Daytona({ apiKey: env.DAYTONA_API_KEY });\n+  const sandbox = await client.create();\n+\n+  const agent = await init({\n+    sandbox: daytona(sandbox, { cleanup: true }),\n+    model: 'anthropic/claude-sonnet-4-6',\n+  });\n+  const session = await agent.session();\n+\n+  return await session.shell('uname -a');\n+}\n+```\n+\n+`cleanup: true` tells Flue to delete the sandbox when the session ends. The default is `false` (you manage the lifecycle), and you can also pass a function for custom teardown.",
+  "path": "docs/connect-daytona.md",
+  "commit_id": "0ebb8896831b3a5bafdb1d5f603eef8a60e839db",
+  "original_commit_id": "0ebb8896831b3a5bafdb1d5f603eef8a60e839db",
+  "user": {
+   "login": "FredKSchott",
+   "id": 622227,
+   "node_id": "MDQ6VXNlcjYyMjIyNw==",
+   "avatar_url": "https://avatars.githubusercontent.com/u/622227?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/FredKSchott",
+   "html_url": "https://github.com/FredKSchott",
+   "followers_url": "https://api.github.com/users/FredKSchott/followers",
+   "following_url": "https://api.github.com/users/FredKSchott/following{/other_user}",
+   "gists_url": "https://api.github.com/users/FredKSchott/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/FredKSchott/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/FredKSchott/subscriptions",
+   "organizations_url": "https://api.github.com/users/FredKSchott/orgs",
+   "repos_url": "https://api.github.com/users/FredKSchott/repos",
+   "events_url": "https://api.github.com/users/FredKSchott/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/FredKSchott/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "Updated the surrounding paragraph along these lines \u2014 clarified that cleanup runs on agent.destroy() and recommended try/finally for request-scoped sandboxes.",
+  "created_at": "2026-05-05T10:30:19Z",
+  "updated_at": "2026-05-05T10:30:19Z",
+  "html_url": "https://github.com/withastro/flue/pull/42#discussion_r3187729574",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/42",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3187729574"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/42#discussion_r3187729574"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/42"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3187729574/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": null,
+  "original_line": 73,
+  "side": "RIGHT",
+  "in_reply_to_id": 3183035525,
+  "author_association": "MEMBER",
+  "original_position": 73,
+  "position": 1,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3187729854",
+  "pull_request_review_id": 4227181341,
+  "id": 3187729854,
+  "node_id": "PRRC_kwDORLED886-AOW-",
+  "diff_hunk": "@@ -0,0 +1,138 @@\n+# Connect a Daytona Sandbox\n+\n+This guide takes a working Flue agent and connects it to a [Daytona](https://www.daytona.io/) remote sandbox so each session gets a fully isolated Linux environment \u2014 git, Node.js, Python, system packages, the lot.\n+\n+## Prerequisites\n+\n+You should already have a Flue project that builds and runs. If you don't yet, start with one of the deploy guides \u2014 whichever target you're using or prefer:\n+\n+- [Deploy on Node.js](./deploy-node.md)\n+- [Deploy on GitHub Actions](./deploy-github-actions.md)\n+- [Deploy on GitLab CI/CD](./deploy-gitlab-ci.md)\n+- [Deploy on Cloudflare](./deploy-cloudflare.md)\n+\n+Each leaves you with a working Hello World agent, a verified run loop, and no remote sandbox wired up yet. That's the starting point.\n+\n+## Sign up for Daytona\n+\n+Sign up at [daytona.io](https://www.daytona.io/) and grab an API key from your dashboard. Then set `DAYTONA_API_KEY` in the same place you already set your model provider key (your `.env` file, your CI secrets, or your Cloudflare secrets bundle \u2014 whichever the prerequisite guide had you set up).\n+\n+The SDK also reads optional `DAYTONA_API_URL` and `DAYTONA_TARGET` if you need them \u2014 see [Daytona's environment configuration docs](https://www.daytona.io/docs/en/configuration/).\n+\n+## Install the connector\n+\n+Install the Daytona connector with `flue add`. Always pass `--print` \u2014 it's the safe default whether you're a human pasting the output into your coding agent of choice, or an agent running this command yourself:\n+\n+```bash\n+# Print the install instructions and let your agent (or you) handle the rest\n+flue add daytona --print\n+\n+# Or pipe directly to a coding agent\n+flue add daytona --print | claude\n+```\n+\n+This drops a `connectors/daytona.ts` file into your workspace (under `.flue/connectors/` if you're using the `.flue/` layout, or `connectors/` at the project root otherwise) and reminds you to install Daytona's TypeScript SDK:\n+\n+```bash\n+npm install @daytona/sdk\n+```\n+\n+The connector is a TypeScript adapter that wraps a Daytona sandbox into Flue's `SandboxFactory` interface \u2014 see the [sandbox connector spec](./sandbox-connector-spec.md) for the contract.\n+\n+## Use Daytona in your agent\n+\n+Instead of letting `init()` spin up a default virtual sandbox, create a Daytona sandbox yourself and pass it to `init()`. Three things change in your agent file:\n+\n+1. Import `Daytona` from `@daytona/sdk` and `daytona` from your connector file.\n+2. Create a Daytona client and sandbox.\n+3. Pass `sandbox: daytona(sandbox)` to `init()`.\n+\n+Applied to the Hello World agent from the deploy guides:\n+\n+```typescript\n+import type { FlueContext } from '@flue/sdk/client';\n+import { Daytona } from '@daytona/sdk';\n+import { daytona } from '../connectors/daytona';\n+\n+export const triggers = { webhook: true };\n+\n+export default async function ({ init, env }: FlueContext) {\n+  const client = new Daytona({ apiKey: env.DAYTONA_API_KEY });\n+  const sandbox = await client.create();\n+\n+  const agent = await init({\n+    sandbox: daytona(sandbox, { cleanup: true }),\n+    model: 'anthropic/claude-sonnet-4-6',\n+  });\n+  const session = await agent.session();\n+\n+  return await session.shell('uname -a');\n+}\n+```\n+\n+`cleanup: true` tells Flue to delete the sandbox when the session ends. The default is `false` (you manage the lifecycle), and you can also pass a function for custom teardown.\n+\n+## Advanced: Sharing a sandbox across sessions\n+\n+If your agent needs the sandbox in a specific state before prompting \u2014 a repo cloned, dependencies installed, config files written \u2014 do the setup in one session, then spin up a second `init()` for the working session with the right `cwd`:\n+\n+```typescript\n+import type { FlueContext } from '@flue/sdk/client';\n+import { Daytona } from '@daytona/sdk';\n+import { daytona } from '../connectors/daytona';\n+\n+export const triggers = { webhook: true };\n+\n+export default async function ({ init, payload, env }: FlueContext) {\n+  const client = new Daytona({ apiKey: env.DAYTONA_API_KEY });\n+  const sandbox = await client.create();\n+\n+  // Setup session \u2014 clone the repo and install dependencies.\n+  const setupAgent = await init({\n+    sandbox: daytona(sandbox, { cleanup: true }),\n+    model: 'anthropic/claude-sonnet-4-6',\n+  });\n+  const setup = await setupAgent.session();\n+  await setup.shell(`git clone ${payload.repo} /workspace/project`);\n+  await setup.shell('npm install', { cwd: '/workspace/project' });\n+\n+  // Working session \u2014 same sandbox, but rooted at the project directory.\n+  const projectAgent = await init({\n+    id: 'project',\n+    sandbox: daytona(sandbox),\n+    cwd: '/workspace/project',\n+    model: 'anthropic/claude-sonnet-4-6',\n+  });\n+  const session = await projectAgent.session();\n+\n+  return await session.prompt(payload.prompt);\n+}\n+```\n+\n+Both `init()` calls share the same Daytona sandbox. Only the first carries `cleanup: true` so the sandbox is torn down when the working session ends. The second passes `cwd` so the agent's tools operate inside the project directory.",
+  "path": "docs/connect-daytona.md",
+  "commit_id": "0ebb8896831b3a5bafdb1d5f603eef8a60e839db",
+  "original_commit_id": "0ebb8896831b3a5bafdb1d5f603eef8a60e839db",
+  "user": {
+   "login": "FredKSchott",
+   "id": 622227,
+   "node_id": "MDQ6VXNlcjYyMjIyNw==",
+   "avatar_url": "https://avatars.githubusercontent.com/u/622227?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/FredKSchott",
+   "html_url": "https://github.com/FredKSchott",
+   "followers_url": "https://api.github.com/users/FredKSchott/followers",
+   "following_url": "https://api.github.com/users/FredKSchott/following{/other_user}",
+   "gists_url": "https://api.github.com/users/FredKSchott/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/FredKSchott/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/FredKSchott/subscriptions",
+   "organizations_url": "https://api.github.com/users/FredKSchott/orgs",
+   "repos_url": "https://api.github.com/users/FredKSchott/repos",
+   "events_url": "https://api.github.com/users/FredKSchott/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/FredKSchott/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "Right, this one was actually wrong as written. Switched the example to manage the shared sandbox directly with sandbox.delete() in finally \u2014 that matches the ownership model better than putting cleanup: true on one of the two agents. Skipped ephemeral/autoDeleteInterval to keep the basic example focused.",
+  "created_at": "2026-05-05T10:30:22Z",
+  "updated_at": "2026-05-05T10:30:22Z",
+  "html_url": "https://github.com/withastro/flue/pull/42#discussion_r3187729854",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/42",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3187729854"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/42#discussion_r3187729854"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/42"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3187729854/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": null,
+  "original_line": 112,
+  "side": "RIGHT",
+  "in_reply_to_id": 3183061487,
+  "author_association": "MEMBER",
+  "original_position": 112,
+  "position": 1,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3202404043",
+  "pull_request_review_id": 4245073979,
+  "id": 3202404043,
+  "node_id": "PRRC_kwDORLED886-4M7L",
+  "diff_hunk": "@@ -94,15 +109,122 @@ export function extractResult<S extends v.GenericSchema>(\n \t\t}\n \t}\n \n-\tconst parsed = v.safeParse(schema, result);\n-\tif (!parsed.success) {\n-\t\tthrow new ResultExtractionError(\n-\t\t\t`Result does not match the expected schema: ${parsed.issues.map((i) => i.message).join(', ')}`,\n-\t\t\tresultBlock,\n-\t\t);\n+\treturn resultBlock;\n+}\n+\n+function normalizeResultSchema<S extends ResultSchema>(\n+\tschema: S,\n+): NormalizedResultSchema<InferResult<S>> {\n+\tif (isStandardJsonSchema(schema)) {\n+\t\tconst standard = schema['~standard'];\n+\t\treturn {\n+\t\t\tjsonSchema: standard.jsonSchema.input({ target: 'draft-07' }),\n+\t\t\tasync parse(value, rawOutput) {\n+\t\t\t\tconst parsed = await standard.validate(value);\n+\t\t\t\tif (parsed.issues) {\n+\t\t\t\t\tthrow new ResultExtractionError(\n+\t\t\t\t\t\t`Result does not match the expected schema: ${formatStandardIssues(parsed.issues)}`,\n+\t\t\t\t\t\trawOutput,\n+\t\t\t\t\t);\n+\t\t\t\t}\n+\t\t\t\treturn parsed.value as InferResult<S>;\n+\t\t\t},\n+\t\t};\n+\t}\n+\n+\tif (isValibotSchema(schema)) {",
+  "path": "packages/sdk/src/result.ts",
+  "commit_id": "6db12417216ee67e8bc1656e34f02f823e108b18",
+  "original_commit_id": "6db12417216ee67e8bc1656e34f02f823e108b18",
+  "user": {
+   "login": "kerkzhan",
+   "id": 8422732,
+   "node_id": "MDQ6VXNlcjg0MjI3MzI=",
+   "avatar_url": "https://avatars.githubusercontent.com/u/8422732?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/kerkzhan",
+   "html_url": "https://github.com/kerkzhan",
+   "followers_url": "https://api.github.com/users/kerkzhan/followers",
+   "following_url": "https://api.github.com/users/kerkzhan/following{/other_user}",
+   "gists_url": "https://api.github.com/users/kerkzhan/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/kerkzhan/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/kerkzhan/subscriptions",
+   "organizations_url": "https://api.github.com/users/kerkzhan/orgs",
+   "repos_url": "https://api.github.com/users/kerkzhan/repos",
+   "events_url": "https://api.github.com/users/kerkzhan/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/kerkzhan/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "nit; I think we can consider collapsing the branch to only diverge on `jsonSchema`.\n\nI understand that this codeblock is here to maintain the exact logic and DX for compatibility, but I believe `~standard.validate` should cover all of our use cases.\n\nThe fields we consume from`v.safeParse` all have equivalents on the  `~standard.validate` return values\n\n```\nvalibotParsed.success -> standardParsed.issues === undefined      \nvalibotParsed.issues -> standardParsed.issues\nvalibotParsed.output -> standardParsed.value\n```\n\nIf Valibot's spec wrapper diverges from this then that would mean they are diverging from Standard Schema, which is probably a Valibot bug, not Flue's responsibility. \n\nThough I think I might have misunderstood you on the issue discussion. If your suggestion was to unify in a later PR, feel free to ignore this.",
+  "created_at": "2026-05-07T14:58:12Z",
+  "updated_at": "2026-05-07T15:21:54Z",
+  "html_url": "https://github.com/withastro/flue/pull/72#discussion_r3202404043",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/72",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3202404043"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/72#discussion_r3202404043"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/72"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3202404043/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": 135,
+  "original_line": 135,
+  "side": "RIGHT",
+  "author_association": "NONE",
+  "original_position": 116,
+  "position": 116,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3202456008",
+  "pull_request_review_id": 4245073979,
+  "id": 3202456008,
+  "node_id": "PRRC_kwDORLED886-4ZnI",
+  "diff_hunk": "@@ -94,15 +109,122 @@ export function extractResult<S extends v.GenericSchema>(\n \t\t}\n \t}\n \n-\tconst parsed = v.safeParse(schema, result);\n-\tif (!parsed.success) {\n-\t\tthrow new ResultExtractionError(\n-\t\t\t`Result does not match the expected schema: ${parsed.issues.map((i) => i.message).join(', ')}`,\n-\t\t\tresultBlock,\n-\t\t);\n+\treturn resultBlock;\n+}\n+\n+function normalizeResultSchema<S extends ResultSchema>(\n+\tschema: S,\n+): NormalizedResultSchema<InferResult<S>> {\n+\tif (isStandardJsonSchema(schema)) {\n+\t\tconst standard = schema['~standard'];\n+\t\treturn {\n+\t\t\tjsonSchema: standard.jsonSchema.input({ target: 'draft-07' }),\n+\t\t\tasync parse(value, rawOutput) {\n+\t\t\t\tconst parsed = await standard.validate(value);\n+\t\t\t\tif (parsed.issues) {\n+\t\t\t\t\tthrow new ResultExtractionError(\n+\t\t\t\t\t\t`Result does not match the expected schema: ${formatStandardIssues(parsed.issues)}`,\n+\t\t\t\t\t\trawOutput,\n+\t\t\t\t\t);\n+\t\t\t\t}\n+\t\t\t\treturn parsed.value as InferResult<S>;\n+\t\t\t},\n+\t\t};\n+\t}\n+\n+\tif (isValibotSchema(schema)) {\n+\t\treturn {\n+\t\t\tjsonSchema: toJsonSchema(schema, { errorMode: 'ignore' }) as Record<string, unknown>,\n+\t\t\tparse(value, rawOutput) {\n+\t\t\t\tconst parsed = v.safeParse(schema, value);\n+\t\t\t\tif (!parsed.success) {\n+\t\t\t\t\tthrow new ResultExtractionError(\n+\t\t\t\t\t\t`Result does not match the expected schema: ${parsed.issues.map((i) => i.message).join(', ')}`,\n+\t\t\t\t\t\trawOutput,\n+\t\t\t\t\t);\n+\t\t\t\t}\n+\t\t\t\treturn parsed.output as InferResult<S>;\n+\t\t\t},\n+\t\t};\n \t}\n \n-\treturn parsed.output;\n+\tthrow new Error(\n+\t\t'[flue] result must be a Valibot schema or a Standard JSON Schema compatible schema.',\n+\t);\n+}\n+\n+function isStandardJsonSchema(value: unknown): value is StandardJSONSchemaV1 {\n+\tconst standard = getStandardProps(value);\n+\treturn (\n+\t\tstandard?.version === 1 &&\n+\t\ttypeof standard.validate === 'function' &&\n+\t\ttypeof standard.jsonSchema === 'object' &&\n+\t\tstandard.jsonSchema !== null &&\n+\t\ttypeof standard.jsonSchema.input === 'function'\n+\t);\n+}\n+\n+function isValibotSchema(value: unknown): value is v.GenericSchema {\n+\tconst schema = value as { type?: unknown } | null;\n+\treturn (\n+\t\ttypeof schema === 'object' &&\n+\t\tschema !== null &&\n+\t\ttypeof schema.type === 'string' &&\n+\t\ttypeof getStandardProps(schema)?.validate === 'function'",
+  "path": "packages/sdk/src/result.ts",
+  "commit_id": "6db12417216ee67e8bc1656e34f02f823e108b18",
+  "original_commit_id": "6db12417216ee67e8bc1656e34f02f823e108b18",
+  "user": {
+   "login": "kerkzhan",
+   "id": 8422732,
+   "node_id": "MDQ6VXNlcjg0MjI3MzI=",
+   "avatar_url": "https://avatars.githubusercontent.com/u/8422732?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/kerkzhan",
+   "html_url": "https://github.com/kerkzhan",
+   "followers_url": "https://api.github.com/users/kerkzhan/followers",
+   "following_url": "https://api.github.com/users/kerkzhan/following{/other_user}",
+   "gists_url": "https://api.github.com/users/kerkzhan/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/kerkzhan/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/kerkzhan/subscriptions",
+   "organizations_url": "https://api.github.com/users/kerkzhan/orgs",
+   "repos_url": "https://api.github.com/users/kerkzhan/repos",
+   "events_url": "https://api.github.com/users/kerkzhan/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/kerkzhan/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "We can narrow even further by checking the spec identifier:\n\n```suggestion\n\t\ttypeof getStandardProps(schema)?.validate === 'function' &&\n\t    getStandardProps(schema)?.vendor === 'valibot'\n```",
+  "created_at": "2026-05-07T15:04:05Z",
+  "updated_at": "2026-05-07T15:21:54Z",
+  "html_url": "https://github.com/withastro/flue/pull/72#discussion_r3202456008",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/72",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3202456008"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/72#discussion_r3202456008"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/72"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3202456008/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": 173,
+  "original_line": 173,
+  "side": "RIGHT",
+  "author_association": "NONE",
+  "original_position": 155,
+  "position": 155,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3202490901",
+  "pull_request_review_id": 4245073979,
+  "id": 3202490901,
+  "node_id": "PRRC_kwDORLED886-4iIV",
+  "diff_hunk": "@@ -94,15 +109,122 @@ export function extractResult<S extends v.GenericSchema>(\n \t\t}\n \t}\n \n-\tconst parsed = v.safeParse(schema, result);\n-\tif (!parsed.success) {\n-\t\tthrow new ResultExtractionError(\n-\t\t\t`Result does not match the expected schema: ${parsed.issues.map((i) => i.message).join(', ')}`,\n-\t\t\tresultBlock,\n-\t\t);\n+\treturn resultBlock;\n+}\n+\n+function normalizeResultSchema<S extends ResultSchema>(\n+\tschema: S,\n+): NormalizedResultSchema<InferResult<S>> {\n+\tif (isStandardJsonSchema(schema)) {\n+\t\tconst standard = schema['~standard'];\n+\t\treturn {\n+\t\t\tjsonSchema: standard.jsonSchema.input({ target: 'draft-07' }),\n+\t\t\tasync parse(value, rawOutput) {\n+\t\t\t\tconst parsed = await standard.validate(value);\n+\t\t\t\tif (parsed.issues) {\n+\t\t\t\t\tthrow new ResultExtractionError(\n+\t\t\t\t\t\t`Result does not match the expected schema: ${formatStandardIssues(parsed.issues)}`,\n+\t\t\t\t\t\trawOutput,\n+\t\t\t\t\t);\n+\t\t\t\t}\n+\t\t\t\treturn parsed.value as InferResult<S>;\n+\t\t\t},\n+\t\t};\n+\t}\n+\n+\tif (isValibotSchema(schema)) {\n+\t\treturn {\n+\t\t\tjsonSchema: toJsonSchema(schema, { errorMode: 'ignore' }) as Record<string, unknown>,\n+\t\t\tparse(value, rawOutput) {\n+\t\t\t\tconst parsed = v.safeParse(schema, value);\n+\t\t\t\tif (!parsed.success) {\n+\t\t\t\t\tthrow new ResultExtractionError(\n+\t\t\t\t\t\t`Result does not match the expected schema: ${parsed.issues.map((i) => i.message).join(', ')}`,\n+\t\t\t\t\t\trawOutput,\n+\t\t\t\t\t);\n+\t\t\t\t}\n+\t\t\t\treturn parsed.output as InferResult<S>;\n+\t\t\t},\n+\t\t};\n \t}\n \n-\treturn parsed.output;\n+\tthrow new Error(\n+\t\t'[flue] result must be a Valibot schema or a Standard JSON Schema compatible schema.',\n+\t);\n+}\n+\n+function isStandardJsonSchema(value: unknown): value is StandardJSONSchemaV1 {\n+\tconst standard = getStandardProps(value);\n+\treturn (\n+\t\tstandard?.version === 1 &&\n+\t\ttypeof standard.validate === 'function' &&\n+\t\ttypeof standard.jsonSchema === 'object' &&\n+\t\tstandard.jsonSchema !== null &&\n+\t\ttypeof standard.jsonSchema.input === 'function'\n+\t);\n+}\n+\n+function isValibotSchema(value: unknown): value is v.GenericSchema {\n+\tconst schema = value as { type?: unknown } | null;\n+\treturn (\n+\t\ttypeof schema === 'object' &&\n+\t\tschema !== null &&\n+\t\ttypeof schema.type === 'string' &&\n+\t\ttypeof getStandardProps(schema)?.validate === 'function'\n+\t);\n+}\n+\n+function getStandardProps(value: unknown): MaybeStandardProps | undefined {\n+\tconst props = (value as { '~standard'?: unknown } | null)?.['~standard'];\n+\tif (typeof props !== 'object' || props === null) return undefined;\n+\treturn props as MaybeStandardProps;\n+}\n+\n+function formatStandardIssues(issues: readonly { message: string }[]): string {\n+\treturn issues.map((issue) => issue.message).join(', ');",
+  "path": "packages/sdk/src/result.ts",
+  "commit_id": "6db12417216ee67e8bc1656e34f02f823e108b18",
+  "original_commit_id": "6db12417216ee67e8bc1656e34f02f823e108b18",
+  "user": {
+   "login": "kerkzhan",
+   "id": 8422732,
+   "node_id": "MDQ6VXNlcjg0MjI3MzI=",
+   "avatar_url": "https://avatars.githubusercontent.com/u/8422732?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/kerkzhan",
+   "html_url": "https://github.com/kerkzhan",
+   "followers_url": "https://api.github.com/users/kerkzhan/followers",
+   "following_url": "https://api.github.com/users/kerkzhan/following{/other_user}",
+   "gists_url": "https://api.github.com/users/kerkzhan/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/kerkzhan/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/kerkzhan/subscriptions",
+   "organizations_url": "https://api.github.com/users/kerkzhan/orgs",
+   "repos_url": "https://api.github.com/users/kerkzhan/repos",
+   "events_url": "https://api.github.com/users/kerkzhan/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/kerkzhan/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "suggestion; Do we want to include the `issues.path` as well so that it's  easier to debug nested schemas?",
+  "created_at": "2026-05-07T15:07:39Z",
+  "updated_at": "2026-05-07T15:21:54Z",
+  "html_url": "https://github.com/withastro/flue/pull/72#discussion_r3202490901",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/72",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3202490901"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/72#discussion_r3202490901"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/72"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3202490901/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": 184,
+  "original_line": 184,
+  "side": "RIGHT",
+  "author_association": "NONE",
+  "original_position": 166,
+  "position": 166,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3214080491",
+  "pull_request_review_id": 4258652008,
+  "id": 3214080491,
+  "node_id": "PRRC_kwDORLED886_kvnr",
+  "diff_hunk": "@@ -0,0 +1,287 @@\n+---\n+{\n+  \"category\": \"sandbox\",\n+  \"website\": \"https://smolmachines.com\",\n+  \"aliases\": [\"smolvm-embedded\"]\n+}\n+---\n+\n+# Add a Flue Connector: smolvm\n+\n+You are an AI coding agent installing the [smolvm](https://smolmachines.com) sandbox\n+connector for a Flue project. Follow these instructions exactly. Confirm with the\n+user only when something is genuinely ambiguous (e.g. an unusual project layout).\n+\n+## What this connector does\n+\n+Wraps an already-initialized smolvm `Machine` (from the `smolvm-embedded` SDK)\n+into Flue's `SandboxFactory` interface. The user owns the machine lifecycle;\n+this connector just adapts the running machine so Flue agents can run shell\n+commands and read/write files inside it.\n+\n+smolvm runs **locally** via libkrun (Hypervisor.framework on macOS, KVM on\n+Linux). There is no remote provider to authenticate with. Because a real\n+hypervisor is required, this connector only works on macOS or Linux hosts and\n+is not suitable for edge runtimes (Cloudflare Workers, Vercel Edge, etc.) or\n+most managed PaaS platforms.\n+\n+The `smolvm-embedded` SDK is currently alpha. One known caveat worth telling\n+the user about: machines created via the embedded SDK are not visible to the\n+`smolvm` CLI (`smolvm machine ls` won't list them). See the\n+[upstream README](https://github.com/smol-machines/smolvm/tree/main/sdks)\n+for current status.\n+\n+## Where to write the file\n+\n+Pick the location based on the user's project layout:\n+\n+- **`.flue/` layout** (project has files at the root and uses `.flue/agents/`\n+  etc.): write to `./.flue/connectors/smolvm.ts`.\n+- **Root layout** (the project root itself contains `agents/` and friends):\n+  write to `./connectors/smolvm.ts`.\n+\n+If neither feels right (uncommon layout, multiple workspaces, etc.), ask the\n+user before writing.\n+\n+Create any missing parent directories.\n+\n+## File contents\n+\n+Write this file verbatim. Do not \"improve\" it \u2014 it conforms to the published\n+`SandboxApi` contract, and the shell quoting in particular is load-bearing.\n+\n+```ts\n+/**\n+ * smolvm connector for Flue.\n+ *\n+ * Wraps an already-initialized smolvm Machine (from smolvm-embedded) into\n+ * Flue's SandboxFactory interface. The user owns the machine lifecycle.\n+ *\n+ * Every shell command is wrapped as `[\"sh\", \"-lc\", cmd]` because the\n+ * smolvm embedded SDK's `exec` takes an argv array, not a shell string.\n+ * The guest image must have `sh` on PATH \u2014 true of alpine, ubuntu,\n+ * debian, node:*, python:*, and nearly every standard OCI image.\n+ *\n+ * @example\n+ * ```ts\n+ * import { Machine } from 'smolvm-embedded';\n+ * import { smolvm } from './connectors/smolvm';\n+ *\n+ * const machine = await Machine.create({ name: 'my-flue-vm' });\n+ * const agent = await init({\n+ *   sandbox: smolvm(machine),\n+ *   model: 'anthropic/claude-sonnet-4-6',\n+ * });\n+ * ```\n+ */\n+import { createSandboxSessionEnv } from '@flue/sdk/sandbox';\n+import type { SandboxApi, SandboxFactory, SessionEnv, FileStat } from '@flue/sdk/sandbox';\n+import type { Machine } from 'smolvm-embedded';",
+  "path": "connectors/sandbox--smolvm.md",
+  "commit_id": "8c1dd8f550cf69f9ce19d7dc6918ea993e659800",
+  "original_commit_id": "8c1dd8f550cf69f9ce19d7dc6918ea993e659800",
+  "user": {
+   "login": "tunnckoCore",
+   "id": 5038030,
+   "node_id": "MDQ6VXNlcjUwMzgwMzA=",
+   "avatar_url": "https://avatars.githubusercontent.com/u/5038030?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/tunnckoCore",
+   "html_url": "https://github.com/tunnckoCore",
+   "followers_url": "https://api.github.com/users/tunnckoCore/followers",
+   "following_url": "https://api.github.com/users/tunnckoCore/following{/other_user}",
+   "gists_url": "https://api.github.com/users/tunnckoCore/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/tunnckoCore/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/tunnckoCore/subscriptions",
+   "organizations_url": "https://api.github.com/users/tunnckoCore/orgs",
+   "repos_url": "https://api.github.com/users/tunnckoCore/repos",
+   "events_url": "https://api.github.com/users/tunnckoCore/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/tunnckoCore/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "wait, there's no `smolvm-embedded` package out there, i think? Docs say `smolvm`. And if it's a private package, okay, but still.\n\ncc @FredKSchott @phooq @BinSquare ",
+  "created_at": "2026-05-10T00:19:12Z",
+  "updated_at": "2026-05-10T00:19:12Z",
+  "html_url": "https://github.com/withastro/flue/pull/101#discussion_r3214080491",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/101",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3214080491"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/101#discussion_r3214080491"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/101"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3214080491/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": 79,
+  "original_line": 79,
+  "side": "RIGHT",
+  "author_association": "CONTRIBUTOR",
+  "original_position": 79,
+  "position": 79,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3215386695",
+  "pull_request_review_id": 4259803710,
+  "id": 3215386695,
+  "node_id": "PRRC_kwDORLED886_puhH",
+  "diff_hunk": "@@ -0,0 +1,287 @@\n+---\n+{\n+  \"category\": \"sandbox\",\n+  \"website\": \"https://smolmachines.com\",\n+  \"aliases\": [\"smolvm-embedded\"]\n+}\n+---\n+\n+# Add a Flue Connector: smolvm\n+\n+You are an AI coding agent installing the [smolvm](https://smolmachines.com) sandbox\n+connector for a Flue project. Follow these instructions exactly. Confirm with the\n+user only when something is genuinely ambiguous (e.g. an unusual project layout).\n+\n+## What this connector does\n+\n+Wraps an already-initialized smolvm `Machine` (from the `smolvm-embedded` SDK)\n+into Flue's `SandboxFactory` interface. The user owns the machine lifecycle;\n+this connector just adapts the running machine so Flue agents can run shell\n+commands and read/write files inside it.\n+\n+smolvm runs **locally** via libkrun (Hypervisor.framework on macOS, KVM on\n+Linux). There is no remote provider to authenticate with. Because a real\n+hypervisor is required, this connector only works on macOS or Linux hosts and\n+is not suitable for edge runtimes (Cloudflare Workers, Vercel Edge, etc.) or\n+most managed PaaS platforms.\n+\n+The `smolvm-embedded` SDK is currently alpha. One known caveat worth telling\n+the user about: machines created via the embedded SDK are not visible to the\n+`smolvm` CLI (`smolvm machine ls` won't list them). See the\n+[upstream README](https://github.com/smol-machines/smolvm/tree/main/sdks)\n+for current status.\n+\n+## Where to write the file\n+\n+Pick the location based on the user's project layout:\n+\n+- **`.flue/` layout** (project has files at the root and uses `.flue/agents/`\n+  etc.): write to `./.flue/connectors/smolvm.ts`.\n+- **Root layout** (the project root itself contains `agents/` and friends):\n+  write to `./connectors/smolvm.ts`.\n+\n+If neither feels right (uncommon layout, multiple workspaces, etc.), ask the\n+user before writing.\n+\n+Create any missing parent directories.\n+\n+## File contents\n+\n+Write this file verbatim. Do not \"improve\" it \u2014 it conforms to the published\n+`SandboxApi` contract, and the shell quoting in particular is load-bearing.\n+\n+```ts\n+/**\n+ * smolvm connector for Flue.\n+ *\n+ * Wraps an already-initialized smolvm Machine (from smolvm-embedded) into\n+ * Flue's SandboxFactory interface. The user owns the machine lifecycle.\n+ *\n+ * Every shell command is wrapped as `[\"sh\", \"-lc\", cmd]` because the\n+ * smolvm embedded SDK's `exec` takes an argv array, not a shell string.\n+ * The guest image must have `sh` on PATH \u2014 true of alpine, ubuntu,\n+ * debian, node:*, python:*, and nearly every standard OCI image.\n+ *\n+ * @example\n+ * ```ts\n+ * import { Machine } from 'smolvm-embedded';\n+ * import { smolvm } from './connectors/smolvm';\n+ *\n+ * const machine = await Machine.create({ name: 'my-flue-vm' });\n+ * const agent = await init({\n+ *   sandbox: smolvm(machine),\n+ *   model: 'anthropic/claude-sonnet-4-6',\n+ * });\n+ * ```\n+ */\n+import { createSandboxSessionEnv } from '@flue/sdk/sandbox';\n+import type { SandboxApi, SandboxFactory, SessionEnv, FileStat } from '@flue/sdk/sandbox';\n+import type { Machine } from 'smolvm-embedded';",
+  "path": "connectors/sandbox--smolvm.md",
+  "commit_id": "8c1dd8f550cf69f9ce19d7dc6918ea993e659800",
+  "original_commit_id": "8c1dd8f550cf69f9ce19d7dc6918ea993e659800",
+  "user": {
+   "login": "FredKSchott",
+   "id": 622227,
+   "node_id": "MDQ6VXNlcjYyMjIyNw==",
+   "avatar_url": "https://avatars.githubusercontent.com/u/622227?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/FredKSchott",
+   "html_url": "https://github.com/FredKSchott",
+   "followers_url": "https://api.github.com/users/FredKSchott/followers",
+   "following_url": "https://api.github.com/users/FredKSchott/following{/other_user}",
+   "gists_url": "https://api.github.com/users/FredKSchott/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/FredKSchott/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/FredKSchott/subscriptions",
+   "organizations_url": "https://api.github.com/users/FredKSchott/orgs",
+   "repos_url": "https://api.github.com/users/FredKSchott/repos",
+   "events_url": "https://api.github.com/users/FredKSchott/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/FredKSchott/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "ha, looks like my agent halucinated it. I thought it had tested the connector, very strange.\r\n\r\njust commented in their issue, we'll see what their timing is\r\n\r\ngood catch!",
+  "created_at": "2026-05-10T19:27:52Z",
+  "updated_at": "2026-05-10T19:28:03Z",
+  "html_url": "https://github.com/withastro/flue/pull/101#discussion_r3215386695",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/101",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3215386695"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/101#discussion_r3215386695"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/101"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3215386695/reactions",
+   "total_count": 2,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 1,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 1,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": 79,
+  "original_line": 79,
+  "side": "RIGHT",
+  "in_reply_to_id": 3214080491,
+  "author_association": "MEMBER",
+  "original_position": 79,
+  "position": 79,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3215722134",
+  "pull_request_review_id": 4260083197,
+  "id": 3215722134,
+  "node_id": "PRRC_kwDORLED886_rAaW",
+  "diff_hunk": "@@ -0,0 +1,287 @@\n+---\n+{\n+  \"category\": \"sandbox\",\n+  \"website\": \"https://smolmachines.com\",\n+  \"aliases\": [\"smolvm-embedded\"]\n+}\n+---\n+\n+# Add a Flue Connector: smolvm\n+\n+You are an AI coding agent installing the [smolvm](https://smolmachines.com) sandbox\n+connector for a Flue project. Follow these instructions exactly. Confirm with the\n+user only when something is genuinely ambiguous (e.g. an unusual project layout).\n+\n+## What this connector does\n+\n+Wraps an already-initialized smolvm `Machine` (from the `smolvm-embedded` SDK)\n+into Flue's `SandboxFactory` interface. The user owns the machine lifecycle;\n+this connector just adapts the running machine so Flue agents can run shell\n+commands and read/write files inside it.\n+\n+smolvm runs **locally** via libkrun (Hypervisor.framework on macOS, KVM on\n+Linux). There is no remote provider to authenticate with. Because a real\n+hypervisor is required, this connector only works on macOS or Linux hosts and\n+is not suitable for edge runtimes (Cloudflare Workers, Vercel Edge, etc.) or\n+most managed PaaS platforms.\n+\n+The `smolvm-embedded` SDK is currently alpha. One known caveat worth telling\n+the user about: machines created via the embedded SDK are not visible to the\n+`smolvm` CLI (`smolvm machine ls` won't list them). See the\n+[upstream README](https://github.com/smol-machines/smolvm/tree/main/sdks)\n+for current status.\n+\n+## Where to write the file\n+\n+Pick the location based on the user's project layout:\n+\n+- **`.flue/` layout** (project has files at the root and uses `.flue/agents/`\n+  etc.): write to `./.flue/connectors/smolvm.ts`.\n+- **Root layout** (the project root itself contains `agents/` and friends):\n+  write to `./connectors/smolvm.ts`.\n+\n+If neither feels right (uncommon layout, multiple workspaces, etc.), ask the\n+user before writing.\n+\n+Create any missing parent directories.\n+\n+## File contents\n+\n+Write this file verbatim. Do not \"improve\" it \u2014 it conforms to the published\n+`SandboxApi` contract, and the shell quoting in particular is load-bearing.\n+\n+```ts\n+/**\n+ * smolvm connector for Flue.\n+ *\n+ * Wraps an already-initialized smolvm Machine (from smolvm-embedded) into\n+ * Flue's SandboxFactory interface. The user owns the machine lifecycle.\n+ *\n+ * Every shell command is wrapped as `[\"sh\", \"-lc\", cmd]` because the\n+ * smolvm embedded SDK's `exec` takes an argv array, not a shell string.\n+ * The guest image must have `sh` on PATH \u2014 true of alpine, ubuntu,\n+ * debian, node:*, python:*, and nearly every standard OCI image.\n+ *\n+ * @example\n+ * ```ts\n+ * import { Machine } from 'smolvm-embedded';\n+ * import { smolvm } from './connectors/smolvm';\n+ *\n+ * const machine = await Machine.create({ name: 'my-flue-vm' });\n+ * const agent = await init({\n+ *   sandbox: smolvm(machine),\n+ *   model: 'anthropic/claude-sonnet-4-6',\n+ * });\n+ * ```\n+ */\n+import { createSandboxSessionEnv } from '@flue/sdk/sandbox';\n+import type { SandboxApi, SandboxFactory, SessionEnv, FileStat } from '@flue/sdk/sandbox';\n+import type { Machine } from 'smolvm-embedded';",
+  "path": "connectors/sandbox--smolvm.md",
+  "commit_id": "8c1dd8f550cf69f9ce19d7dc6918ea993e659800",
+  "original_commit_id": "8c1dd8f550cf69f9ce19d7dc6918ea993e659800",
+  "user": {
+   "login": "tunnckoCore",
+   "id": 5038030,
+   "node_id": "MDQ6VXNlcjUwMzgwMzA=",
+   "avatar_url": "https://avatars.githubusercontent.com/u/5038030?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/tunnckoCore",
+   "html_url": "https://github.com/tunnckoCore",
+   "followers_url": "https://api.github.com/users/tunnckoCore/followers",
+   "following_url": "https://api.github.com/users/tunnckoCore/following{/other_user}",
+   "gists_url": "https://api.github.com/users/tunnckoCore/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/tunnckoCore/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/tunnckoCore/subscriptions",
+   "organizations_url": "https://api.github.com/users/tunnckoCore/orgs",
+   "repos_url": "https://api.github.com/users/tunnckoCore/repos",
+   "events_url": "https://api.github.com/users/tunnckoCore/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/tunnckoCore/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "Agents love to confidently lie.. :laughing: :man_shrugging: ",
+  "created_at": "2026-05-10T23:50:22Z",
+  "updated_at": "2026-05-10T23:52:01Z",
+  "html_url": "https://github.com/withastro/flue/pull/101#discussion_r3215722134",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/101",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/3215722134"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/101#discussion_r3215722134"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/101"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/3215722134/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": 79,
+  "original_line": 79,
+  "side": "RIGHT",
+  "in_reply_to_id": 3214080491,
+  "author_association": "CONTRIBUTOR",
+  "original_position": 79,
+  "position": 79,
+  "subject_type": "line"
+ },
+ {
+  "url": "https://api.github.com/repos/withastro/flue/pulls/comments/4008691996",
+  "pull_request_review_id": 5201850689,
+  "id": 4008691996,
+  "node_id": "PRRC_kwDORLED887u78kc",
+  "diff_hunk": "",
+  "path": "packages/runtime/src/conversation-writer.ts",
+  "commit_id": "1a665796700c8277c5577bdd273b77bea09ff2f8",
+  "original_commit_id": "1a665796700c8277c5577bdd273b77bea09ff2f8",
+  "user": {
+   "login": "matthewp",
+   "id": 361671,
+   "node_id": "MDQ6VXNlcjM2MTY3MQ==",
+   "avatar_url": "https://avatars.githubusercontent.com/u/361671?v=4",
+   "gravatar_id": "",
+   "url": "https://api.github.com/users/matthewp",
+   "html_url": "https://github.com/matthewp",
+   "followers_url": "https://api.github.com/users/matthewp/followers",
+   "following_url": "https://api.github.com/users/matthewp/following{/other_user}",
+   "gists_url": "https://api.github.com/users/matthewp/gists{/gist_id}",
+   "starred_url": "https://api.github.com/users/matthewp/starred{/owner}{/repo}",
+   "subscriptions_url": "https://api.github.com/users/matthewp/subscriptions",
+   "organizations_url": "https://api.github.com/users/matthewp/orgs",
+   "repos_url": "https://api.github.com/users/matthewp/repos",
+   "events_url": "https://api.github.com/users/matthewp/events{/privacy}",
+   "received_events_url": "https://api.github.com/users/matthewp/received_events",
+   "type": "User",
+   "user_view_type": "public",
+   "site_admin": false
+  },
+  "body": "95-96 needs rewording, it's no longer true that there are no path appends, because the flush adds them",
+  "created_at": "2026-09-14T19:18:29Z",
+  "updated_at": "2026-09-14T19:18:29Z",
+  "html_url": "https://github.com/withastro/flue/pull/694#discussion_r4008691996",
+  "pull_request_url": "https://api.github.com/repos/withastro/flue/pulls/694",
+  "_links": {
+   "self": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/comments/4008691996"
+   },
+   "html": {
+    "href": "https://github.com/withastro/flue/pull/694#discussion_r4008691996"
+   },
+   "pull_request": {
+    "href": "https://api.github.com/repos/withastro/flue/pulls/694"
+   }
+  },
+  "reactions": {
+   "url": "https://api.github.com/repos/withastro/flue/pulls/comments/4008691996/reactions",
+   "total_count": 0,
+   "+1": 0,
+   "-1": 0,
+   "laugh": 0,
+   "hooray": 0,
+   "confused": 0,
+   "heart": 0,
+   "rocket": 0,
+   "eyes": 0
+  },
+  "start_line": null,
+  "original_start_line": null,
+  "start_side": null,
+  "line": 95,
+  "original_line": 95,
+  "side": "RIGHT",
+  "author_association": "CONTRIBUTOR",
+  "original_position": 1,
+  "position": 1,
+  "subject_type": "line"
+ }
+]

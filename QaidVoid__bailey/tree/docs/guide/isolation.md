@@ -1,0 +1,90 @@
+# Namespace isolation
+
+```sh
+bailey run ./program              # isolated
+bailey run --no-isolate ./program # Landlock and seccomp only
+```
+
+Landlock denies access to ungranted paths. Isolation goes further: it rebuilds the
+world so those paths are not there. It is the default, because four things stop
+being enforceable without it: a nested `deny`, a `read_only` island, the private
+`/tmp`, and the private home at your real home's path.
+
+## What changes
+
+**Filesystem.** The program gets a fresh root, built on tmpfs, containing only the
+paths the policy grants plus the essential system paths. Everything else is absent
+from its mount table. `ls /home` does not return a permission error; it returns
+nothing, because `/home` does not exist in that world.
+
+**Processes.** A new PID namespace, with a fresh `/proc`. The program is PID 1 in
+its own namespace and cannot see or signal anything outside its own tree.
+
+**Denials.** A path denied by the policy is covered with an empty read-only
+filesystem, so a `deny` on a subdirectory of a granted directory is actually
+enforced. This is the only place it can be: Landlock rules add access and never
+subtract it.
+
+**Privilege.** All of it happens inside a user namespace, so none of it needs
+root. What permits the mount operations is `CAP_SYS_ADMIN` in that namespace,
+which its creator holds whatever uid the map names, so the map is an identity
+one: you are yourself inside the sandbox. Mapping to 0 instead would buy
+nothing and cost two things, a program that refuses to run as root, Electron
+and Chromium among them, and D-Bus `EXTERNAL` authentication, which fails when
+the uid the client offers is not the one the daemon reads from `SO_PEERCRED`.
+
+## How it is built
+
+Inside the pre-exec child:
+
+1. `unshare(CLONE_NEWUSER)`, then write `uid_map` and `gid_map` with `setgroups`
+   denied.
+2. `unshare(CLONE_NEWNS | CLONE_NEWPID)`.
+3. Fork. A PID namespace only takes effect for a child of the process that
+   unshared it, so the target becomes PID 1 in the new namespace. The intermediate
+   process waits for it and exits with its status.
+4. Make the mount tree private, mount a tmpfs as the new root, and bind-mount each
+   granted path into it.
+5. Mount a fresh `/proc`.
+6. `pivot_root` into the new root and detach the old one.
+
+Landlock is applied after this, against the reconstructed root. Because Landlock
+governs inodes and the granted directories are bind mounts of the same inodes,
+enforcement holds on both sides of the pivot.
+
+## The bind set
+
+The paths bound into the new root come from the policy: every filesystem grant and
+every device grant. Nested paths under an already-bound directory are skipped,
+since they arrive with the parent. `/proc` is excluded, because a fresh one is
+mounted inside the new PID namespace.
+
+A grant naming a path that does not exist on the host is skipped. A denied path
+is never bound, and where it arrives inside a bound parent it is covered over
+afterwards.
+
+## Graceful degradation
+
+Isolation needs unprivileged user namespaces, which some distributions and
+security policies disable. Bailey probes for real rather than trusting a sysctl:
+it forks a throwaway child that attempts the actual setup, including the uid map
+and a tmpfs mount, since a host can report user namespaces as permitted while a
+policy such as AppArmor still blocks the unshare.
+
+If the probe fails, the run continues with Landlock and seccomp only, and says so:
+
+```
+bailey: warning: unprivileged user namespaces unavailable; running without namespace isolation
+```
+
+## What else the new root contains
+
+Beyond the granted paths, isolation provides the writable areas a normal program
+expects, described in [environment and storage](/guide/environment):
+
+- A private `/tmp` and `/dev/shm`, on tmpfs, discarded when the run ends.
+- The target's private home, mounted where your real home would be.
+- The directory you invoked the program from, so relative paths resolve.
+
+The network namespace is part of the same layer; see
+[network confinement](/guide/network).

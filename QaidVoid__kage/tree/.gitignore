@@ -1,0 +1,12 @@
+/target
+/.direnv
+/.kage
+*.swp
+*.swo
+*.log
+.DS_Store
+.vscode
+.idea
+node_modules
+/docs/.vitepress/cache
+/docs/.vitepress/dist

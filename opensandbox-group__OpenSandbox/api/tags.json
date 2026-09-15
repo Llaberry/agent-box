@@ -1,0 +1,1802 @@
+[
+ {
+  "name": "server/v0.2.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.2.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.2.3",
+  "commit": {
+   "sha": "c39b814f36ded4c61d5ac6f9332ee4dfbab86c00",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/c39b814f36ded4c61d5ac6f9332ee4dfbab86c00"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjIuMw"
+ },
+ {
+  "name": "server/v0.2.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.2.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.2.2",
+  "commit": {
+   "sha": "207d94c7dc7735c143856fe5c6538b743e478786",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/207d94c7dc7735c143856fe5c6538b743e478786"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjIuMg"
+ },
+ {
+  "name": "server/v0.2.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.2.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.2.1",
+  "commit": {
+   "sha": "032790072b3efb69a75a2917e26259df49cf7138",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/032790072b3efb69a75a2917e26259df49cf7138"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjIuMQ"
+ },
+ {
+  "name": "server/v0.2.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.2.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.2.0",
+  "commit": {
+   "sha": "4bcef31c6c29964121faf3491aba35c5799daa91",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4bcef31c6c29964121faf3491aba35c5799daa91"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjIuMA"
+ },
+ {
+  "name": "server/v0.1.14",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.14",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.14",
+  "commit": {
+   "sha": "ef13d88f8479089ab6773556d7782b5d92fea53f",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ef13d88f8479089ab6773556d7782b5d92fea53f"
+  },
+  "node_id": "REF_kwDOQqSjUrhyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuMTQ"
+ },
+ {
+  "name": "server/v0.1.13",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.13",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.13",
+  "commit": {
+   "sha": "4b115920d433d2afc1cb3c4f218ce0e36822d0c9",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4b115920d433d2afc1cb3c4f218ce0e36822d0c9"
+  },
+  "node_id": "REF_kwDOQqSjUrhyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuMTM"
+ },
+ {
+  "name": "server/v0.1.12",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.12",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.12",
+  "commit": {
+   "sha": "2a52b8f33393297deb517126f1fb04595f7f0458",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/2a52b8f33393297deb517126f1fb04595f7f0458"
+  },
+  "node_id": "REF_kwDOQqSjUrhyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuMTI"
+ },
+ {
+  "name": "server/v0.1.11",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.11",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.11",
+  "commit": {
+   "sha": "c0d4b833514564e807dee0e0d128ee6959242549",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/c0d4b833514564e807dee0e0d128ee6959242549"
+  },
+  "node_id": "REF_kwDOQqSjUrhyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuMTE"
+ },
+ {
+  "name": "server/v0.1.10",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.10",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.10",
+  "commit": {
+   "sha": "0510e3223c7899fc3c1d4248a910c49a2fb9b118",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/0510e3223c7899fc3c1d4248a910c49a2fb9b118"
+  },
+  "node_id": "REF_kwDOQqSjUrhyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuMTA"
+ },
+ {
+  "name": "server/v0.1.9",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.9",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.9",
+  "commit": {
+   "sha": "c7d52561f6d7f01c5a51f0462a17bb8da9c499b5",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/c7d52561f6d7f01c5a51f0462a17bb8da9c499b5"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuOQ"
+ },
+ {
+  "name": "server/v0.1.8",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.8",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.8",
+  "commit": {
+   "sha": "fe55fe935723dc7d2d3b3949b597caf3a6ac3435",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/fe55fe935723dc7d2d3b3949b597caf3a6ac3435"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuOA"
+ },
+ {
+  "name": "server/v0.1.7",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.7",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.7",
+  "commit": {
+   "sha": "4049cc9c16102f32a055216a2a09bc6c90f30f94",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4049cc9c16102f32a055216a2a09bc6c90f30f94"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuNw"
+ },
+ {
+  "name": "server/v0.1.6",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.6",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.6",
+  "commit": {
+   "sha": "935681658be4874336816d00bd98550b54aa0837",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/935681658be4874336816d00bd98550b54aa0837"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuNg"
+ },
+ {
+  "name": "server/v0.1.5",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.5",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.5",
+  "commit": {
+   "sha": "77ac1de3f0752e0a10be6d0cfa4633f46f86211e",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/77ac1de3f0752e0a10be6d0cfa4633f46f86211e"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuNQ"
+ },
+ {
+  "name": "server/v0.1.4",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.4",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.4",
+  "commit": {
+   "sha": "a64dc4276d78c85e2131865b22afa0ff64c82b1d",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/a64dc4276d78c85e2131865b22afa0ff64c82b1d"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuNA"
+ },
+ {
+  "name": "server/v0.1.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.3",
+  "commit": {
+   "sha": "40cd4a76ab90e7b36a982a1d1057616e41a19cae",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/40cd4a76ab90e7b36a982a1d1057616e41a19cae"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuMw"
+ },
+ {
+  "name": "server/v0.1.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.2",
+  "commit": {
+   "sha": "ecb1b5b012cb14a7289c5c565cc379b17a828699",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ecb1b5b012cb14a7289c5c565cc379b17a828699"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuMg"
+ },
+ {
+  "name": "server/v0.1.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.1",
+  "commit": {
+   "sha": "09380c6b0bf5f344ded3000e9718b0951ae4d8f6",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/09380c6b0bf5f344ded3000e9718b0951ae4d8f6"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuMQ"
+ },
+ {
+  "name": "server/v0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/server/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/server/v0.1.0",
+  "commit": {
+   "sha": "13b3c18689f34c019f2152a3e3b6c537db55365d",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/13b3c18689f34c019f2152a3e3b6c537db55365d"
+  },
+  "node_id": "REF_kwDOQqSjUrdyZWZzL3RhZ3Mvc2VydmVyL3YwLjEuMA"
+ },
+ {
+  "name": "sdks/sandbox/go/v1.0.5",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/sdks/sandbox/go/v1.0.5",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/sdks/sandbox/go/v1.0.5",
+  "commit": {
+   "sha": "e9d0a63919739b1bed05914373acbacb11e37d43",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/e9d0a63919739b1bed05914373acbacb11e37d43"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9zZGtzL3NhbmRib3gvZ28vdjEuMC41"
+ },
+ {
+  "name": "sdks/sandbox/go/v1.0.4",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/sdks/sandbox/go/v1.0.4",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/sdks/sandbox/go/v1.0.4",
+  "commit": {
+   "sha": "6c98cc631fad021b7fd098933d4629317bc4c18d",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/6c98cc631fad021b7fd098933d4629317bc4c18d"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9zZGtzL3NhbmRib3gvZ28vdjEuMC40"
+ },
+ {
+  "name": "sdks/sandbox/go/v1.0.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/sdks/sandbox/go/v1.0.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/sdks/sandbox/go/v1.0.3",
+  "commit": {
+   "sha": "aaf3cb68938e8c5a294a629102050eefa28cd33c",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/aaf3cb68938e8c5a294a629102050eefa28cd33c"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9zZGtzL3NhbmRib3gvZ28vdjEuMC4z"
+ },
+ {
+  "name": "sdks/sandbox/go/v1.0.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/sdks/sandbox/go/v1.0.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/sdks/sandbox/go/v1.0.2",
+  "commit": {
+   "sha": "bb47d01af42fd9e192e8f01168a497613f78c76b",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/bb47d01af42fd9e192e8f01168a497613f78c76b"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9zZGtzL3NhbmRib3gvZ28vdjEuMC4y"
+ },
+ {
+  "name": "sdks/sandbox/go/v1.0.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/sdks/sandbox/go/v1.0.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/sdks/sandbox/go/v1.0.1",
+  "commit": {
+   "sha": "6b465d463dfd4770dc64c2dc8dc89ef4672dd5db",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/6b465d463dfd4770dc64c2dc8dc89ef4672dd5db"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9zZGtzL3NhbmRib3gvZ28vdjEuMC4x"
+ },
+ {
+  "name": "sdks/sandbox/go/v1.0.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/sdks/sandbox/go/v1.0.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/sdks/sandbox/go/v1.0.0",
+  "commit": {
+   "sha": "faa05d9544f7fff80eb61f65c96fd45543a22e4e",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/faa05d9544f7fff80eb61f65c96fd45543a22e4e"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9zZGtzL3NhbmRib3gvZ28vdjEuMC4w"
+ },
+ {
+  "name": "python/sandbox/v0.1.17.dev0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.17.dev0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.17.dev0",
+  "commit": {
+   "sha": "4178647f0488d9c6893e719e0c962d8d40e27800",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4178647f0488d9c6893e719e0c962d8d40e27800"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJXJlZnMvdGFncy9weXRob24vc2FuZGJveC92MC4xLjE3LmRldjA"
+ },
+ {
+  "name": "python/sandbox/v0.1.16",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.16",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.16",
+  "commit": {
+   "sha": "169adf766124db57b474e7788acbab12e1b8e092",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/169adf766124db57b474e7788acbab12e1b8e092"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9weXRob24vc2FuZGJveC92MC4xLjE2"
+ },
+ {
+  "name": "python/sandbox/v0.1.15",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.15",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.15",
+  "commit": {
+   "sha": "e9d0a63919739b1bed05914373acbacb11e37d43",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/e9d0a63919739b1bed05914373acbacb11e37d43"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9weXRob24vc2FuZGJveC92MC4xLjE1"
+ },
+ {
+  "name": "python/sandbox/v0.1.14",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.14",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.14",
+  "commit": {
+   "sha": "98652992d4a557f34ca45f4404e25a77bb360e70",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/98652992d4a557f34ca45f4404e25a77bb360e70"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9weXRob24vc2FuZGJveC92MC4xLjE0"
+ },
+ {
+  "name": "python/sandbox/v0.1.13",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.13",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.13",
+  "commit": {
+   "sha": "41b5921392c852a5a042b5c8258c2d299d69e81a",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/41b5921392c852a5a042b5c8258c2d299d69e81a"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9weXRob24vc2FuZGJveC92MC4xLjEz"
+ },
+ {
+  "name": "python/sandbox/v0.1.12",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.12",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.12",
+  "commit": {
+   "sha": "7e7dee4baaaf57b38f4d814db57c0ea6c955e656",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/7e7dee4baaaf57b38f4d814db57c0ea6c955e656"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9weXRob24vc2FuZGJveC92MC4xLjEy"
+ },
+ {
+  "name": "python/sandbox/v0.1.11",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.11",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.11",
+  "commit": {
+   "sha": "aaf3cb68938e8c5a294a629102050eefa28cd33c",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/aaf3cb68938e8c5a294a629102050eefa28cd33c"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9weXRob24vc2FuZGJveC92MC4xLjEx"
+ },
+ {
+  "name": "python/sandbox/v0.1.10",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.10",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.10",
+  "commit": {
+   "sha": "3020f5012c35d36dbd296d15f6ba2bae2ad670bc",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/3020f5012c35d36dbd296d15f6ba2bae2ad670bc"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9weXRob24vc2FuZGJveC92MC4xLjEw"
+ },
+ {
+  "name": "python/sandbox/v0.1.9",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.9",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.9",
+  "commit": {
+   "sha": "ba98ca4960656f0956d12c041a477485178ade21",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ba98ca4960656f0956d12c041a477485178ade21"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvcHl0aG9uL3NhbmRib3gvdjAuMS45"
+ },
+ {
+  "name": "python/sandbox/v0.1.8",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.8",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.8",
+  "commit": {
+   "sha": "742fae9afa7ae4710d7604867d7067d43d13fa16",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/742fae9afa7ae4710d7604867d7067d43d13fa16"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvcHl0aG9uL3NhbmRib3gvdjAuMS44"
+ },
+ {
+  "name": "python/sandbox/v0.1.7",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.7",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.7",
+  "commit": {
+   "sha": "2fcf697ac9e8827fef4c8d70fd3d24188fc0f8bd",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/2fcf697ac9e8827fef4c8d70fd3d24188fc0f8bd"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvcHl0aG9uL3NhbmRib3gvdjAuMS43"
+ },
+ {
+  "name": "python/sandbox/v0.1.6",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.6",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.6",
+  "commit": {
+   "sha": "4609a56ef2a48d028caaccd8bff4aa9bff3549a4",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4609a56ef2a48d028caaccd8bff4aa9bff3549a4"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvcHl0aG9uL3NhbmRib3gvdjAuMS42"
+ },
+ {
+  "name": "python/sandbox/v0.1.5",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.5",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.5",
+  "commit": {
+   "sha": "187a0c628964a6a2961c9a3c6de9c297ad08db8d",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/187a0c628964a6a2961c9a3c6de9c297ad08db8d"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvcHl0aG9uL3NhbmRib3gvdjAuMS41"
+ },
+ {
+  "name": "python/sandbox/v0.1.5.dev0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.5.dev0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.5.dev0",
+  "commit": {
+   "sha": "a55b9dedb6e1a083eaf57c294be00a98f0a2816c",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/a55b9dedb6e1a083eaf57c294be00a98f0a2816c"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJHJlZnMvdGFncy9weXRob24vc2FuZGJveC92MC4xLjUuZGV2MA"
+ },
+ {
+  "name": "python/sandbox/v0.1.4",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.4",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.4",
+  "commit": {
+   "sha": "0f3e1464d9be8a45a1ce682dd24e2c9c96f06218",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/0f3e1464d9be8a45a1ce682dd24e2c9c96f06218"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvcHl0aG9uL3NhbmRib3gvdjAuMS40"
+ },
+ {
+  "name": "python/sandbox/v0.1.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.3",
+  "commit": {
+   "sha": "7ac3ad2f359043c356eaff533645cffc49b89abf",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/7ac3ad2f359043c356eaff533645cffc49b89abf"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvcHl0aG9uL3NhbmRib3gvdjAuMS4z"
+ },
+ {
+  "name": "python/sandbox/v0.1.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.2",
+  "commit": {
+   "sha": "4ee3295e2785a2cd4bc1aeda292dfa4010ea4f54",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4ee3295e2785a2cd4bc1aeda292dfa4010ea4f54"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvcHl0aG9uL3NhbmRib3gvdjAuMS4y"
+ },
+ {
+  "name": "python/sandbox/v0.1.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.1",
+  "commit": {
+   "sha": "f27aca1ab6e381ab97174ebcf5efc962dfbf55d9",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/f27aca1ab6e381ab97174ebcf5efc962dfbf55d9"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvcHl0aG9uL3NhbmRib3gvdjAuMS4x"
+ },
+ {
+  "name": "python/sandbox/v0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/sandbox/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/sandbox/v0.1.0",
+  "commit": {
+   "sha": "551a697db1644dbba6203ea406dae436463b4bdc",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/551a697db1644dbba6203ea406dae436463b4bdc"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvcHl0aG9uL3NhbmRib3gvdjAuMS4w"
+ },
+ {
+  "name": "python/mcp/sandbox/v0.1.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/mcp/sandbox/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/mcp/sandbox/v0.1.1",
+  "commit": {
+   "sha": "3fac0368f33213764d83a2149b5080188d23bca9",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/3fac0368f33213764d83a2149b5080188d23bca9"
+  },
+  "node_id": "REF_kwDOQqSjUtoAI3JlZnMvdGFncy9weXRob24vbWNwL3NhbmRib3gvdjAuMS4x"
+ },
+ {
+  "name": "python/code-interpreter/v0.1.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/code-interpreter/v0.1.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/code-interpreter/v0.1.2",
+  "commit": {
+   "sha": "4609a56ef2a48d028caaccd8bff4aa9bff3549a4",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4609a56ef2a48d028caaccd8bff4aa9bff3549a4"
+  },
+  "node_id": "REF_kwDOQqSjUtoAKHJlZnMvdGFncy9weXRob24vY29kZS1pbnRlcnByZXRlci92MC4xLjI"
+ },
+ {
+  "name": "python/code-interpreter/v0.1.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/code-interpreter/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/code-interpreter/v0.1.1",
+  "commit": {
+   "sha": "174de3011e10297620c8f6bc6c90edd2af9d344a",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/174de3011e10297620c8f6bc6c90edd2af9d344a"
+  },
+  "node_id": "REF_kwDOQqSjUtoAKHJlZnMvdGFncy9weXRob24vY29kZS1pbnRlcnByZXRlci92MC4xLjE"
+ },
+ {
+  "name": "python/code-interpreter/v0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/python/code-interpreter/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/python/code-interpreter/v0.1.0",
+  "commit": {
+   "sha": "40240df51b70e76ed34e371053bb8e93b484d184",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/40240df51b70e76ed34e371053bb8e93b484d184"
+  },
+  "node_id": "REF_kwDOQqSjUtoAKHJlZnMvdGFncy9weXRob24vY29kZS1pbnRlcnByZXRlci92MC4xLjA"
+ },
+ {
+  "name": "k8s/task-executor/v0.2.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/k8s/task-executor/v0.2.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/k8s/task-executor/v0.2.0",
+  "commit": {
+   "sha": "7e0a53b492e4b803c91c6b33d4f20a6ebdffeaf8",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/7e0a53b492e4b803c91c6b33d4f20a6ebdffeaf8"
+  },
+  "node_id": "REF_kwDOQqSjUtoAInJlZnMvdGFncy9rOHMvdGFzay1leGVjdXRvci92MC4yLjA"
+ },
+ {
+  "name": "k8s/task-executor/v0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/k8s/task-executor/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/k8s/task-executor/v0.1.0",
+  "commit": {
+   "sha": "99aed712bab53f4d3ddd3b37da1405ebfe01b2b1",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/99aed712bab53f4d3ddd3b37da1405ebfe01b2b1"
+  },
+  "node_id": "REF_kwDOQqSjUtoAInJlZnMvdGFncy9rOHMvdGFzay1leGVjdXRvci92MC4xLjA"
+ },
+ {
+  "name": "k8s/image-committer/v0.1.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/k8s/image-committer/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/k8s/image-committer/v0.1.1",
+  "commit": {
+   "sha": "82d642c835c2835140473f50d436fac17fb3c057",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/82d642c835c2835140473f50d436fac17fb3c057"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJHJlZnMvdGFncy9rOHMvaW1hZ2UtY29tbWl0dGVyL3YwLjEuMQ"
+ },
+ {
+  "name": "k8s/image-committer/v0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/k8s/image-committer/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/k8s/image-committer/v0.1.0",
+  "commit": {
+   "sha": "40e1a1516d1d05911c28efea66819ca6059ab0eb",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/40e1a1516d1d05911c28efea66819ca6059ab0eb"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJHJlZnMvdGFncy9rOHMvaW1hZ2UtY29tbWl0dGVyL3YwLjEuMA"
+ },
+ {
+  "name": "k8s/controller/v0.2.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/k8s/controller/v0.2.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/k8s/controller/v0.2.0",
+  "commit": {
+   "sha": "c16dfe25ca9071b02597d13f9ed2cf2f8f52158f",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/c16dfe25ca9071b02597d13f9ed2cf2f8f52158f"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvazhzL2NvbnRyb2xsZXIvdjAuMi4w"
+ },
+ {
+  "name": "k8s/controller/v0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/k8s/controller/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/k8s/controller/v0.1.0",
+  "commit": {
+   "sha": "596481c28355228529b2644d260b67fb3193286e",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/596481c28355228529b2644d260b67fb3193286e"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvazhzL2NvbnRyb2xsZXIvdjAuMS4w"
+ },
+ {
+  "name": "js/sandbox/v0.1.11",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.11",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.11",
+  "commit": {
+   "sha": "e9d0a63919739b1bed05914373acbacb11e37d43",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/e9d0a63919739b1bed05914373acbacb11e37d43"
+  },
+  "node_id": "REF_kwDOQqSjUrxyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjEx"
+ },
+ {
+  "name": "js/sandbox/v0.1.10",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.10",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.10",
+  "commit": {
+   "sha": "6c98cc631fad021b7fd098933d4629317bc4c18d",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/6c98cc631fad021b7fd098933d4629317bc4c18d"
+  },
+  "node_id": "REF_kwDOQqSjUrxyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjEw"
+ },
+ {
+  "name": "js/sandbox/v0.1.9",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.9",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.9",
+  "commit": {
+   "sha": "aaf3cb68938e8c5a294a629102050eefa28cd33c",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/aaf3cb68938e8c5a294a629102050eefa28cd33c"
+  },
+  "node_id": "REF_kwDOQqSjUrtyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjk"
+ },
+ {
+  "name": "js/sandbox/v0.1.8",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.8",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.8",
+  "commit": {
+   "sha": "bb47d01af42fd9e192e8f01168a497613f78c76b",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/bb47d01af42fd9e192e8f01168a497613f78c76b"
+  },
+  "node_id": "REF_kwDOQqSjUrtyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjg"
+ },
+ {
+  "name": "js/sandbox/v0.1.7",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.7",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.7",
+  "commit": {
+   "sha": "0e13e9920d4282d91b478e9fb3c415b0e909842e",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/0e13e9920d4282d91b478e9fb3c415b0e909842e"
+  },
+  "node_id": "REF_kwDOQqSjUrtyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjc"
+ },
+ {
+  "name": "js/sandbox/v0.1.6",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.6",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.6",
+  "commit": {
+   "sha": "09f36317d97d495d8800bc0484e799b021bb99e6",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/09f36317d97d495d8800bc0484e799b021bb99e6"
+  },
+  "node_id": "REF_kwDOQqSjUrtyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjY"
+ },
+ {
+  "name": "js/sandbox/v0.1.5",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.5",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.5",
+  "commit": {
+   "sha": "490e1d17b7a2d623c39c030ce6f98a07db95f1f0",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/490e1d17b7a2d623c39c030ce6f98a07db95f1f0"
+  },
+  "node_id": "REF_kwDOQqSjUrtyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjU"
+ },
+ {
+  "name": "js/sandbox/v0.1.4",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.4",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.4",
+  "commit": {
+   "sha": "187a0c628964a6a2961c9a3c6de9c297ad08db8d",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/187a0c628964a6a2961c9a3c6de9c297ad08db8d"
+  },
+  "node_id": "REF_kwDOQqSjUrtyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjQ"
+ },
+ {
+  "name": "js/sandbox/v0.1.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.3",
+  "commit": {
+   "sha": "0f3e1464d9be8a45a1ce682dd24e2c9c96f06218",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/0f3e1464d9be8a45a1ce682dd24e2c9c96f06218"
+  },
+  "node_id": "REF_kwDOQqSjUrtyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjM"
+ },
+ {
+  "name": "js/sandbox/v0.1.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.2",
+  "commit": {
+   "sha": "74055bc020007cf8653fb153e05df5862b52898f",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/74055bc020007cf8653fb153e05df5862b52898f"
+  },
+  "node_id": "REF_kwDOQqSjUrtyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjI"
+ },
+ {
+  "name": "js/sandbox/v0.1.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.1",
+  "commit": {
+   "sha": "68191c26c8448e92216c591cd18aa97a0c5a92f8",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/68191c26c8448e92216c591cd18aa97a0c5a92f8"
+  },
+  "node_id": "REF_kwDOQqSjUrtyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjE"
+ },
+ {
+  "name": "js/sandbox/v0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/sandbox/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/sandbox/v0.1.0",
+  "commit": {
+   "sha": "4ee3295e2785a2cd4bc1aeda292dfa4010ea4f54",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4ee3295e2785a2cd4bc1aeda292dfa4010ea4f54"
+  },
+  "node_id": "REF_kwDOQqSjUrtyZWZzL3RhZ3MvanMvc2FuZGJveC92MC4xLjA"
+ },
+ {
+  "name": "js/code-interpreter/v0.1.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/code-interpreter/v0.1.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/code-interpreter/v0.1.3",
+  "commit": {
+   "sha": "b22466fc9e259b17723bbb5a5a554ce7592ce364",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/b22466fc9e259b17723bbb5a5a554ce7592ce364"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJHJlZnMvdGFncy9qcy9jb2RlLWludGVycHJldGVyL3YwLjEuMw"
+ },
+ {
+  "name": "js/code-interpreter/v0.1.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/code-interpreter/v0.1.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/code-interpreter/v0.1.2",
+  "commit": {
+   "sha": "74055bc020007cf8653fb153e05df5862b52898f",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/74055bc020007cf8653fb153e05df5862b52898f"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJHJlZnMvdGFncy9qcy9jb2RlLWludGVycHJldGVyL3YwLjEuMg"
+ },
+ {
+  "name": "js/code-interpreter/v0.1.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/code-interpreter/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/code-interpreter/v0.1.1",
+  "commit": {
+   "sha": "68191c26c8448e92216c591cd18aa97a0c5a92f8",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/68191c26c8448e92216c591cd18aa97a0c5a92f8"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJHJlZnMvdGFncy9qcy9jb2RlLWludGVycHJldGVyL3YwLjEuMQ"
+ },
+ {
+  "name": "js/code-interpreter/v0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/js/code-interpreter/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/js/code-interpreter/v0.1.0",
+  "commit": {
+   "sha": "2aebd9277808df63b1fe0ae37c723f2430d25e88",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/2aebd9277808df63b1fe0ae37c723f2430d25e88"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJHJlZnMvdGFncy9qcy9jb2RlLWludGVycHJldGVyL3YwLjEuMA"
+ },
+ {
+  "name": "java/sandbox/v1.0.19",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.19",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.19",
+  "commit": {
+   "sha": "22a1ece6fb10889a05db2446731ccd734069eb1e",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/22a1ece6fb10889a05db2446731ccd734069eb1e"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMTk"
+ },
+ {
+  "name": "java/sandbox/v1.0.18",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.18",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.18",
+  "commit": {
+   "sha": "47d85df848f957f5e7b3231e435ef9333a57537c",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/47d85df848f957f5e7b3231e435ef9333a57537c"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMTg"
+ },
+ {
+  "name": "java/sandbox/v1.0.17",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.17",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.17",
+  "commit": {
+   "sha": "e9d0a63919739b1bed05914373acbacb11e37d43",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/e9d0a63919739b1bed05914373acbacb11e37d43"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMTc"
+ },
+ {
+  "name": "java/sandbox/v1.0.16",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.16",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.16",
+  "commit": {
+   "sha": "98652992d4a557f34ca45f4404e25a77bb360e70",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/98652992d4a557f34ca45f4404e25a77bb360e70"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMTY"
+ },
+ {
+  "name": "java/sandbox/v1.0.15",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.15",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.15",
+  "commit": {
+   "sha": "41b5921392c852a5a042b5c8258c2d299d69e81a",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/41b5921392c852a5a042b5c8258c2d299d69e81a"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMTU"
+ },
+ {
+  "name": "java/sandbox/v1.0.14",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.14",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.14",
+  "commit": {
+   "sha": "7e7dee4baaaf57b38f4d814db57c0ea6c955e656",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/7e7dee4baaaf57b38f4d814db57c0ea6c955e656"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMTQ"
+ },
+ {
+  "name": "java/sandbox/v1.0.13",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.13",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.13",
+  "commit": {
+   "sha": "aaf3cb68938e8c5a294a629102050eefa28cd33c",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/aaf3cb68938e8c5a294a629102050eefa28cd33c"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMTM"
+ },
+ {
+  "name": "java/sandbox/v1.0.12",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.12",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.12",
+  "commit": {
+   "sha": "bb47d01af42fd9e192e8f01168a497613f78c76b",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/bb47d01af42fd9e192e8f01168a497613f78c76b"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMTI"
+ },
+ {
+  "name": "java/sandbox/v1.0.11",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.11",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.11",
+  "commit": {
+   "sha": "ba98ca4960656f0956d12c041a477485178ade21",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ba98ca4960656f0956d12c041a477485178ade21"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMTE"
+ },
+ {
+  "name": "java/sandbox/v1.0.10",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.10",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.10",
+  "commit": {
+   "sha": "4d70dafc64b0d6ccc7a0c68a65674c2fa25f39f2",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4d70dafc64b0d6ccc7a0c68a65674c2fa25f39f2"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMTA"
+ },
+ {
+  "name": "java/sandbox/v1.0.9",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.9",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.9",
+  "commit": {
+   "sha": "ffa1b0e36743dc6a7e81d9e707fb518a7b7c6777",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ffa1b0e36743dc6a7e81d9e707fb518a7b7c6777"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuOQ"
+ },
+ {
+  "name": "java/sandbox/v1.0.8",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.8",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.8",
+  "commit": {
+   "sha": "cea06fa773d1c18d7d280ba014093d4b2102ad62",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/cea06fa773d1c18d7d280ba014093d4b2102ad62"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuOA"
+ },
+ {
+  "name": "java/sandbox/v1.0.7",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.7",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.7",
+  "commit": {
+   "sha": "09f36317d97d495d8800bc0484e799b021bb99e6",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/09f36317d97d495d8800bc0484e799b021bb99e6"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuNw"
+ },
+ {
+  "name": "java/sandbox/v1.0.6",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.6",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.6",
+  "commit": {
+   "sha": "d9882d06cac83f234a317be3437ca4e648c40be6",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/d9882d06cac83f234a317be3437ca4e648c40be6"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuNg"
+ },
+ {
+  "name": "java/sandbox/v1.0.5",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.5",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.5",
+  "commit": {
+   "sha": "b22466fc9e259b17723bbb5a5a554ce7592ce364",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/b22466fc9e259b17723bbb5a5a554ce7592ce364"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuNQ"
+ },
+ {
+  "name": "java/sandbox/v1.0.4",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.4",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.4",
+  "commit": {
+   "sha": "187a0c628964a6a2961c9a3c6de9c297ad08db8d",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/187a0c628964a6a2961c9a3c6de9c297ad08db8d"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuNA"
+ },
+ {
+  "name": "java/sandbox/v1.0.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.3",
+  "commit": {
+   "sha": "0f3e1464d9be8a45a1ce682dd24e2c9c96f06218",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/0f3e1464d9be8a45a1ce682dd24e2c9c96f06218"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMw"
+ },
+ {
+  "name": "java/sandbox/v1.0.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.2",
+  "commit": {
+   "sha": "4ee3295e2785a2cd4bc1aeda292dfa4010ea4f54",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4ee3295e2785a2cd4bc1aeda292dfa4010ea4f54"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMg"
+ },
+ {
+  "name": "java/sandbox/v1.0.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.1",
+  "commit": {
+   "sha": "f27aca1ab6e381ab97174ebcf5efc962dfbf55d9",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/f27aca1ab6e381ab97174ebcf5efc962dfbf55d9"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMQ"
+ },
+ {
+  "name": "java/sandbox/v1.0.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/sandbox/v1.0.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/sandbox/v1.0.0",
+  "commit": {
+   "sha": "28a8ec01714102e101cd35d4bb8278f78621c980",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/28a8ec01714102e101cd35d4bb8278f78621c980"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvamF2YS9zYW5kYm94L3YxLjAuMA"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.16",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.16",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.16",
+  "commit": {
+   "sha": "c09b90ae0fa10752f7200e1dd8b86803fdc88675",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/c09b90ae0fa10752f7200e1dd8b86803fdc88675"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJ3JlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC4xNg"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.15",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.15",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.15",
+  "commit": {
+   "sha": "41b5921392c852a5a042b5c8258c2d299d69e81a",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/41b5921392c852a5a042b5c8258c2d299d69e81a"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJ3JlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC4xNQ"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.14",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.14",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.14",
+  "commit": {
+   "sha": "1a0713c28ba84e4f8c29e764079386d39f89e8d3",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/1a0713c28ba84e4f8c29e764079386d39f89e8d3"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJ3JlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC4xNA"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.13",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.13",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.13",
+  "commit": {
+   "sha": "aaf3cb68938e8c5a294a629102050eefa28cd33c",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/aaf3cb68938e8c5a294a629102050eefa28cd33c"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJ3JlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC4xMw"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.12",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.12",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.12",
+  "commit": {
+   "sha": "9b532554db01a25b271d82fede1cdf094f8ac702",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/9b532554db01a25b271d82fede1cdf094f8ac702"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJ3JlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC4xMg"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.11",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.11",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.11",
+  "commit": {
+   "sha": "60c3f31ed74a9450dd955a624891a7046ace205b",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/60c3f31ed74a9450dd955a624891a7046ace205b"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJ3JlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC4xMQ"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.9",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.9",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.9",
+  "commit": {
+   "sha": "67a510d670eb3203977181c7ac4f11fa47507766",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/67a510d670eb3203977181c7ac4f11fa47507766"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJnJlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC45"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.7",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.7",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.7",
+  "commit": {
+   "sha": "2fcf697ac9e8827fef4c8d70fd3d24188fc0f8bd",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/2fcf697ac9e8827fef4c8d70fd3d24188fc0f8bd"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJnJlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC43"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.5",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.5",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.5",
+  "commit": {
+   "sha": "b22466fc9e259b17723bbb5a5a554ce7592ce364",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/b22466fc9e259b17723bbb5a5a554ce7592ce364"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJnJlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC41"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.4",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.4",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.4",
+  "commit": {
+   "sha": "7d95a3e60fee9de943ab4548ee45ddea8cb5342f",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/7d95a3e60fee9de943ab4548ee45ddea8cb5342f"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJnJlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC40"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.3",
+  "commit": {
+   "sha": "0f3e1464d9be8a45a1ce682dd24e2c9c96f06218",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/0f3e1464d9be8a45a1ce682dd24e2c9c96f06218"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJnJlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC4z"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.2",
+  "commit": {
+   "sha": "2aebd9277808df63b1fe0ae37c723f2430d25e88",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/2aebd9277808df63b1fe0ae37c723f2430d25e88"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJnJlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC4y"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.1",
+  "commit": {
+   "sha": "2c35258e7b5d69c1252d26485261ec29dc4f5742",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/2c35258e7b5d69c1252d26485261ec29dc4f5742"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJnJlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC4x"
+ },
+ {
+  "name": "java/code-interpreter/v1.0.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/java/code-interpreter/v1.0.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/java/code-interpreter/v1.0.0",
+  "commit": {
+   "sha": "9bc35d34c1b11f621fadbb7df82b25c937c3e8fd",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/9bc35d34c1b11f621fadbb7df82b25c937c3e8fd"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJnJlZnMvdGFncy9qYXZhL2NvZGUtaW50ZXJwcmV0ZXIvdjEuMC4w"
+ },
+ {
+  "name": "helm/opensandbox-controller/0.2.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/helm/opensandbox-controller/0.2.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/helm/opensandbox-controller/0.2.0",
+  "commit": {
+   "sha": "7e0a53b492e4b803c91c6b33d4f20a6ebdffeaf8",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/7e0a53b492e4b803c91c6b33d4f20a6ebdffeaf8"
+  },
+  "node_id": "REF_kwDOQqSjUtoAK3JlZnMvdGFncy9oZWxtL29wZW5zYW5kYm94LWNvbnRyb2xsZXIvMC4yLjA"
+ },
+ {
+  "name": "helm/opensandbox-controller/0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/helm/opensandbox-controller/0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/helm/opensandbox-controller/0.1.0",
+  "commit": {
+   "sha": "596481c28355228529b2644d260b67fb3193286e",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/596481c28355228529b2644d260b67fb3193286e"
+  },
+  "node_id": "REF_kwDOQqSjUtoAK3JlZnMvdGFncy9oZWxtL29wZW5zYW5kYm94LWNvbnRyb2xsZXIvMC4xLjA"
+ },
+ {
+  "name": "helm/opensandbox/0.2.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/helm/opensandbox/0.2.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/helm/opensandbox/0.2.2",
+  "commit": {
+   "sha": "8f01e935c2cabba778cf37a152033fae062fa0f4",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/8f01e935c2cabba778cf37a152033fae062fa0f4"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9oZWxtL29wZW5zYW5kYm94LzAuMi4y"
+ },
+ {
+  "name": "helm/opensandbox/0.2.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/helm/opensandbox/0.2.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/helm/opensandbox/0.2.0",
+  "commit": {
+   "sha": "7e0a53b492e4b803c91c6b33d4f20a6ebdffeaf8",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/7e0a53b492e4b803c91c6b33d4f20a6ebdffeaf8"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9oZWxtL29wZW5zYW5kYm94LzAuMi4w"
+ },
+ {
+  "name": "helm/opensandbox/0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/helm/opensandbox/0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/helm/opensandbox/0.1.0",
+  "commit": {
+   "sha": "9c661b0bcd60da7c2aed99fd0ec930ba1970b30e",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/9c661b0bcd60da7c2aed99fd0ec930ba1970b30e"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9oZWxtL29wZW5zYW5kYm94LzAuMS4w"
+ },
+ {
+  "name": "docker/ingress/v1.0.10",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/ingress/v1.0.10",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/ingress/v1.0.10",
+  "commit": {
+   "sha": "34653f7a70da87029abb40624f1de8dfee3f1576",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/34653f7a70da87029abb40624f1de8dfee3f1576"
+  },
+  "node_id": "REF_kwDOQqSjUtoAIHJlZnMvdGFncy9kb2NrZXIvaW5ncmVzcy92MS4wLjEw"
+ },
+ {
+  "name": "docker/ingress/v1.0.9",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/ingress/v1.0.9",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/ingress/v1.0.9",
+  "commit": {
+   "sha": "82d642c835c2835140473f50d436fac17fb3c057",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/82d642c835c2835140473f50d436fac17fb3c057"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2luZ3Jlc3MvdjEuMC45"
+ },
+ {
+  "name": "docker/ingress/v1.0.8",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/ingress/v1.0.8",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/ingress/v1.0.8",
+  "commit": {
+   "sha": "ada8659adeff273084797f6797f316db492fc017",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ada8659adeff273084797f6797f316db492fc017"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2luZ3Jlc3MvdjEuMC44"
+ },
+ {
+  "name": "docker/ingress/v1.0.7",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/ingress/v1.0.7",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/ingress/v1.0.7",
+  "commit": {
+   "sha": "081009aceb7a252bd531add26a60cbb43ee19eaa",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/081009aceb7a252bd531add26a60cbb43ee19eaa"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2luZ3Jlc3MvdjEuMC43"
+ },
+ {
+  "name": "docker/ingress/v1.0.6",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/ingress/v1.0.6",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/ingress/v1.0.6",
+  "commit": {
+   "sha": "116ab501dc3b08a1a8121ea5a06e70862603fdcd",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/116ab501dc3b08a1a8121ea5a06e70862603fdcd"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2luZ3Jlc3MvdjEuMC42"
+ },
+ {
+  "name": "docker/ingress/v1.0.5",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/ingress/v1.0.5",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/ingress/v1.0.5",
+  "commit": {
+   "sha": "c7d52561f6d7f01c5a51f0462a17bb8da9c499b5",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/c7d52561f6d7f01c5a51f0462a17bb8da9c499b5"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2luZ3Jlc3MvdjEuMC41"
+ },
+ {
+  "name": "docker/ingress/v1.0.4",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/ingress/v1.0.4",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/ingress/v1.0.4",
+  "commit": {
+   "sha": "4049cc9c16102f32a055216a2a09bc6c90f30f94",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4049cc9c16102f32a055216a2a09bc6c90f30f94"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2luZ3Jlc3MvdjEuMC40"
+ },
+ {
+  "name": "docker/ingress/v1.0.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/ingress/v1.0.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/ingress/v1.0.3",
+  "commit": {
+   "sha": "cb899f990266a879a7d0f743c461c13f1ebccb4f",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/cb899f990266a879a7d0f743c461c13f1ebccb4f"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2luZ3Jlc3MvdjEuMC4z"
+ },
+ {
+  "name": "docker/ingress/v1.0.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/ingress/v1.0.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/ingress/v1.0.2",
+  "commit": {
+   "sha": "f2f5dd8f77793125a0523a444b900703fb0b57ae",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/f2f5dd8f77793125a0523a444b900703fb0b57ae"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2luZ3Jlc3MvdjEuMC4y"
+ },
+ {
+  "name": "docker/ingress/v1.0.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/ingress/v1.0.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/ingress/v1.0.1",
+  "commit": {
+   "sha": "ecb1b5b012cb14a7289c5c565cc379b17a828699",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ecb1b5b012cb14a7289c5c565cc379b17a828699"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2luZ3Jlc3MvdjEuMC4x"
+ },
+ {
+  "name": "docker/ingress/v1.0.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/ingress/v1.0.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/ingress/v1.0.0",
+  "commit": {
+   "sha": "eeb57fe5bcc01deb633a6c083575b22027c3ca58",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/eeb57fe5bcc01deb633a6c083575b22027c3ca58"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2luZ3Jlc3MvdjEuMC4w"
+ },
+ {
+  "name": "docker/execd/1.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/1.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/1.1.0",
+  "commit": {
+   "sha": "c39b814f36ded4c61d5ac6f9332ee4dfbab86c00",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/c39b814f36ded4c61d5ac6f9332ee4dfbab86c00"
+  },
+  "node_id": "REF_kwDOQqSjUrxyZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkLzEuMS4w"
+ },
+ {
+  "name": "docker/execd/1.0.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/1.0.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/1.0.0",
+  "commit": {
+   "sha": "6c86abd7477f8c3835cbf20215c7d99cbb3380f3",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/6c86abd7477f8c3835cbf20215c7d99cbb3380f3"
+  },
+  "node_id": "REF_kwDOQqSjUrxyZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkLzEuMC4w"
+ },
+ {
+  "name": "docker/execd/v1.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.1.0",
+  "commit": {
+   "sha": "48b0215f1bd097b31d0f022a44640e00c11ac49d",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/48b0215f1bd097b31d0f022a44640e00c11ac49d"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjEuMA"
+ },
+ {
+  "name": "docker/execd/v1.0.22",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.22",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.22",
+  "commit": {
+   "sha": "4a9db411879601610843af9c8e03563694325b2a",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4a9db411879601610843af9c8e03563694325b2a"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMjI"
+ },
+ {
+  "name": "docker/execd/v1.0.21",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.21",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.21",
+  "commit": {
+   "sha": "34653f7a70da87029abb40624f1de8dfee3f1576",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/34653f7a70da87029abb40624f1de8dfee3f1576"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMjE"
+ },
+ {
+  "name": "docker/execd/v1.0.20",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.20",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.20",
+  "commit": {
+   "sha": "ae452d4af7b6415b5074fd7e075b97ff7a5ac236",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ae452d4af7b6415b5074fd7e075b97ff7a5ac236"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMjA"
+ },
+ {
+  "name": "docker/execd/v1.0.19",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.19",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.19",
+  "commit": {
+   "sha": "26292cd5561b616aba1d65cc38d4176307e8fedf",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/26292cd5561b616aba1d65cc38d4176307e8fedf"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMTk"
+ },
+ {
+  "name": "docker/execd/v1.0.18",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.18",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.18",
+  "commit": {
+   "sha": "277262361e81bec91a0e696e02fcf8d6cafc58ad",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/277262361e81bec91a0e696e02fcf8d6cafc58ad"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMTg"
+ },
+ {
+  "name": "docker/execd/v1.0.17",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.17",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.17",
+  "commit": {
+   "sha": "a52cb6326b977d2ec15d274b4fbdcbd73fa0aba7",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/a52cb6326b977d2ec15d274b4fbdcbd73fa0aba7"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMTc"
+ },
+ {
+  "name": "docker/execd/v1.0.16",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.16",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.16",
+  "commit": {
+   "sha": "e3e7d5c93e6df4117125dd352a30324d886d853e",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/e3e7d5c93e6df4117125dd352a30324d886d853e"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMTY"
+ },
+ {
+  "name": "docker/execd/v1.0.15",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.15",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.15",
+  "commit": {
+   "sha": "2e218b3e0b4a05b7a3adb0bfd9d8d92b3224f8a5",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/2e218b3e0b4a05b7a3adb0bfd9d8d92b3224f8a5"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMTU"
+ },
+ {
+  "name": "docker/execd/v1.0.14",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.14",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.14",
+  "commit": {
+   "sha": "9632540d3919fdfadf7b59b3bd2be2cecc3d9d45",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/9632540d3919fdfadf7b59b3bd2be2cecc3d9d45"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMTQ"
+ },
+ {
+  "name": "docker/execd/v1.0.13",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.13",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.13",
+  "commit": {
+   "sha": "dd14e6d9874f62ab923f85c47bd6a079269ee21b",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/dd14e6d9874f62ab923f85c47bd6a079269ee21b"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMTM"
+ },
+ {
+  "name": "docker/execd/v1.0.12",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.12",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.12",
+  "commit": {
+   "sha": "915f17212bbf5a3608472fab6f33ef842845672b",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/915f17212bbf5a3608472fab6f33ef842845672b"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMTI"
+ },
+ {
+  "name": "docker/execd/v1.0.11",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.11",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.11",
+  "commit": {
+   "sha": "d1aba70bb6ad72f37bde5d05d71dba290039472f",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/d1aba70bb6ad72f37bde5d05d71dba290039472f"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMTE"
+ },
+ {
+  "name": "docker/execd/v1.0.10",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.10",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.10",
+  "commit": {
+   "sha": "116ab501dc3b08a1a8121ea5a06e70862603fdcd",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/116ab501dc3b08a1a8121ea5a06e70862603fdcd"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMTA"
+ },
+ {
+  "name": "docker/execd/v1.0.9",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.9",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.9",
+  "commit": {
+   "sha": "0f87153d19546036c2211e43c7bb5f0e5220f733",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/0f87153d19546036c2211e43c7bb5f0e5220f733"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuOQ"
+ },
+ {
+  "name": "docker/execd/v1.0.8",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.8",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.8",
+  "commit": {
+   "sha": "0d0f2ac82a0a267e503c2679326472295672641a",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/0d0f2ac82a0a267e503c2679326472295672641a"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuOA"
+ },
+ {
+  "name": "docker/execd/v1.0.7",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.7",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.7",
+  "commit": {
+   "sha": "5fdf9707a643db917f6f1a4028a04e56d5e3f4ca",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/5fdf9707a643db917f6f1a4028a04e56d5e3f4ca"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuNw"
+ },
+ {
+  "name": "docker/execd/v1.0.6",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.6",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.6",
+  "commit": {
+   "sha": "d7f58f2ef9e582279bde445344f72dc512b68cf3",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/d7f58f2ef9e582279bde445344f72dc512b68cf3"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuNg"
+ },
+ {
+  "name": "docker/execd/v1.0.5",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.5",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.5",
+  "commit": {
+   "sha": "70930683764918a841af42e3923ff70aa4fa2ff2",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/70930683764918a841af42e3923ff70aa4fa2ff2"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuNQ"
+ },
+ {
+  "name": "docker/execd/v1.0.4",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.4",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.4",
+  "commit": {
+   "sha": "7e5cdcf8ba1c7f743899ed9c62ff37fe33f5a468",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/7e5cdcf8ba1c7f743899ed9c62ff37fe33f5a468"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuNA"
+ },
+ {
+  "name": "docker/execd/v1.0.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.3",
+  "commit": {
+   "sha": "4ee3295e2785a2cd4bc1aeda292dfa4010ea4f54",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4ee3295e2785a2cd4bc1aeda292dfa4010ea4f54"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMw"
+ },
+ {
+  "name": "docker/execd/v1.0.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.2",
+  "commit": {
+   "sha": "3d3f0a69b2ea3bbe12d5c762581b746f31c093e2",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/3d3f0a69b2ea3bbe12d5c762581b746f31c093e2"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMg"
+ },
+ {
+  "name": "docker/execd/v1.0.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/execd/v1.0.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/execd/v1.0.1",
+  "commit": {
+   "sha": "78e6c353348d6ceb7df3a3534f83acafd419dd40",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/78e6c353348d6ceb7df3a3534f83acafd419dd40"
+  },
+  "node_id": "REF_kwDOQqSjUr1yZWZzL3RhZ3MvZG9ja2VyL2V4ZWNkL3YxLjAuMQ"
+ },
+ {
+  "name": "docker/egress/v1.1.7",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.1.7",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.1.7",
+  "commit": {
+   "sha": "6b2023e9b7eb80a940d88e6ae05fcbc0eb0cf23f",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/6b2023e9b7eb80a940d88e6ae05fcbc0eb0cf23f"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4xLjc"
+ },
+ {
+  "name": "docker/egress/v1.1.6",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.1.6",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.1.6",
+  "commit": {
+   "sha": "c3e97bfbf79021d48733e6d8366bb588373d977c",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/c3e97bfbf79021d48733e6d8366bb588373d977c"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4xLjY"
+ },
+ {
+  "name": "docker/egress/v1.1.5",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.1.5",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.1.5",
+  "commit": {
+   "sha": "62c5348d2fea44b240400bbfbd0b687cdfc3f964",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/62c5348d2fea44b240400bbfbd0b687cdfc3f964"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4xLjU"
+ },
+ {
+  "name": "docker/egress/v1.1.4",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.1.4",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.1.4",
+  "commit": {
+   "sha": "34653f7a70da87029abb40624f1de8dfee3f1576",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/34653f7a70da87029abb40624f1de8dfee3f1576"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4xLjQ"
+ },
+ {
+  "name": "docker/egress/v1.1.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.1.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.1.3",
+  "commit": {
+   "sha": "ae452d4af7b6415b5074fd7e075b97ff7a5ac236",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ae452d4af7b6415b5074fd7e075b97ff7a5ac236"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4xLjM"
+ },
+ {
+  "name": "docker/egress/v1.1.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.1.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.1.2",
+  "commit": {
+   "sha": "ada8659adeff273084797f6797f316db492fc017",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ada8659adeff273084797f6797f316db492fc017"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4xLjI"
+ },
+ {
+  "name": "docker/egress/v1.1.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.1.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.1.1",
+  "commit": {
+   "sha": "cdb32590c72f213d093cf6d1a3a3a994351a39bb",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/cdb32590c72f213d093cf6d1a3a3a994351a39bb"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4xLjE"
+ },
+ {
+  "name": "docker/egress/v1.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.1.0",
+  "commit": {
+   "sha": "876839504e5671007a12751bb4c5a82bc800fa7c",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/876839504e5671007a12751bb4c5a82bc800fa7c"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4xLjA"
+ },
+ {
+  "name": "docker/egress/v1.0.13",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.13",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.13",
+  "commit": {
+   "sha": "58f3aa421ff0ce2c9d99eb230f9f69c69b8cab98",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/58f3aa421ff0ce2c9d99eb230f9f69c69b8cab98"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjEz"
+ },
+ {
+  "name": "docker/egress/v1.0.12",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.12",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.12",
+  "commit": {
+   "sha": "73973afd7a47fe490ae6b188eef1cab904517aea",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/73973afd7a47fe490ae6b188eef1cab904517aea"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjEy"
+ },
+ {
+  "name": "docker/egress/v1.0.11",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.11",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.11",
+  "commit": {
+   "sha": "60c3f31ed74a9450dd955a624891a7046ace205b",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/60c3f31ed74a9450dd955a624891a7046ace205b"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjEx"
+ },
+ {
+  "name": "docker/egress/v1.0.10",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.10",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.10",
+  "commit": {
+   "sha": "8aded26fa29391a258285861eaa564ef9334d3df",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/8aded26fa29391a258285861eaa564ef9334d3df"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjEw"
+ },
+ {
+  "name": "docker/egress/v1.0.9",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.9",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.9",
+  "commit": {
+   "sha": "bcdcad544c7af6ba0922ed97dd6483776fdc6571",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/bcdcad544c7af6ba0922ed97dd6483776fdc6571"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjk"
+ },
+ {
+  "name": "docker/egress/v1.0.8",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.8",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.8",
+  "commit": {
+   "sha": "9d7167a8779cb7c5aad0de3154729af33ce73fcc",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/9d7167a8779cb7c5aad0de3154729af33ce73fcc"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjg"
+ },
+ {
+  "name": "docker/egress/v1.0.7",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.7",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.7",
+  "commit": {
+   "sha": "0510e3223c7899fc3c1d4248a910c49a2fb9b118",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/0510e3223c7899fc3c1d4248a910c49a2fb9b118"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjc"
+ },
+ {
+  "name": "docker/egress/v1.0.6",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.6",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.6",
+  "commit": {
+   "sha": "09f36317d97d495d8800bc0484e799b021bb99e6",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/09f36317d97d495d8800bc0484e799b021bb99e6"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjY"
+ },
+ {
+  "name": "docker/egress/v1.0.5",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.5",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.5",
+  "commit": {
+   "sha": "116ab501dc3b08a1a8121ea5a06e70862603fdcd",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/116ab501dc3b08a1a8121ea5a06e70862603fdcd"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjU"
+ },
+ {
+  "name": "docker/egress/v1.0.4",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.4",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.4",
+  "commit": {
+   "sha": "6295384588a8036f41057a2b2551f54b73368092",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/6295384588a8036f41057a2b2551f54b73368092"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjQ"
+ },
+ {
+  "name": "docker/egress/v1.0.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.3",
+  "commit": {
+   "sha": "cda2ff296a7098d56a435336ee0da4a19390f183",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/cda2ff296a7098d56a435336ee0da4a19390f183"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjM"
+ },
+ {
+  "name": "docker/egress/v1.0.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.2",
+  "commit": {
+   "sha": "cbd22e60c42df6ba16043d45954951febebb7026",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/cbd22e60c42df6ba16043d45954951febebb7026"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjI"
+ },
+ {
+  "name": "docker/egress/v1.0.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.1",
+  "commit": {
+   "sha": "39184e16135e11c54e0162c6122b89607e7de93b",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/39184e16135e11c54e0162c6122b89607e7de93b"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjE"
+ },
+ {
+  "name": "docker/egress/v1.0.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/egress/v1.0.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/egress/v1.0.0",
+  "commit": {
+   "sha": "0f3e1464d9be8a45a1ce682dd24e2c9c96f06218",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/0f3e1464d9be8a45a1ce682dd24e2c9c96f06218"
+  },
+  "node_id": "REF_kwDOQqSjUr5yZWZzL3RhZ3MvZG9ja2VyL2VncmVzcy92MS4wLjA"
+ },
+ {
+  "name": "docker/code-interpreter/1.0.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/code-interpreter/1.0.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/code-interpreter/1.0.0",
+  "commit": {
+   "sha": "0f1dddfe4178fe96d9b7d034927d01389fe3023c",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/0f1dddfe4178fe96d9b7d034927d01389fe3023c"
+  },
+  "node_id": "REF_kwDOQqSjUtoAJ3JlZnMvdGFncy9kb2NrZXIvY29kZS1pbnRlcnByZXRlci8xLjAuMA"
+ },
+ {
+  "name": "docker/code-interpreter/v1.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/code-interpreter/v1.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/code-interpreter/v1.1.0",
+  "commit": {
+   "sha": "d2fba03f8dadced4e0ca7a57f3b668979e3ef03a",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/d2fba03f8dadced4e0ca7a57f3b668979e3ef03a"
+  },
+  "node_id": "REF_kwDOQqSjUtoAKHJlZnMvdGFncy9kb2NrZXIvY29kZS1pbnRlcnByZXRlci92MS4xLjA"
+ },
+ {
+  "name": "docker/code-interpreter/v1.0.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/code-interpreter/v1.0.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/code-interpreter/v1.0.2",
+  "commit": {
+   "sha": "36526be993b721a292837bffca1f8dc63c6026a9",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/36526be993b721a292837bffca1f8dc63c6026a9"
+  },
+  "node_id": "REF_kwDOQqSjUtoAKHJlZnMvdGFncy9kb2NrZXIvY29kZS1pbnRlcnByZXRlci92MS4wLjI"
+ },
+ {
+  "name": "docker/code-interpreter/v1.0.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/docker/code-interpreter/v1.0.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/docker/code-interpreter/v1.0.1",
+  "commit": {
+   "sha": "ed63a459276bfbb65913405a95b4b567be47c2ba",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ed63a459276bfbb65913405a95b4b567be47c2ba"
+  },
+  "node_id": "REF_kwDOQqSjUtoAKHJlZnMvdGFncy9kb2NrZXIvY29kZS1pbnRlcnByZXRlci92MS4wLjE"
+ },
+ {
+  "name": "csharp/sandbox/v0.1.5",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/csharp/sandbox/v0.1.5",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/csharp/sandbox/v0.1.5",
+  "commit": {
+   "sha": "e9d0a63919739b1bed05914373acbacb11e37d43",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/e9d0a63919739b1bed05914373acbacb11e37d43"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvY3NoYXJwL3NhbmRib3gvdjAuMS41"
+ },
+ {
+  "name": "csharp/sandbox/v0.1.4",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/csharp/sandbox/v0.1.4",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/csharp/sandbox/v0.1.4",
+  "commit": {
+   "sha": "6c98cc631fad021b7fd098933d4629317bc4c18d",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/6c98cc631fad021b7fd098933d4629317bc4c18d"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvY3NoYXJwL3NhbmRib3gvdjAuMS40"
+ },
+ {
+  "name": "csharp/sandbox/v0.1.3",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/csharp/sandbox/v0.1.3",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/csharp/sandbox/v0.1.3",
+  "commit": {
+   "sha": "aaf3cb68938e8c5a294a629102050eefa28cd33c",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/aaf3cb68938e8c5a294a629102050eefa28cd33c"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvY3NoYXJwL3NhbmRib3gvdjAuMS4z"
+ },
+ {
+  "name": "csharp/sandbox/v0.1.2",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/csharp/sandbox/v0.1.2",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/csharp/sandbox/v0.1.2",
+  "commit": {
+   "sha": "bb47d01af42fd9e192e8f01168a497613f78c76b",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/bb47d01af42fd9e192e8f01168a497613f78c76b"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvY3NoYXJwL3NhbmRib3gvdjAuMS4y"
+ },
+ {
+  "name": "csharp/sandbox/v0.1.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/csharp/sandbox/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/csharp/sandbox/v0.1.1",
+  "commit": {
+   "sha": "09f36317d97d495d8800bc0484e799b021bb99e6",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/09f36317d97d495d8800bc0484e799b021bb99e6"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvY3NoYXJwL3NhbmRib3gvdjAuMS4x"
+ },
+ {
+  "name": "csharp/sandbox/v0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/csharp/sandbox/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/csharp/sandbox/v0.1.0",
+  "commit": {
+   "sha": "4609a56ef2a48d028caaccd8bff4aa9bff3549a4",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4609a56ef2a48d028caaccd8bff4aa9bff3549a4"
+  },
+  "node_id": "REF_kwDOQqSjUr9yZWZzL3RhZ3MvY3NoYXJwL3NhbmRib3gvdjAuMS4w"
+ },
+ {
+  "name": "csharp/code-interpreter/v0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/csharp/code-interpreter/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/csharp/code-interpreter/v0.1.0",
+  "commit": {
+   "sha": "4609a56ef2a48d028caaccd8bff4aa9bff3549a4",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/4609a56ef2a48d028caaccd8bff4aa9bff3549a4"
+  },
+  "node_id": "REF_kwDOQqSjUtoAKHJlZnMvdGFncy9jc2hhcnAvY29kZS1pbnRlcnByZXRlci92MC4xLjA"
+ },
+ {
+  "name": "cli/v0.1.1",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/cli/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/cli/v0.1.1",
+  "commit": {
+   "sha": "97b2b0fda91f2c155b62a28b655f3709c2660e48",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/97b2b0fda91f2c155b62a28b655f3709c2660e48"
+  },
+  "node_id": "REF_kwDOQqSjUrRyZWZzL3RhZ3MvY2xpL3YwLjEuMQ"
+ },
+ {
+  "name": "cli/v0.1.0",
+  "zipball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/zipball/refs/tags/cli/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/tarball/refs/tags/cli/v0.1.0",
+  "commit": {
+   "sha": "ffa1b0e36743dc6a7e81d9e707fb518a7b7c6777",
+   "url": "https://api.github.com/repos/opensandbox-group/OpenSandbox/commits/ffa1b0e36743dc6a7e81d9e707fb518a7b7c6777"
+  },
+  "node_id": "REF_kwDOQqSjUrRyZWZzL3RhZ3MvY2xpL3YwLjEuMA"
+ }
+]

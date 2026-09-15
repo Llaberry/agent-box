@@ -1,0 +1,542 @@
+[
+ {
+  "name": "v0.7.1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.7.1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.7.1",
+  "commit": {
+   "sha": "31d911e430fdf8a8879bd062b8e78066c1a8e89d",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/31d911e430fdf8a8879bd062b8e78066c1a8e89d"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuNy4x"
+ },
+ {
+  "name": "v0.7.1-rc2",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.7.1-rc2",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.7.1-rc2",
+  "commit": {
+   "sha": "5e9c2e09b79f61966d4e68b021af7ddf150abd7a",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/5e9c2e09b79f61966d4e68b021af7ddf150abd7a"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNy4xLXJjMg"
+ },
+ {
+  "name": "v0.7.1-rc1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.7.1-rc1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.7.1-rc1",
+  "commit": {
+   "sha": "62da01877a2469503d6f62a600b02ca053db2b0d",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/62da01877a2469503d6f62a600b02ca053db2b0d"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNy4xLXJjMQ"
+ },
+ {
+  "name": "v0.7.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.7.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.7.0",
+  "commit": {
+   "sha": "d0081641c59822e4e5653b7462e914410b81910a",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/d0081641c59822e4e5653b7462e914410b81910a"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuNy4w"
+ },
+ {
+  "name": "v0.7.0-rc2",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.7.0-rc2",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.7.0-rc2",
+  "commit": {
+   "sha": "5d7e3230603ace36e33804ae06c555edf4da0ad2",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/5d7e3230603ace36e33804ae06c555edf4da0ad2"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNy4wLXJjMg"
+ },
+ {
+  "name": "v0.7.0-rc1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.7.0-rc1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.7.0-rc1",
+  "commit": {
+   "sha": "b6bfab0df92a456629800be165ff2825e93d9250",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/b6bfab0df92a456629800be165ff2825e93d9250"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNy4wLXJjMQ"
+ },
+ {
+  "name": "v0.6.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.6.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.6.0",
+  "commit": {
+   "sha": "8721dd151971ce3c2966482bbd32904ad98f378e",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/8721dd151971ce3c2966482bbd32904ad98f378e"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuNi4w"
+ },
+ {
+  "name": "v0.6.0-rc3",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.6.0-rc3",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.6.0-rc3",
+  "commit": {
+   "sha": "6ae921ba2a96856640a6cc793771a2a819f348d5",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/6ae921ba2a96856640a6cc793771a2a819f348d5"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNi4wLXJjMw"
+ },
+ {
+  "name": "v0.6.0-rc2",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.6.0-rc2",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.6.0-rc2",
+  "commit": {
+   "sha": "c2589ca3adf6fe74a5e12ffa2f1fe67ef6801349",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/c2589ca3adf6fe74a5e12ffa2f1fe67ef6801349"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNi4wLXJjMg"
+ },
+ {
+  "name": "v0.6.0-rc1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.6.0-rc1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.6.0-rc1",
+  "commit": {
+   "sha": "d7eb3b2254f1e326958d3f9b2b6a053f8194aba1",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/d7eb3b2254f1e326958d3f9b2b6a053f8194aba1"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNi4wLXJjMQ"
+ },
+ {
+  "name": "v0.5.1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1",
+  "commit": {
+   "sha": "a164417f497234a0d787cb328b0ae96480b1569b",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/a164417f497234a0d787cb328b0ae96480b1569b"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuNS4x"
+ },
+ {
+  "name": "v0.5.1-rc12",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc12",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc12",
+  "commit": {
+   "sha": "44d1ca0453b1a0389694213b214274ca626935a6",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/44d1ca0453b1a0389694213b214274ca626935a6"
+  },
+  "node_id": "REF_kwDOR-qLWbVyZWZzL3RhZ3MvdjAuNS4xLXJjMTI"
+ },
+ {
+  "name": "v0.5.1-rc11",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc11",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc11",
+  "commit": {
+   "sha": "27153eca572c4aaa1677f576f60f78247c605948",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/27153eca572c4aaa1677f576f60f78247c605948"
+  },
+  "node_id": "REF_kwDOR-qLWbVyZWZzL3RhZ3MvdjAuNS4xLXJjMTE"
+ },
+ {
+  "name": "v0.5.1-rc10",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc10",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc10",
+  "commit": {
+   "sha": "ccbb2f2365b8e985f49e78d3e9abcfeb69b988d2",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/ccbb2f2365b8e985f49e78d3e9abcfeb69b988d2"
+  },
+  "node_id": "REF_kwDOR-qLWbVyZWZzL3RhZ3MvdjAuNS4xLXJjMTA"
+ },
+ {
+  "name": "v0.5.1-rc9",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc9",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc9",
+  "commit": {
+   "sha": "12532e4808761b4e53fc1641e4611ae4c8c7313f",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/12532e4808761b4e53fc1641e4611ae4c8c7313f"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4xLXJjOQ"
+ },
+ {
+  "name": "v0.5.1-rc8",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc8",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc8",
+  "commit": {
+   "sha": "bbc3f2eeea658188c81405a64908eafc9c952d95",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/bbc3f2eeea658188c81405a64908eafc9c952d95"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4xLXJjOA"
+ },
+ {
+  "name": "v0.5.1-rc7",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc7",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc7",
+  "commit": {
+   "sha": "06e40f51392d47ab1c1cbab724b14e1a3f9f98ac",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/06e40f51392d47ab1c1cbab724b14e1a3f9f98ac"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4xLXJjNw"
+ },
+ {
+  "name": "v0.5.1-rc6",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc6",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc6",
+  "commit": {
+   "sha": "5158ff3884844fadc535d385986de52a6bc34266",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/5158ff3884844fadc535d385986de52a6bc34266"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4xLXJjNg"
+ },
+ {
+  "name": "v0.5.1-rc5",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc5",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc5",
+  "commit": {
+   "sha": "bfbe910e9f028bf90f0d656e7488191a53630259",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/bfbe910e9f028bf90f0d656e7488191a53630259"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4xLXJjNQ"
+ },
+ {
+  "name": "v0.5.1-rc4",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc4",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc4",
+  "commit": {
+   "sha": "e509b41a5b49a62f096f00a3598c91ad84cb6fc3",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/e509b41a5b49a62f096f00a3598c91ad84cb6fc3"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4xLXJjNA"
+ },
+ {
+  "name": "v0.5.1-rc3",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc3",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc3",
+  "commit": {
+   "sha": "d5ac863495c8465b71a254af492e75ca7b950adb",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/d5ac863495c8465b71a254af492e75ca7b950adb"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4xLXJjMw"
+ },
+ {
+  "name": "v0.5.1-rc2",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc2",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc2",
+  "commit": {
+   "sha": "868ced307c6b4d0296ec630043fadf8f37609ec5",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/868ced307c6b4d0296ec630043fadf8f37609ec5"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4xLXJjMg"
+ },
+ {
+  "name": "v0.5.1-rc1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.1-rc1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.1-rc1",
+  "commit": {
+   "sha": "18aafe0c212bdc39454930b8fa39f9e5547f1642",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/18aafe0c212bdc39454930b8fa39f9e5547f1642"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4xLXJjMQ"
+ },
+ {
+  "name": "v0.5.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.0",
+  "commit": {
+   "sha": "30b4e25ab16891187c775e002816274427f541f1",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/30b4e25ab16891187c775e002816274427f541f1"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuNS4w"
+ },
+ {
+  "name": "v0.5.0-rc3",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.0-rc3",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.0-rc3",
+  "commit": {
+   "sha": "dfa23408a364388b05c84722f37f6fa68be4f287",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/dfa23408a364388b05c84722f37f6fa68be4f287"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4wLXJjMw"
+ },
+ {
+  "name": "v0.5.0-rc2",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.0-rc2",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.0-rc2",
+  "commit": {
+   "sha": "20c3bb306b532c38453e7ed72b1f03b3cf635d13",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/20c3bb306b532c38453e7ed72b1f03b3cf635d13"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4wLXJjMg"
+ },
+ {
+  "name": "v0.5.0-rc1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.5.0-rc1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.5.0-rc1",
+  "commit": {
+   "sha": "447d435868b0b34c852c0f15aff87e741bcefa12",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/447d435868b0b34c852c0f15aff87e741bcefa12"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNS4wLXJjMQ"
+ },
+ {
+  "name": "v0.4.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.4.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.4.0",
+  "commit": {
+   "sha": "4004a6ec34a9d045a9789a1fd438d6518eedb3d3",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/4004a6ec34a9d045a9789a1fd438d6518eedb3d3"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuNC4w"
+ },
+ {
+  "name": "v0.4.0-rc2",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.4.0-rc2",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.4.0-rc2",
+  "commit": {
+   "sha": "5817fd70541a6c404df2c7289da085c85faf487e",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/5817fd70541a6c404df2c7289da085c85faf487e"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNC4wLXJjMg"
+ },
+ {
+  "name": "v0.4.0-rc1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.4.0-rc1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.4.0-rc1",
+  "commit": {
+   "sha": "870a24633c040ca8b3c62dc071e56ea438f857b5",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/870a24633c040ca8b3c62dc071e56ea438f857b5"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuNC4wLXJjMQ"
+ },
+ {
+  "name": "v0.3.1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.3.1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.3.1",
+  "commit": {
+   "sha": "90032886afd1f15ad194d22d6eb593fb220c4378",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/90032886afd1f15ad194d22d6eb593fb220c4378"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuMy4x"
+ },
+ {
+  "name": "v0.3.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.3.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.3.0",
+  "commit": {
+   "sha": "a7b099dba3f7c789c93e4b608fa44943c316505e",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/a7b099dba3f7c789c93e4b608fa44943c316505e"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuMy4w"
+ },
+ {
+  "name": "v0.3.0-rc4",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.3.0-rc4",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.3.0-rc4",
+  "commit": {
+   "sha": "e4fe20596dc51a4b74deffef6d3471c6fff9311c",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/e4fe20596dc51a4b74deffef6d3471c6fff9311c"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuMy4wLXJjNA"
+ },
+ {
+  "name": "v0.3.0-rc3",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.3.0-rc3",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.3.0-rc3",
+  "commit": {
+   "sha": "f5be7b2e04bc19129addc4bfbf71a49150287a62",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/f5be7b2e04bc19129addc4bfbf71a49150287a62"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuMy4wLXJjMw"
+ },
+ {
+  "name": "v0.3.0-rc2",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.3.0-rc2",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.3.0-rc2",
+  "commit": {
+   "sha": "d7c4b57e9f31e47f07c70ae26aa6ea76ca876d94",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/d7c4b57e9f31e47f07c70ae26aa6ea76ca876d94"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuMy4wLXJjMg"
+ },
+ {
+  "name": "v0.3.0-rc1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.3.0-rc1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.3.0-rc1",
+  "commit": {
+   "sha": "62e0d56d80cdf86d4b3ad83f7dc1e5b8253528c4",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/62e0d56d80cdf86d4b3ad83f7dc1e5b8253528c4"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuMy4wLXJjMQ"
+ },
+ {
+  "name": "v0.2.2",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.2.2",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.2.2",
+  "commit": {
+   "sha": "46424e74dfce5f4ea5d5efb6a640491c4acdf41c",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/46424e74dfce5f4ea5d5efb6a640491c4acdf41c"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuMi4y"
+ },
+ {
+  "name": "v0.2.2-rc1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.2.2-rc1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.2.2-rc1",
+  "commit": {
+   "sha": "46424e74dfce5f4ea5d5efb6a640491c4acdf41c",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/46424e74dfce5f4ea5d5efb6a640491c4acdf41c"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuMi4yLXJjMQ"
+ },
+ {
+  "name": "v0.2.1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.2.1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.2.1",
+  "commit": {
+   "sha": "689486272a90ade61eabc0c171fb9e1ce36c5da1",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/689486272a90ade61eabc0c171fb9e1ce36c5da1"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuMi4x"
+ },
+ {
+  "name": "v0.2.1-rc1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.2.1-rc1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.2.1-rc1",
+  "commit": {
+   "sha": "b3347462a7fd969b9488ce6e885764a3cd985667",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/b3347462a7fd969b9488ce6e885764a3cd985667"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuMi4xLXJjMQ"
+ },
+ {
+  "name": "v0.2.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.2.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.2.0",
+  "commit": {
+   "sha": "9c1602171c474c534b42ee1b3b9c046ba3a3126f",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/9c1602171c474c534b42ee1b3b9c046ba3a3126f"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuMi4w"
+ },
+ {
+  "name": "v0.2.0-rc1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.2.0-rc1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.2.0-rc1",
+  "commit": {
+   "sha": "bbca837628bb660b0dc1bbbb3c7e140246dbf800",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/bbca837628bb660b0dc1bbbb3c7e140246dbf800"
+  },
+  "node_id": "REF_kwDOR-qLWbRyZWZzL3RhZ3MvdjAuMi4wLXJjMQ"
+ },
+ {
+  "name": "v0.1.2",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.1.2",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.1.2",
+  "commit": {
+   "sha": "aa8d6427b867531a2f1bcb63368f9eecb6996abb",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/aa8d6427b867531a2f1bcb63368f9eecb6996abb"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuMS4y"
+ },
+ {
+  "name": "v0.1.1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.1.1",
+  "commit": {
+   "sha": "0176255345948927cf36db8b28cb65a4039823f2",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/0176255345948927cf36db8b28cb65a4039823f2"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuMS4x"
+ },
+ {
+  "name": "v0.1.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/v0.1.0",
+  "commit": {
+   "sha": "b767d0645e4ad9aae68f04cdcbb4c690661c601a",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/b767d0645e4ad9aae68f04cdcbb4c690661c601a"
+  },
+  "node_id": "REF_kwDOR-qLWbByZWZzL3RhZ3MvdjAuMS4w"
+ },
+ {
+  "name": "sdk/go/0.7.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/sdk/go/0.7.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/sdk/go/0.7.0",
+  "commit": {
+   "sha": "d0081641c59822e4e5653b7462e914410b81910a",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/d0081641c59822e4e5653b7462e914410b81910a"
+  },
+  "node_id": "REF_kwDOR-qLWbZyZWZzL3RhZ3Mvc2RrL2dvLzAuNy4w"
+ },
+ {
+  "name": "sdk/go/0.6.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/sdk/go/0.6.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/sdk/go/0.6.0",
+  "commit": {
+   "sha": "8721dd151971ce3c2966482bbd32904ad98f378e",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/8721dd151971ce3c2966482bbd32904ad98f378e"
+  },
+  "node_id": "REF_kwDOR-qLWbZyZWZzL3RhZ3Mvc2RrL2dvLzAuNi4w"
+ },
+ {
+  "name": "python-sdk-v0.7.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/python-sdk-v0.7.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/python-sdk-v0.7.0",
+  "commit": {
+   "sha": "d0081641c59822e4e5653b7462e914410b81910a",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/d0081641c59822e4e5653b7462e914410b81910a"
+  },
+  "node_id": "REF_kwDOR-qLWbtyZWZzL3RhZ3MvcHl0aG9uLXNkay12MC43LjA"
+ },
+ {
+  "name": "python-sdk-v0.6.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/python-sdk-v0.6.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/python-sdk-v0.6.0",
+  "commit": {
+   "sha": "8721dd151971ce3c2966482bbd32904ad98f378e",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/8721dd151971ce3c2966482bbd32904ad98f378e"
+  },
+  "node_id": "REF_kwDOR-qLWbtyZWZzL3RhZ3MvcHl0aG9uLXNkay12MC42LjA"
+ },
+ {
+  "name": "python-sdk-v0.5.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/python-sdk-v0.5.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/python-sdk-v0.5.0",
+  "commit": {
+   "sha": "092c76a4de2f1560c118bee9288206624e02332e",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/092c76a4de2f1560c118bee9288206624e02332e"
+  },
+  "node_id": "REF_kwDOR-qLWbtyZWZzL3RhZ3MvcHl0aG9uLXNkay12MC41LjA"
+ },
+ {
+  "name": "kernel-release-260812-1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/kernel-release-260812-1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/kernel-release-260812-1",
+  "commit": {
+   "sha": "e6d7765cc47e4df60fae4cea726d7bd2645742bc",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/e6d7765cc47e4df60fae4cea726d7bd2645742bc"
+  },
+  "node_id": "REF_kwDOR-qLWdoAIXJlZnMvdGFncy9rZXJuZWwtcmVsZWFzZS0yNjA4MTItMQ"
+ },
+ {
+  "name": "guest-image-260820-1",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/guest-image-260820-1",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/guest-image-260820-1",
+  "commit": {
+   "sha": "270e77118eb0fe85a18e31fa4af0dc6ae29dd5fe",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/270e77118eb0fe85a18e31fa4af0dc6ae29dd5fe"
+  },
+  "node_id": "REF_kwDOR-qLWb5yZWZzL3RhZ3MvZ3Vlc3QtaW1hZ2UtMjYwODIwLTE"
+ },
+ {
+  "name": "go-sdk-v0.7.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/go-sdk-v0.7.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/go-sdk-v0.7.0",
+  "commit": {
+   "sha": "d0081641c59822e4e5653b7462e914410b81910a",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/d0081641c59822e4e5653b7462e914410b81910a"
+  },
+  "node_id": "REF_kwDOR-qLWbdyZWZzL3RhZ3MvZ28tc2RrLXYwLjcuMA"
+ },
+ {
+  "name": "go-sdk-v0.6.0",
+  "zipball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/zipball/refs/tags/go-sdk-v0.6.0",
+  "tarball_url": "https://api.github.com/repos/TencentCloud/CubeSandbox/tarball/refs/tags/go-sdk-v0.6.0",
+  "commit": {
+   "sha": "8721dd151971ce3c2966482bbd32904ad98f378e",
+   "url": "https://api.github.com/repos/TencentCloud/CubeSandbox/commits/8721dd151971ce3c2966482bbd32904ad98f378e"
+  },
+  "node_id": "REF_kwDOR-qLWbdyZWZzL3RhZ3MvZ28tc2RrLXYwLjYuMA"
+ }
+]

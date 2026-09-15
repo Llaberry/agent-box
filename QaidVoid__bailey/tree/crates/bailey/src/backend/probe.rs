@@ -1,0 +1,192 @@
+//! Runtime kernel capability detection.
+//!
+//! The probe reports which sandboxing features the running kernel offers, and
+//! what each missing one costs, so a user can find out what a run will actually
+//! enforce before running anything rather than after a program mysteriously
+//! fails.
+
+use std::path::{Path, PathBuf};
+use std::process::{Command, Stdio};
+
+use crate::backend::isolation;
+
+/// `landlock_create_ruleset`, which reports the supported ABI when asked for the
+/// version. The number is the same across the architectures bailey supports;
+/// libc only exposes the constant for Android targets.
+const SYS_LANDLOCK_CREATE_RULESET: libc::c_long = 444;
+const LANDLOCK_CREATE_RULESET_VERSION: u32 = 1 << 0;
+
+/// Landlock ABI level at which network rules became available.
+const ABI_NETWORK: u32 = 4;
+/// Landlock ABI level at which scoping became available.
+const ABI_SCOPE: u32 = 6;
+
+/// Name of the privileged helper binary.
+pub const HELPER_BIN: &str = "bailey-bpf-helper";
+
+/// Whether the privileged audit helper is usable.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum HelperStatus {
+    /// The helper loaded its programs, so audit will work.
+    Ready(PathBuf),
+    /// The helper was found but could not load, almost always missing
+    /// capabilities.
+    NotPermitted(PathBuf),
+    /// No helper binary was found.
+    Missing,
+}
+
+/// Sandboxing-relevant features detected on the running kernel.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct Capabilities {
+    /// Landlock ABI level the kernel supports, or `None` when Landlock is
+    /// unavailable.
+    pub landlock_abi: Option<u32>,
+    /// Whether unprivileged user namespaces can actually be created here.
+    pub unprivileged_userns: bool,
+    /// Whether kernel BTF is available, which the audit programs need.
+    pub btf: bool,
+    /// Whether a cgroup can be created for a run, which resource limits need.
+    pub cgroup_delegated: bool,
+    /// Whether the audit helper is present and permitted.
+    pub helper: HelperStatus,
+}
+
+impl Capabilities {
+    /// Whether Landlock can enforce network policy.
+    pub fn landlock_network(&self) -> bool {
+        self.landlock_abi.is_some_and(|abi| abi >= ABI_NETWORK)
+    }
+
+    /// Whether Landlock can scope the target away from abstract sockets and
+    /// signals.
+    pub fn landlock_scope(&self) -> bool {
+        self.landlock_abi.is_some_and(|abi| abi >= ABI_SCOPE)
+    }
+}
+
+/// Probe the running kernel for sandboxing-relevant features.
+///
+/// `deep` also starts the audit helper to find out whether it can really load
+/// its programs, which costs a process spawn and is only worth it when the
+/// caller is reporting to a person.
+pub fn probe(deep: bool) -> Capabilities {
+    Capabilities {
+        landlock_abi: landlock_abi(),
+        unprivileged_userns: isolation::available(),
+        btf: Path::new("/sys/kernel/btf/vmlinux").exists(),
+        cgroup_delegated: cgroup_delegated(),
+        helper: if deep {
+            helper_status()
+        } else {
+            HelperStatus::Missing
+        },
+    }
+}
+
+/// Ask the kernel which Landlock ABI it implements.
+fn landlock_abi() -> Option<u32> {
+    let version = unsafe {
+        libc::syscall(
+            SYS_LANDLOCK_CREATE_RULESET,
+            std::ptr::null::<libc::c_void>(),
+            0usize,
+            LANDLOCK_CREATE_RULESET_VERSION,
+        )
+    };
+    (version > 0).then_some(version as u32)
+}
+
+/// Whether a run could be given resource limits: a cgroup this user may create
+/// runs in, whose children receive the controller files.
+fn cgroup_delegated() -> bool {
+    crate::backend::cgroup::usable_root(&["memory", "pids", "cpu"]).is_some()
+}
+
+/// Start the audit helper and see whether it can load its programs.
+fn helper_status() -> HelperStatus {
+    let Some(path) = locate_helper() else {
+        return HelperStatus::Missing;
+    };
+
+    let Ok(mut child) = Command::new(&path)
+        .stdin(Stdio::piped())
+        .stdout(Stdio::piped())
+        .stderr(Stdio::null())
+        .spawn()
+    else {
+        return HelperStatus::Missing;
+    };
+
+    let mut hello = [0u8; 2];
+    let loaded = child
+        .stdout
+        .as_mut()
+        .is_some_and(|out| std::io::Read::read_exact(out, &mut hello).is_ok());
+
+    // Closing stdin ends the helper, which is still waiting for a target.
+    drop(child.stdin.take());
+    let _ = child.wait();
+
+    if loaded && hello[0] == bailey_common::HELLO {
+        HelperStatus::Ready(path)
+    } else {
+        HelperStatus::NotPermitted(path)
+    }
+}
+
+/// Find the audit helper: the path named in the environment, then one beside
+/// this executable, then one on `PATH`.
+///
+/// Both the probe and the audit backend resolve it through here. They used to
+/// look separately, and disagreed: the backend fell back to the bare name, which
+/// `Command` resolves on `PATH`, while the probe gave up before that and had
+/// `doctor` report a helper missing that a run would have found and used.
+pub fn locate_helper() -> Option<PathBuf> {
+    if let Some(path) = std::env::var_os("BAILEY_BPF_HELPER") {
+        let path = PathBuf::from(path);
+        return path.is_file().then_some(path);
+    }
+    if let Ok(exe) = std::env::current_exe()
+        && let Some(dir) = exe.parent()
+    {
+        let candidate = dir.join(HELPER_BIN);
+        if candidate.is_file() {
+            return Some(candidate);
+        }
+    }
+    // An installed helper is the ordinary case for anyone who did not build
+    // from source, and `cargo install` puts it on `PATH` rather than beside
+    // bailey.
+    let paths = std::env::var_os("PATH")?;
+    std::env::split_paths(&paths)
+        .map(|dir| dir.join(HELPER_BIN))
+        .find(|candidate| candidate.is_file())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn probe_does_not_panic() {
+        let _ = probe(false);
+    }
+
+    #[test]
+    fn abi_thresholds_follow_the_reported_level() {
+        let with = |abi| Capabilities {
+            landlock_abi: abi,
+            unprivileged_userns: false,
+            btf: false,
+            cgroup_delegated: false,
+            helper: HelperStatus::Missing,
+        };
+
+        assert!(!with(None).landlock_network());
+        assert!(!with(Some(3)).landlock_network());
+        assert!(with(Some(4)).landlock_network());
+        assert!(!with(Some(5)).landlock_scope());
+        assert!(with(Some(6)).landlock_scope());
+    }
+}

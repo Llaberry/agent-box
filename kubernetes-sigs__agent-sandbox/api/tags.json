@@ -1,0 +1,402 @@
+[
+ {
+  "name": "v1.0.2",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v1.0.2",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v1.0.2",
+  "commit": {
+   "sha": "9a85153590e54cb980f3241f9e7a9228449412c9",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/9a85153590e54cb980f3241f9e7a9228449412c9"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjEuMC4y"
+ },
+ {
+  "name": "v1.0.1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v1.0.1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v1.0.1",
+  "commit": {
+   "sha": "3e77ccbac4db8a12b0157eafcad0d1ad5872f32a",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/3e77ccbac4db8a12b0157eafcad0d1ad5872f32a"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjEuMC4x"
+ },
+ {
+  "name": "v1.0.0",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v1.0.0",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v1.0.0",
+  "commit": {
+   "sha": "bb72f49d79f009a960eed2ae6c32e1cc082399c5",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/bb72f49d79f009a960eed2ae6c32e1cc082399c5"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjEuMC4w"
+ },
+ {
+  "name": "v0.5.6",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.6",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.6",
+  "commit": {
+   "sha": "211b7579cabed9460c1a692eb687084ff4c5879d",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/211b7579cabed9460c1a692eb687084ff4c5879d"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNS42"
+ },
+ {
+  "name": "v0.5.5",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.5",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.5",
+  "commit": {
+   "sha": "3ea199b8b910f8e838a6000796c29536d592fbdd",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/3ea199b8b910f8e838a6000796c29536d592fbdd"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNS41"
+ },
+ {
+  "name": "v0.5.4",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.4",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.4",
+  "commit": {
+   "sha": "945016a7b97f46cd2edf8633d6b6a22d5355ecc1",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/945016a7b97f46cd2edf8633d6b6a22d5355ecc1"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNS40"
+ },
+ {
+  "name": "v0.5.3",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.3",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.3",
+  "commit": {
+   "sha": "7935857fee859bb18752ee04d8948b975e47ff20",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/7935857fee859bb18752ee04d8948b975e47ff20"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNS4z"
+ },
+ {
+  "name": "v0.5.2",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.2",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.2",
+  "commit": {
+   "sha": "9575043bdce1e4d9f6d485df814b583c207e9ce9",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/9575043bdce1e4d9f6d485df814b583c207e9ce9"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNS4y"
+ },
+ {
+  "name": "v0.5.1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.1",
+  "commit": {
+   "sha": "d5d7523dd5dd1c32f1fa08d70a15d51850b41c53",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/d5d7523dd5dd1c32f1fa08d70a15d51850b41c53"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNS4x"
+ },
+ {
+  "name": "v0.5.0",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.0",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.0",
+  "commit": {
+   "sha": "a1a58a019a5479ec6cd77f95234927da7a1f434d",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/a1a58a019a5479ec6cd77f95234927da7a1f434d"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNS4w"
+ },
+ {
+  "name": "v0.5.0rc5",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.0rc5",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.0rc5",
+  "commit": {
+   "sha": "a1a58a019a5479ec6cd77f95234927da7a1f434d",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/a1a58a019a5479ec6cd77f95234927da7a1f434d"
+  },
+  "node_id": "REF_kwDOPcbYcbNyZWZzL3RhZ3MvdjAuNS4wcmM1"
+ },
+ {
+  "name": "v0.5.0rc4",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.0rc4",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.0rc4",
+  "commit": {
+   "sha": "bed7e5c2e3ffdb8d81948612faa5bba928f43867",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/bed7e5c2e3ffdb8d81948612faa5bba928f43867"
+  },
+  "node_id": "REF_kwDOPcbYcbNyZWZzL3RhZ3MvdjAuNS4wcmM0"
+ },
+ {
+  "name": "v0.5.0rc3",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.0rc3",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.0rc3",
+  "commit": {
+   "sha": "aae8e6272688daaf45a4a890f813da29aa73de7e",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/aae8e6272688daaf45a4a890f813da29aa73de7e"
+  },
+  "node_id": "REF_kwDOPcbYcbNyZWZzL3RhZ3MvdjAuNS4wcmMz"
+ },
+ {
+  "name": "v0.5.0rc2",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.0rc2",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.0rc2",
+  "commit": {
+   "sha": "21e7845b3f89f5ecdcbd7f9bd11bde1096f5a856",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/21e7845b3f89f5ecdcbd7f9bd11bde1096f5a856"
+  },
+  "node_id": "REF_kwDOPcbYcbNyZWZzL3RhZ3MvdjAuNS4wcmMy"
+ },
+ {
+  "name": "v0.5.0rc1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.5.0rc1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.5.0rc1",
+  "commit": {
+   "sha": "6af1bbd0cf64256ddf099e5a6ee1cbed17298057",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/6af1bbd0cf64256ddf099e5a6ee1cbed17298057"
+  },
+  "node_id": "REF_kwDOPcbYcbNyZWZzL3RhZ3MvdjAuNS4wcmMx"
+ },
+ {
+  "name": "v0.4.6",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.6",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.6",
+  "commit": {
+   "sha": "d0c124d4a1fded4ed4aecb92753696b4dd8de17b",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/d0c124d4a1fded4ed4aecb92753696b4dd8de17b"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNC42"
+ },
+ {
+  "name": "v0.4.5",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.5",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.5",
+  "commit": {
+   "sha": "41da075d36c8eb89ee4c94d8a9a71b5ad7c7bfe6",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/41da075d36c8eb89ee4c94d8a9a71b5ad7c7bfe6"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNC41"
+ },
+ {
+  "name": "v0.4.5rc1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.5rc1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.5rc1",
+  "commit": {
+   "sha": "41da075d36c8eb89ee4c94d8a9a71b5ad7c7bfe6",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/41da075d36c8eb89ee4c94d8a9a71b5ad7c7bfe6"
+  },
+  "node_id": "REF_kwDOPcbYcbNyZWZzL3RhZ3MvdjAuNC41cmMx"
+ },
+ {
+  "name": "v0.4.5rc0",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.5rc0",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.5rc0",
+  "commit": {
+   "sha": "c239a6b8fbd8045cdc2325ecb88994e82ed83ede",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/c239a6b8fbd8045cdc2325ecb88994e82ed83ede"
+  },
+  "node_id": "REF_kwDOPcbYcbNyZWZzL3RhZ3MvdjAuNC41cmMw"
+ },
+ {
+  "name": "v0.4.4.rc3",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.4.rc3",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.4.rc3",
+  "commit": {
+   "sha": "2d0b77521f864be6445e4558191d8a244512d03e",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/2d0b77521f864be6445e4558191d8a244512d03e"
+  },
+  "node_id": "REF_kwDOPcbYcbRyZWZzL3RhZ3MvdjAuNC40LnJjMw"
+ },
+ {
+  "name": "v0.4.4.rc2",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.4.rc2",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.4.rc2",
+  "commit": {
+   "sha": "2d0b77521f864be6445e4558191d8a244512d03e",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/2d0b77521f864be6445e4558191d8a244512d03e"
+  },
+  "node_id": "REF_kwDOPcbYcbRyZWZzL3RhZ3MvdjAuNC40LnJjMg"
+ },
+ {
+  "name": "v0.4.4.rc1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.4.rc1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.4.rc1",
+  "commit": {
+   "sha": "33752e047839a3906eec0c8747fb76c647b86ff5",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/33752e047839a3906eec0c8747fb76c647b86ff5"
+  },
+  "node_id": "REF_kwDOPcbYcbRyZWZzL3RhZ3MvdjAuNC40LnJjMQ"
+ },
+ {
+  "name": "v0.4.4rc0",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.4rc0",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.4rc0",
+  "commit": {
+   "sha": "2d0b77521f864be6445e4558191d8a244512d03e",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/2d0b77521f864be6445e4558191d8a244512d03e"
+  },
+  "node_id": "REF_kwDOPcbYcbNyZWZzL3RhZ3MvdjAuNC40cmMw"
+ },
+ {
+  "name": "v0.4.3",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.3",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.3",
+  "commit": {
+   "sha": "af42928112956d5978c67ec6ab8d7499f7a8df03",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/af42928112956d5978c67ec6ab8d7499f7a8df03"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNC4z"
+ },
+ {
+  "name": "v0.4.3rc1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.3rc1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.3rc1",
+  "commit": {
+   "sha": "af42928112956d5978c67ec6ab8d7499f7a8df03",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/af42928112956d5978c67ec6ab8d7499f7a8df03"
+  },
+  "node_id": "REF_kwDOPcbYcbNyZWZzL3RhZ3MvdjAuNC4zcmMx"
+ },
+ {
+  "name": "v0.4.2",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.2",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.2",
+  "commit": {
+   "sha": "a0b466a1fc0e69e57d68f65c17aa706b593c2af6",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/a0b466a1fc0e69e57d68f65c17aa706b593c2af6"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNC4y"
+ },
+ {
+  "name": "v0.4.1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.1",
+  "commit": {
+   "sha": "a0b466a1fc0e69e57d68f65c17aa706b593c2af6",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/a0b466a1fc0e69e57d68f65c17aa706b593c2af6"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNC4x"
+ },
+ {
+  "name": "v0.4.0",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.4.0",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.4.0",
+  "commit": {
+   "sha": "a0b466a1fc0e69e57d68f65c17aa706b593c2af6",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/a0b466a1fc0e69e57d68f65c17aa706b593c2af6"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuNC4w"
+ },
+ {
+  "name": "v0.3.10",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.3.10",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.3.10",
+  "commit": {
+   "sha": "4eceb03ddc8940d3f6713ddccac8c5af89c45dea",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/4eceb03ddc8940d3f6713ddccac8c5af89c45dea"
+  },
+  "node_id": "REF_kwDOPcbYcbFyZWZzL3RhZ3MvdjAuMy4xMA"
+ },
+ {
+  "name": "v0.3.10.post2",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.3.10.post2",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.3.10.post2",
+  "commit": {
+   "sha": "60626cfb2c0474bf0959791ebafef13f5aa35cc6",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/60626cfb2c0474bf0959791ebafef13f5aa35cc6"
+  },
+  "node_id": "REF_kwDOPcbYcbdyZWZzL3RhZ3MvdjAuMy4xMC5wb3N0Mg"
+ },
+ {
+  "name": "v0.3.10.post1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.3.10.post1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.3.10.post1",
+  "commit": {
+   "sha": "a8fecf6731f96be40de6c93815ca694afecd60d8",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/a8fecf6731f96be40de6c93815ca694afecd60d8"
+  },
+  "node_id": "REF_kwDOPcbYcbdyZWZzL3RhZ3MvdjAuMy4xMC5wb3N0MQ"
+ },
+ {
+  "name": "v0.2.1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.2.1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.2.1",
+  "commit": {
+   "sha": "17c33dd15c9b0a37a46cbf778caa2e6d84a01201",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/17c33dd15c9b0a37a46cbf778caa2e6d84a01201"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuMi4x"
+ },
+ {
+  "name": "v0.2.1rc1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.2.1rc1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.2.1rc1",
+  "commit": {
+   "sha": "17c33dd15c9b0a37a46cbf778caa2e6d84a01201",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/17c33dd15c9b0a37a46cbf778caa2e6d84a01201"
+  },
+  "node_id": "REF_kwDOPcbYcbNyZWZzL3RhZ3MvdjAuMi4xcmMx"
+ },
+ {
+  "name": "v0.1.1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.1.1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.1.1",
+  "commit": {
+   "sha": "c1790347e2a0fa4e936aeaca758ebf7da45f2c07",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/c1790347e2a0fa4e936aeaca758ebf7da45f2c07"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuMS4x"
+ },
+ {
+  "name": "v0.1.1.post3",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.1.1.post3",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.1.1.post3",
+  "commit": {
+   "sha": "f85aa59f5ea080aa8f84fd223e86d66e93768fa7",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/f85aa59f5ea080aa8f84fd223e86d66e93768fa7"
+  },
+  "node_id": "REF_kwDOPcbYcbZyZWZzL3RhZ3MvdjAuMS4xLnBvc3Qz"
+ },
+ {
+  "name": "v0.1.1.post2",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.1.1.post2",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.1.1.post2",
+  "commit": {
+   "sha": "47a199b256fb1499d464d274eb517adfad9c48ef",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/47a199b256fb1499d464d274eb517adfad9c48ef"
+  },
+  "node_id": "REF_kwDOPcbYcbZyZWZzL3RhZ3MvdjAuMS4xLnBvc3Qy"
+ },
+ {
+  "name": "v0.1.0",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.1.0",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.1.0",
+  "commit": {
+   "sha": "ba768e643813e8ab4a8b0e6ef7b247031532efb4",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/ba768e643813e8ab4a8b0e6ef7b247031532efb4"
+  },
+  "node_id": "REF_kwDOPcbYcbByZWZzL3RhZ3MvdjAuMS4w"
+ },
+ {
+  "name": "v0.1.0-rc.2",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.1.0-rc.2",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.1.0-rc.2",
+  "commit": {
+   "sha": "83317b27af86087182f6c59fe1818edcc85799e4",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/83317b27af86087182f6c59fe1818edcc85799e4"
+  },
+  "node_id": "REF_kwDOPcbYcbVyZWZzL3RhZ3MvdjAuMS4wLXJjLjI"
+ },
+ {
+  "name": "v0.1.0-rc.1",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.1.0-rc.1",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.1.0-rc.1",
+  "commit": {
+   "sha": "508424e0ec517429bfee3ef34c1c19ad5d2787dd",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/508424e0ec517429bfee3ef34c1c19ad5d2787dd"
+  },
+  "node_id": "REF_kwDOPcbYcbVyZWZzL3RhZ3MvdjAuMS4wLXJjLjE"
+ },
+ {
+  "name": "v0.1.0-rc.0",
+  "zipball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/zipball/refs/tags/v0.1.0-rc.0",
+  "tarball_url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/tarball/refs/tags/v0.1.0-rc.0",
+  "commit": {
+   "sha": "6b24ca949b293a71279dcc3845cfaeb7da8fd1ae",
+   "url": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/commits/6b24ca949b293a71279dcc3845cfaeb7da8fd1ae"
+  },
+  "node_id": "REF_kwDOPcbYcbVyZWZzL3RhZ3MvdjAuMS4wLXJjLjA"
+ }
+]

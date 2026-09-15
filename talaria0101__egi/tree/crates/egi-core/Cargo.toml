@@ -1,0 +1,19 @@
+[package]
+name = "egi-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+license.workspace = true
+description = "Core types for egi: config, sandbox contracts, provider contracts"
+
+[lib]
+name = "egi_core"
+path = "src/lib.rs"
+
+[dependencies]
+
+[dev-dependencies]
+
+[lints]
+workspace = true

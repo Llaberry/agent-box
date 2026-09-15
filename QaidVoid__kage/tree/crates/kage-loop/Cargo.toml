@@ -1,0 +1,26 @@
+[package]
+name = "kage-loop"
+description = "Synchronous, event-driven agent loop for the kage coding agent."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+homepage.workspace = true
+readme.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+chrono.workspace = true
+kage-core.workspace = true
+kage-provider.workspace = true
+kage-tools.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+kage-provider = { workspace = true, features = ["testing"] }

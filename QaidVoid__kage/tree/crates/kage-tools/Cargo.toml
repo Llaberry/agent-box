@@ -1,0 +1,33 @@
+[package]
+name = "kage-tools"
+description = "Tool trait and built-in tools (read/write/edit/bash/...) for kage."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+homepage.workspace = true
+readme.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+globset.workspace = true
+grep.workspace = true
+html2text.workspace = true
+ignore.workspace = true
+kage-core.workspace = true
+schemars.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+similar.workspace = true
+thiserror.workspace = true
+ulid.workspace = true
+ureq.workspace = true
+url.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

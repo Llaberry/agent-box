@@ -1,0 +1,36 @@
+[package]
+name = "kage-plugin"
+description = "Sandboxed Lua runtime and host API surface for kage plugins."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+homepage.workspace = true
+readme.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[lints]
+workspace = true
+
+[features]
+# Expose `kage_plugin::testing` (recording sink + runtime helper) so
+# downstream plugin-crate authors can unit-test plugins the way the
+# in-repo tests do. Off by default; enabled as a dev-dependency feature.
+testing = []
+
+[dependencies]
+kage-core.workspace = true
+kage-provider.workspace = true
+kage-tools.workspace = true
+mlua.workspace = true
+notify.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+ureq.workspace = true
+url.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

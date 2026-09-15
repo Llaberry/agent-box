@@ -1,0 +1,83 @@
+# The gates, in CI. Part (a) of the three-part gate.
+# docs/methodology/gate.md
+#
+# This runs the SAME checks the local gate runs. When they diverge, the local
+# one is what a session actually experiences and this one is the defect.
+#
+# PIN EVERY THIRD-PARTY ACTION TO A COMMIT, NOT A TAG. A tag moves, and a moved
+# tag runs code you did not review with the permissions you granted.
+
+name: gates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gates-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  docs:
+    name: docs and scripts
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: probe the runner
+        run: sh scripts/doctor/doctor.sh --fast
+
+      - name: the gate
+        run: sh scripts/common/check-gate.sh --strict
+
+      - name: shell scripts parse
+        run: |
+          fail=0
+          for f in $(git ls-files '*.sh'); do
+            sh -n "$f" || fail=1
+          done
+          exit $fail
+
+      - name: line endings match .gitattributes
+        run: |
+          bad=$(git ls-files --eol | grep -v 'i/lf' | grep -v 'i/-text' || true)
+          if [ -n "$bad" ]; then
+            echo "$bad"
+            echo "index endings disagree with .gitattributes"
+            exit 1
+          fi
+          echo clean
+
+  rust:
+    name: rust (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: dtolnay/rust-toolchain@6c977a6ca4077a0ceb28ffbe03f59d46e9ac8772 # v1
+        with:
+          components: rustfmt, clippy
+
+      - uses: Swatinem/rust-cache@3d235536a282a154082b2cf71c391c1d3a8050c8e # v2.8.2
+
+      - name: fmt
+        run: cargo fmt --all --check
+
+      - name: clippy
+        run: cargo clippy --all-targets -- -D warnings
+
+      - name: test
+        run: cargo test --all-targets --locked

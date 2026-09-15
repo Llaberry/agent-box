@@ -1,0 +1,47 @@
+[package]
+name = "kage-tui"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description = "Modal raw-view ratatui terminal UI for the kage coding agent."
+readme.workspace = true
+homepage.workspace = true
+repository.workspace = true
+license.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[lib]
+bench = false
+
+[[bench]]
+harness = false
+name = "render"
+
+[dependencies]
+arboard = { version = "3.6.1", features = ["wayland-data-control"] }
+base64.workspace = true
+ignore.workspace = true
+image = { version = "0.25.9", default-features = false, features = ["png"] }
+kage-core.workspace = true
+kage-loop.workspace = true
+kage-plugin.workspace = true
+pulldown-cmark.workspace = true
+ratatui.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+syntect.workspace = true
+thiserror.workspace = true
+toml.workspace = true
+unicode-width = "0.2.2"
+
+[dev-dependencies]
+criterion = {
+  version = "0.8.2",
+  default-features = false,
+  features = ["cargo_bench_support"]
+}
+tempfile.workspace = true
+
+[lints]
+workspace = true

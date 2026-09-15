@@ -1,0 +1,1 @@
+RESUME: egi mining done, pushed f9c5c73. Next: read TODO/PROGRESS.md in talaria0101/egi, then T-021 (CHANGELOG), T-019 (xtask), T-001 (broker). No mining needed; sweeps filed under docs/history/references/.

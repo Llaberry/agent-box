@@ -1,0 +1,146 @@
+# Network confinement
+
+There are two modes, chosen from the policy and from what the host can do.
+`bailey show <target>` prints which one applies.
+
+| Policy | Mode | What is enforced |
+| --- | --- | --- |
+| `egress = "deny"`, no bound ports | **isolated** | Own network namespace, loopback only. Nothing reaches off the host, at any protocol |
+| Any egress allowed, or a bound port | **landlock only** | Landlock rules over TCP ports. Other protocols are unrestricted |
+
+The default policy denies egress, so the default mode is isolated.
+
+## Isolated mode
+
+The target runs in its own network namespace containing a loopback interface and
+nothing else. A namespace with no route has nowhere to send anything, so TCP,
+UDP, QUIC, DNS, ICMP, and raw sockets all fail at the socket layer rather than at
+a rule.
+
+```sh
+bailey run /usr/bin/python3 -c "
+import socket
+socket.socket(socket.AF_INET, socket.SOCK_DGRAM).sendto(b'x', ('8.8.8.8', 53))"
+# OSError: Network is unreachable
+```
+
+The namespace is created through a user namespace, so it needs no privilege, and
+it applies to every `bailey run`, including one with `--no-isolate`: a denied
+egress is enforced this way regardless of the filesystem isolation.
+
+Two things come along with the namespace:
+
+- **Loopback still works inside the sandbox.** A program that binds a local port
+  for its own IPC keeps working. That loopback reaches nothing but the sandbox;
+  the host's loopback services are in a different namespace.
+- **Host abstract UNIX sockets are unreachable.** The abstract socket namespace
+  is tied to the network namespace, so X11, D-Bus, and PipeWire sockets addressed
+  by abstract name cannot be reached.
+
+## Landlock-only mode
+
+Allowing any egress means the sandbox needs real connectivity, which a namespace
+with no route cannot provide, so the target stays in the host's network namespace
+and Landlock enforces the policy's TCP ports.
+
+That is a genuinely weaker position, and the run says so:
+
+```
+bailey: warning: outbound access is restricted by TCP port only;
+UDP, QUIC, and DNS are not restricted
+```
+
+Two things are worth knowing about this mode, because both are permanent rather
+than pending:
+
+- **UDP, QUIC, DNS, and ICMP are unrestricted.** Landlock has no rule for them.
+- **The host's loopback is reachable.** The target shares your network namespace,
+  so a service on `127.0.0.1` is subject only to the TCP port rules, and any UDP
+  port on loopback is reachable outright.
+
+If you need a program to reach one TCP port and nothing else, this mode does
+that. If you need more than that, deny egress entirely and give the program its
+data another way, or put it behind a proxy that can filter.
+
+Because the target shares the host's network namespace, it also sees the host's
+interfaces: the IP address, the MAC, the ARP neighbours, and the routes are all
+readable, whether through `ip`, `/proc/net`, or `/sys/class/net`. Blocking one
+of those does not help, since the same facts are reachable through the others,
+and the host's global IPv6 address encodes the interface MAC on its own.
+
+### Hiding the host's address with `--proxy-net`
+
+`bailey run --proxy-net` gives the target its own network namespace after all,
+with connectivity supplied by [pasta](https://passt.top). The target sees a
+private address and a synthetic MAC in place of the host's; egress still leaves
+over the host's connection, and the policy's TCP ports are still enforced by
+Landlock inside the namespace exactly as they are without it.
+
+```sh
+bailey run --proxy-net /usr/bin/ip -o addr show scope global
+# a private address such as 10.0.2.15, never the host's
+```
+
+It needs pasta on `PATH` and unprivileged user namespaces. Without either, the
+run continues and says the host address stays visible rather than failing. The
+namespace is given a private IPv6 address as well, where the host has one to
+reach, so the host's global IPv6 and the MAC embedded in it are never formed; on
+a host with no IPv6, the namespace gets none rather than a route it cannot
+follow. This addresses the host-identity exposure above; it does not tighten the
+egress surface, which the policy's ports already govern.
+
+pasta forwards the namespace's own `127.0.0.0/8` to the host's loopback, so
+without more a session could reach a host service on a permitted port. Under
+`--proxy-net` bailey drops that forwarded loopback with a netfilter rule, so a
+session cannot reach the host on `127.0.0.1` whatever port the policy allows.
+It is best-effort here and needs `nft`; the run says so if the rule cannot be
+installed. The default landlock-only mode shares the host network namespace,
+so there is no separate loopback to isolate and this rule does not apply;
+`--proxy-net` is what gives a session a loopback of its own to protect.
+
+### Forcing egress through a broker with `--egress-proxy`
+
+Port rules cannot tell one host on 443 from another, so a session may reach any
+host there, and a userspace VPN turns that reach into a two-way channel.
+`--egress-proxy ADDR:PORT` closes that. It implies `--proxy-net`, maps the
+host's loopback into the namespace at ADDR so a broker listening on the host is
+reachable, and installs a netfilter rule that drops every outbound connection
+except one to ADDR:PORT.
+
+```sh
+bailey run --egress-proxy 169.254.169.1:8443 -- curl https://example.com
+# reaches the broker at 169.254.169.1:8443 and nothing else; 1.1.1.1:443 is dropped
+```
+
+The broker is whatever the caller runs there: it admits an allowlist of hosts
+and refuses the rest, so a session reaches the endpoints it needs and no relay
+it does not. The lockdown is the enforcement, and it is fail-closed: if the
+netfilter rule cannot be installed, or pasta or user namespaces are missing,
+the run is refused rather than left with open egress. `nft` must be present.
+
+## Scoping
+
+Independently of the mode, on Linux 6.12 and later bailey asks Landlock to scope
+the target away from two things that no path rule can cover:
+
+- **Abstract UNIX sockets** created outside the sandbox.
+- **Signals** to processes outside the sandbox.
+
+```sh
+bailey run /usr/bin/python3 -c "import os; os.kill($$, 0)"
+# PermissionError
+```
+
+This is what protects a target in landlock-only mode, where there is no network
+namespace to isolate the abstract socket namespace. On older kernels the request
+is dropped, along with the protection.
+
+## What is not covered
+
+- **Host and CIDR rules in `egress_allow` are advisory.** Landlock matches on TCP
+  port; the host field is not enforced, and bailey warns when you set one.
+- **UDP filtering.** There is no mode that allows some UDP and denies the rest.
+- **Ingress.** A sandbox in isolated mode has no address, so there is nothing to
+  reach it on. In landlock-only mode, `bind_ports` governs what it may listen on.
+
+See [known limitations](/security/limitations) for the full list.

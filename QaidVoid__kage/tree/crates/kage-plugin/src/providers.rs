@@ -1,0 +1,498 @@
+//! `kage.register_provider` and the `Provider` adapter that backs into Lua.
+//!
+//! Plugins declare a custom provider. The handler may take an optional
+//! second `emit` argument and stream events as they happen:
+//! ```lua
+//! kage.register_provider({
+//!     id = "echo",
+//!     stream = function(req, emit)
+//!         emit({ type = "message_start" })
+//!         emit({ type = "text_delta", delta = "hi" })
+//!         emit({ type = "message_end", stop_reason = "end_turn",
+//!                usage = { input = 0, output = 0, cache_read = 0, cache_write = 0 } })
+//!     end,
+//! })
+//! ```
+//! Returning a table or an iterator function still works; events are
+//! drained after the handler returns. The host registers each
+//! [`LuaProvider`] with its `ProviderRegistry` so the agent loop can
+//! route `provider:model` strings into Lua.
+
+use std::sync::mpsc;
+use std::sync::{Arc, Mutex};
+use std::thread;
+
+use kage_core::CancelFlag;
+use kage_provider::{
+    EventStream, Provider, ProviderError, ProviderEvent, ProviderMetadata, ProviderModel,
+    StreamRequest, make_cancelable,
+};
+use mlua::{Function, Lua, RegistryKey, Table, Value};
+
+use crate::api::{LogLevel, SharedHostLog, json_to_lua, lua_to_json};
+use crate::error::PluginError;
+use crate::runtime::SharedLua;
+
+/// `Provider` whose `stream` runs inside the plugin runtime's Lua state.
+pub struct LuaProvider {
+    metadata: ProviderMetadata,
+    models: Vec<ProviderModel>,
+    preserves_thinking: bool,
+    lua: SharedLua,
+    sink: SharedHostLog,
+    handler_key: Arc<RegistryKey>,
+}
+
+impl std::fmt::Debug for LuaProvider {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.debug_struct("LuaProvider")
+            .field("id", &self.metadata.id)
+            .finish_non_exhaustive()
+    }
+}
+
+impl Provider for LuaProvider {
+    fn metadata(&self) -> &ProviderMetadata {
+        &self.metadata
+    }
+
+    fn stream(
+        &self,
+        req: StreamRequest,
+        cancel: &CancelFlag,
+    ) -> Result<EventStream, ProviderError> {
+        let req_value = serde_json::to_value(&req)
+            .map_err(|e| ProviderError::Decode(format!("plugin provider: encode request: {e}")))?;
+        let (tx, rx) = mpsc::channel::<Result<ProviderEvent, ProviderError>>();
+        let lua = self.lua.clone();
+        let handler_key = self.handler_key.clone();
+        let sink = self.sink.clone();
+        let worker_cancel = cancel.clone();
+        thread::spawn(move || {
+            let tx_err = tx.clone();
+            if let Err(e) = run_handler(&lua, &handler_key, &sink, &req_value, &worker_cancel, tx) {
+                let _ = tx_err.send(Err(ProviderError::Decode(format!("plugin provider: {e}"))));
+            }
+        });
+        Ok(make_cancelable(
+            Box::new(ChannelStream { rx }),
+            cancel.clone(),
+        ))
+    }
+
+    fn models(&self) -> Vec<ProviderModel> {
+        self.models.clone()
+    }
+
+    fn preserves_thinking(&self) -> bool {
+        self.preserves_thinking
+    }
+}
+
+/// Channel-backed iterator returned from [`LuaProvider::stream`]. The
+/// receiver blocks on `recv()` until the worker thread either sends an
+/// event or drops the sender (which fuses the iterator).
+struct ChannelStream {
+    rx: mpsc::Receiver<Result<ProviderEvent, ProviderError>>,
+}
+
+impl Iterator for ChannelStream {
+    type Item = Result<ProviderEvent, ProviderError>;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        self.rx.recv().ok()
+    }
+}
+
+/// Worker-thread body: lock the Lua state, install an `emit` callback
+/// that forwards each event onto `tx`, then call the registered Lua
+/// handler. A plugin that calls `emit` streams; one that returns a
+/// table or iterator function is drained after the handler returns.
+///
+/// `tx` is wrapped in an `Arc` and the emit closure holds only a
+/// `Weak`, so the channel closes as soon as this function returns even
+/// if the Lua GC has not yet released the closure.
+///
+/// `cancel` is observed cooperatively: the `emit` callback raises when
+/// the flag is set so a streaming handler unwinds, and the table and
+/// iterator drain loops break. The foreground iterator already returns
+/// `Cancelled` promptly through [`make_cancelable`]; this bounds the
+/// worker so it does not run on after the turn is abandoned.
+fn run_handler(
+    lua: &SharedLua,
+    handler_key: &Arc<RegistryKey>,
+    sink: &SharedHostLog,
+    req: &serde_json::Value,
+    cancel: &CancelFlag,
+    tx: mpsc::Sender<Result<ProviderEvent, ProviderError>>,
+) -> Result<(), PluginError> {
+    let lua = lua.lock().expect("plugin lua mutex poisoned");
+    let handler: Function = lua.registry_value(handler_key)?;
+    let lua_req = json_to_lua(&lua, req)?;
+
+    let tx = Arc::new(tx);
+    let emit_tx = Arc::downgrade(&tx);
+    let emit_sink = sink.clone();
+    let emit_cancel = cancel.clone();
+    let emit = lua.create_function(move |_, value: Value| {
+        if emit_cancel.is_cancelled() {
+            return Err(mlua::Error::external("plugin provider stream cancelled"));
+        }
+        if let Some(tx) = emit_tx.upgrade() {
+            let _ = tx.send(value_to_provider_event(value, &emit_sink));
+        }
+        Ok(())
+    })?;
+
+    let result: Value = handler.call((lua_req, emit))?;
+    match result {
+        Value::Table(t) => {
+            for pair in t.clone().sequence_values::<Value>() {
+                if cancel.is_cancelled() {
+                    break;
+                }
+                let v = pair?;
+                let _ = tx.send(value_to_provider_event(v, sink));
+            }
+        }
+        Value::Function(f) => loop {
+            if cancel.is_cancelled() {
+                break;
+            }
+            let next: Value = match f.call::<Value>(()) {
+                Ok(v) => v,
+                Err(err) => {
+                    let _ = tx.send(Err(ProviderError::Decode(format!(
+                        "plugin provider iterator raised: {err}"
+                    ))));
+                    break;
+                }
+            };
+            if matches!(next, Value::Nil) {
+                break;
+            }
+            let _ = tx.send(value_to_provider_event(next, sink));
+        },
+        Value::Nil => {}
+        _ => {
+            let _ = tx.send(Err(ProviderError::Decode(
+                "plugin provider's stream() returned neither nil, a table, nor a function"
+                    .to_owned(),
+            )));
+        }
+    }
+    Ok(())
+}
+
+/// Parse the optional `models` array on a `register_provider` spec.
+/// Each entry must be a `{ id = "...", name = "..." }` table; `name`
+/// defaults to `id` when omitted. Missing or non-table `models` yields
+/// an empty list (built-in catalog drives the picker in that case).
+fn parse_models(spec: &Table) -> mlua::Result<Vec<ProviderModel>> {
+    let Ok(models_tbl) = spec.get::<Table>("models") else {
+        return Ok(Vec::new());
+    };
+    let mut out = Vec::new();
+    for pair in models_tbl.clone().sequence_values::<Value>() {
+        let value = pair?;
+        let entry = match value {
+            Value::Table(t) => t,
+            other => {
+                return Err(mlua::Error::external(format!(
+                    "register_provider: models entry must be a table, got {other:?}"
+                )));
+            }
+        };
+        let id: String = entry.get("id").map_err(|e| {
+            mlua::Error::external(format!("register_provider: models[].id missing: {e}"))
+        })?;
+        let name: String = entry.get("name").unwrap_or_else(|_| id.clone());
+        let context: Option<u64> = entry.get("context").ok();
+        let max_output: Option<u32> = entry.get("max_output").ok();
+        out.push(ProviderModel {
+            id,
+            name,
+            context,
+            max_output,
+        });
+    }
+    Ok(out)
+}
+
+fn value_to_provider_event(
+    value: Value,
+    sink: &SharedHostLog,
+) -> Result<ProviderEvent, ProviderError> {
+    let json = lua_to_json(value)
+        .map_err(|e| ProviderError::Decode(format!("plugin provider: lua to json: {e}")))?;
+    serde_json::from_value::<ProviderEvent>(json).map_err(|err| {
+        if let Ok(mut s) = sink.lock() {
+            s.log(
+                LogLevel::Error,
+                &format!("plugin provider yielded undecodable event: {err}"),
+            );
+        }
+        ProviderError::Decode(format!("plugin provider: decode event: {err}"))
+    })
+}
+
+/// Shared registry of providers contributed by Lua plugins.
+pub type RegisteredProviders = Arc<Mutex<Vec<Arc<LuaProvider>>>>;
+
+/// Construct an empty provider registry.
+#[must_use]
+pub fn registered_providers() -> RegisteredProviders {
+    Arc::new(Mutex::new(Vec::new()))
+}
+
+/// Install `kage.register_provider` on the running Lua state.
+pub fn install_register_provider(
+    lua: &Lua,
+    shared_lua: SharedLua,
+    sink: SharedHostLog,
+    registered: RegisteredProviders,
+) -> Result<(), PluginError> {
+    let kage: Table = lua.globals().get("kage")?;
+    kage.set(
+        "register_provider",
+        lua.create_function(move |lua, spec: Table| {
+            let id: String = spec.get("id")?;
+            let display_name: Option<String> = spec.get("display_name").ok();
+            let supports_caching: bool = spec.get("supports_caching").unwrap_or(false);
+            let supports_thinking: bool = spec.get("supports_thinking").unwrap_or(false);
+            let supports_tool_use: bool = spec.get("supports_tool_use").unwrap_or(true);
+            let preserves_thinking: bool = spec.get("preserves_thinking").unwrap_or(false);
+            let stream: Function = spec.get("stream")?;
+            let models = parse_models(&spec)?;
+            let key = lua.create_registry_value(stream)?;
+            let metadata = ProviderMetadata {
+                id: id.clone(),
+                display_name: display_name.unwrap_or_else(|| id.clone()),
+                supports_caching,
+                supports_thinking,
+                supports_tool_use,
+            };
+            let provider = LuaProvider {
+                metadata,
+                models,
+                preserves_thinking,
+                lua: shared_lua.clone(),
+                sink: sink.clone(),
+                handler_key: Arc::new(key),
+            };
+            registered
+                .lock()
+                .map_err(|_| mlua::Error::external("plugin providers registry poisoned"))?
+                .push(Arc::new(provider));
+            Ok(())
+        })?,
+    )?;
+    Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use kage_core::{CancelFlag, Message, Role};
+    use kage_provider::{Provider, StopReason};
+
+    use crate::PluginRuntime;
+
+    #[test]
+    fn lua_provider_streams_table_of_events() {
+        let rt = PluginRuntime::new().unwrap();
+        rt.eval(
+            r"
+            kage.register_provider({
+                id = 'fake',
+                display_name = 'Fake',
+                stream = function(req)
+                    return {
+                        { type = 'message_start' },
+                        { type = 'text_delta', delta = 'hi ' },
+                        { type = 'text_delta', delta = req.model },
+                        { type = 'message_end', stop_reason = 'end_turn',
+                          usage = { input = 1, output = 2, cache_read = 0, cache_write = 0 } },
+                    }
+                end,
+            })
+            ",
+        )
+        .unwrap();
+        let providers = rt.registered_providers();
+        assert_eq!(providers.len(), 1);
+        let provider = &providers[0];
+        assert_eq!(provider.metadata().id, "fake");
+
+        let req = kage_provider::StreamRequest::new(
+            "model-x",
+            vec![Message::new(
+                Role::User,
+                vec![kage_core::Content::Text { text: "hi".into() }],
+                None,
+            )],
+        );
+        let cancel = CancelFlag::new();
+        let stream = provider.stream(req, &cancel).unwrap();
+        let events: Vec<_> = stream.collect::<Result<_, _>>().unwrap();
+        assert_eq!(events.len(), 4);
+        assert!(matches!(
+            events[0],
+            kage_provider::ProviderEvent::MessageStart
+        ));
+        assert!(matches!(
+            &events[1],
+            kage_provider::ProviderEvent::TextDelta { delta } if delta == "hi "
+        ));
+        assert!(matches!(
+            &events[2],
+            kage_provider::ProviderEvent::TextDelta { delta } if delta == "model-x"
+        ));
+        assert!(matches!(
+            events[3],
+            kage_provider::ProviderEvent::MessageEnd {
+                stop_reason: StopReason::EndTurn,
+                ..
+            }
+        ));
+    }
+
+    #[test]
+    fn lua_provider_streams_iterator_function() {
+        let rt = PluginRuntime::new().unwrap();
+        rt.eval(
+            r"
+            kage.register_provider({
+                id = 'iter',
+                stream = function(req)
+                    local i = 0
+                    return function()
+                        i = i + 1
+                        if i == 1 then return { type = 'message_start' } end
+                        if i == 2 then return { type = 'text_delta', delta = 'ok' } end
+                        if i == 3 then return { type = 'message_end', stop_reason = 'end_turn',
+                            usage = { input = 0, output = 0, cache_read = 0, cache_write = 0 } } end
+                        return nil
+                    end
+                end,
+            })
+            ",
+        )
+        .unwrap();
+        let provider = rt.registered_providers().pop().unwrap();
+        let cancel = CancelFlag::new();
+        let req = kage_provider::StreamRequest::new("m", vec![]);
+        let events: Vec<_> = provider
+            .stream(req, &cancel)
+            .unwrap()
+            .collect::<Result<_, _>>()
+            .unwrap();
+        assert_eq!(events.len(), 3);
+    }
+
+    #[test]
+    fn lua_provider_streams_via_emit_callback() {
+        let rt = PluginRuntime::new().unwrap();
+        rt.eval(
+            r"
+            kage.register_provider({
+                id = 'emitter',
+                stream = function(req, emit)
+                    emit({ type = 'message_start' })
+                    emit({ type = 'text_delta', delta = 'streaming ' })
+                    emit({ type = 'text_delta', delta = req.model })
+                    emit({ type = 'message_end', stop_reason = 'end_turn',
+                           usage = { input = 0, output = 0, cache_read = 0, cache_write = 0 } })
+                end,
+            })
+            ",
+        )
+        .unwrap();
+        let provider = rt.registered_providers().pop().unwrap();
+        let cancel = CancelFlag::new();
+        let req = kage_provider::StreamRequest::new("model-z", vec![]);
+        let events: Vec<_> = provider
+            .stream(req, &cancel)
+            .unwrap()
+            .collect::<Result<_, _>>()
+            .unwrap();
+        assert_eq!(events.len(), 4);
+        assert!(matches!(
+            &events[2],
+            kage_provider::ProviderEvent::TextDelta { delta } if delta == "model-z"
+        ));
+        assert!(matches!(
+            events[3],
+            kage_provider::ProviderEvent::MessageEnd {
+                stop_reason: StopReason::EndTurn,
+                ..
+            }
+        ));
+    }
+
+    #[test]
+    fn lua_provider_stream_observes_cancel_while_handler_runs() {
+        use std::time::{Duration, Instant};
+
+        use kage_provider::ProviderError;
+
+        let rt = PluginRuntime::new().unwrap();
+        rt.eval(
+            r"
+            kage.register_provider({
+                id = 'hang',
+                stream = function(req, emit)
+                    emit({ type = 'message_start' })
+                    while true do
+                        emit({ type = 'text_delta', delta = 'x' })
+                        kage.sleep_ms(5)
+                    end
+                end,
+            })
+            ",
+        )
+        .unwrap();
+        let provider = rt.registered_providers().pop().unwrap();
+        let cancel = CancelFlag::new();
+        let mut stream = provider
+            .stream(kage_provider::StreamRequest::new("m", vec![]), &cancel)
+            .unwrap();
+        let first = stream.next().expect("first event before cancel");
+        assert!(first.is_ok());
+        cancel.cancel();
+        let start = Instant::now();
+        let after = stream.next().expect("an item after cancel");
+        assert!(
+            matches!(after, Err(ProviderError::Cancelled)),
+            "expected Cancelled, got {after:?}"
+        );
+        assert!(
+            start.elapsed() < Duration::from_millis(500),
+            "cancel observation took {:?}",
+            start.elapsed()
+        );
+        assert!(stream.next().is_none(), "stream fuses after cancel");
+    }
+
+    #[test]
+    fn malformed_event_propagates_as_provider_error() {
+        let rt = PluginRuntime::new().unwrap();
+        rt.eval(
+            r"
+            kage.register_provider({
+                id = 'bad',
+                stream = function() return { { type = 'unknown_kind' } } end,
+            })
+            ",
+        )
+        .unwrap();
+        let provider = rt.registered_providers().pop().unwrap();
+        let stream = provider
+            .stream(
+                kage_provider::StreamRequest::new("m", vec![]),
+                &CancelFlag::new(),
+            )
+            .unwrap();
+        let events: Vec<_> = stream.collect();
+        assert!(events[0].is_err());
+    }
+}

@@ -1,0 +1,94 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  # The sandbox itself: stable toolchain, no system dependencies, no privilege.
+  #
+  # Bare cargo commands act on default-members, which is the main tool and the
+  # shared crate. The eBPF programs are a separate member whose only target is
+  # behind a `bpf` feature nothing here enables, so they are not built by this
+  # job; the audit-helper job below builds them for the BPF target.
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+
+      - uses: Swatinem/rust-cache@v2
+
+      - name: Format
+        run: cargo fmt --all -- --check
+
+      - name: Clippy
+        run: cargo clippy --all-targets --all-features -- -D warnings
+
+      - name: Build
+        run: cargo build --all-targets
+
+      # What this runner can actually enforce, recorded before the tests run.
+      # Tests that need a layer the host cannot provide skip rather than fail,
+      # so this is what says whether a green run exercised them.
+      - name: Host capabilities
+        run: cargo run -p bailey --quiet -- doctor || true
+
+      - name: Test
+        run: cargo test
+
+  # The eBPF programs, checked for the BPF target.
+  #
+  # This compiles them but does not link them: linking needs bpf-linker, which
+  # builds against whichever LLVM the current rustc nightly bundles, and there
+  # is no apt package that tracks that. Chasing it would make this job fail for
+  # reasons that have nothing to do with the code.
+  #
+  # So what is verified here is that the programs still compile for their target
+  # and that the `bpf` feature gate still matches what the helper's build script
+  # enables. Producing the object, and building the helper around it, needs
+  # bpf-linker and happens on a developer's machine.
+  ebpf:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@nightly
+        with:
+          components: rust-src
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: bpf
+
+      - name: Check the programs compile for the BPF target
+        run: |
+          cargo check -p bailey-ebpf \
+            --target bpfel-unknown-none \
+            -Z build-std=core \
+            --features bpf
+
+  # VitePress fails a build on a dead internal link, which is the failure worth
+  # catching: these pages cross-reference heavily.
+  docs:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: docs
+    steps:
+      - uses: actions/checkout@v4
+      # Pinned: with `--frozen-lockfile` an unpinned bun turns its own upgrades
+      # into a docs build failure. Bump this and the lockfile together.
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.0
+      - run: bun install --frozen-lockfile
+      - run: bun run build
