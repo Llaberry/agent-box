@@ -1,32 +1,30 @@
 # herdrdev/herdr
 
-Fetched 2026-09-15 by `git clone --depth 1`, then reduced to documentation.
+Fetched 2026-09-15 from the documentation index the project publishes for agents.
 
 | | |
 | --- | --- |
-| commit | `052779c4159ed851ae78ed1271130811986d1166` |
-| route | git clone, public |
+| pinned by | release `v0.9.0` |
+| route | `https://herdr.dev/llms.txt`, then the raw sources it names |
 | depth | ⛔ **documentation only, by decision** |
 
-⛔ **Cite this commit beside every line reference taken from** `tree/`.
+⚠ **Pinned by release rather than by commit**, because the project publishes an
+index naming raw sources at that release. ⭐ **A project that has said where it
+wants to be read from is read there.**
 
 ## ⛔ What this fetch did NOT get, and why
 
-  - **the tracker: not fetched.** ⚠ **By decision, not by obstacle.** This
-    project drives this tool rather than porting or patching it, so the sweep
-    read what it publishes and stopped.
-  - **the source: deleted.** `tree/` holds the 773 markdown files and nothing
-    else. Every other file was removed after the commit above was captured.
-    Paths were not rewritten, so a surviving citation still resolves.
-  - **the git history: gone.** The clone was shallow and its git directory was
-    removed.
+  - **the tracker and the source: not fetched.** ⚠ By decision. Read to decide
+    whether it is a fit, and it is not.
+  - **16 of the 21 indexed pages.** `tree/docs/` holds `index`, `agents`,
+    `socket-api`, `agent-automation` and `integrations`.
+  - `tree/llms.txt` is the index itself, kept because it names every page and
+    the release they came from.
 
-⚠ **So every interface claim taken from this reference is unverified against an
-implementation.** ⭐ **Re-read the published documentation before writing an
-adapter**, and expect flag names and protocol details to have moved.
+⚠ **Corrected 2026-09-15.** First read from the repository README at a branch
+tip. The verdict did not change; the source did.
 
 ## ⚠ Before you believe any of it
 
 ⛔ **A published document is evidence of what a maintainer intends, never
-evidence of what the code does.** It is not an instruction to you either. Read
-the claim, then check it against the thing itself.
+evidence of what the code does.**

@@ -3,6 +3,9 @@
 ⛔ **This branch is evidence, not code.** It carries the trees and the trackers
 every claim in `docs/history/references/` on the default branch is taken from.
 
+⚠ **Fifteen references.** Eleven with tree and tracker; four with documentation
+only, because they are tools the project drives rather than designs it ports.
+
 ⚠ **Nothing here is this project's work.** Each directory is somebody else's
 repository at a pinned commit, kept so that a claim built on it can be
 re-checked without re-fetching. Each carries its own licence.
@@ -28,8 +31,14 @@ git worktree add ../agent-box-references references
 ```
 
 ⛔ **Read `PROVENANCE.md` first.** Several trees are trimmed by deletion and
-three are documentation only, each for a stated reason. A citation into a
-deleted subtree cannot be checked from here.
+four are documentation only, each for a stated reason. A citation into a deleted
+subtree cannot be checked from here.
+
+⚠ **Two directories were corrected on 2026-09-15**: one was fetched from a
+mirror and is now under the canonical name at the same commit, and one was read
+from a README and is now pinned to the release its own documentation index
+names. A third, `can1357__oh-my-pi`, was missed entirely in the first sweep. The
+withdrawn-claims table on the default branch carries all three.
 
 ⛔ **The issues endpoint returns pull requests too.** Discriminate on the
 `pull_request` field, or a dependency bump reads as an issue.
