@@ -1,0 +1,326 @@
+# prose.md
+
+How documents are written here. The mechanical half is checked by a linter; the
+rest is a reading.
+
+---
+
+## The rule
+
+Short sentences. No em dashes. No marketing adjectives. No emoji beyond the
+five defined below, and only three of those belong in prose. Present tense.
+Every claim backed by a command a reader can run or a path a reader can open.
+
+Write for an agent with no memory of the session that wrote the file, and for a
+person who is looking for one fact.
+
+---
+
+## The three markers, and nothing else
+
+⛔ ⭐ ⚠ and no others. Each means one thing:
+
+| marker | meaning |
+| --- | --- |
+| ⛔ | a rule that has already been broken, or one whose violation is unrecoverable. A hard stop. |
+| ⭐ | reach for this first. The highest-value item on the page. |
+| ⚠ | a trap. It works until it does not, and the failure is quiet. |
+
+⛔ **They do not stack.** There is no `⛔⛔` and no `⛔⛔⛔`. Escalating a marker
+is how a vocabulary stops meaning anything: once a page has three levels of
+stop, a reader has to weigh them, and weighing is what a marker exists to
+prevent. One marker or none.
+
+⭐ **Use them sparingly enough that they are still visible.** A page where every
+paragraph carries one has no markers at all. If a page needs more than a
+handful, the page is a rulebook pretending to be a summary and it should be
+split.
+
+⛔ **This has a ceiling now, and it is checked.** The rule above was
+unenforceable for as long as it was only a sentence, and an agent that kept
+strictly to the five allowed characters spammed them until the documents were
+unreadable. Keeping to the allowlist was treated as compliance; nothing said
+how many.
+
+`cargo xtask check markers` refuses a file
+carrying more than **30 markers per 100 non-blank lines**. Measured over three
+trees on 2026-08-28:
+
+| tree | markers per 100 non-blank lines | worst file |
+| --- | --- | --- |
+| the one that reads worst | 38.6 | 53.3 |
+| the template this repository started from | 9.0 | 26.3 |
+| the one that reads best | 8.6 | 21.8 |
+
+⭐ **The two adopter trees had been ranked by eye before any of this was
+counted, and the ranking came out in that order.** One number reproducing a
+reading is the argument for having the number. ⚠ **This repository's own
+density has never been measured**, because the check that measures it does not
+exist yet.
+
+⚠ **The ceiling is a long way above good practice on purpose.** It is a refusal
+of the unreadable, not a target: a page at 25 is already dense.
+
+---
+
+## Status glyphs are a second tier, and a different job
+
+⭐ **A semantic marker and a status glyph are not the same thing.** ⛔ means a
+rule whose violation is unrecoverable. A check reporting that one file of forty
+failed needs a pass or fail glyph, which denotes a state rather than a rule.
+
+The two tiers, and there is no third:
+
+| tier | the set | where it belongs | what it means |
+| --- | --- | --- | --- |
+| prose markers | ⛔ ⭐ ⚠ | documents | the table above. Sparing, and they do not stack. |
+| status glyphs | ✅ ❌ | machine output, result tables, checklists | passed, or failed. Nothing else. |
+
+⛔ **A status glyph never carries a rule, and a marker never reports a result.**
+With no glyph available an author reaches for ⛔ to mean "this one failed", and
+that is exactly the dilution the three-marker rule exists to prevent. Widening
+the set by two characters is what keeps the other three meaning what they say.
+
+⚠ **The list is two characters, not a principle, and that is deliberate.** The
+tempting version of this rule is "allow non-anthropomorphic symbols, forbid
+anthropomorphic ones", on the reasoning that faces and hands carry tone while a
+symbol denotes a state. The reasoning is right and the rule is unenforceable: no
+check can decide what is anthropomorphic, so the boundary would move every time
+somebody argued for one more glyph, and a vocabulary that grows stops meaning
+anything. An explicit five-character allowlist is something
+`cargo xtask check markers` can hold, and it
+holds it.
+
+⛔ **The allowlist covers EVERY tracked text file, not just markdown.** It was
+once narrower, scanning documents alone. On the day it was widened over the
+template this repository started from, that tree's own scripts held **2290**
+characters outside the five across 22 files: a rule that only ever looked at
+documents had left every script it shipped unchecked. ⚠ **That is a measurement
+of another tree, not of this one.** This repository ships no scripts yet and
+has never had the check run over it.
+
+⭐ **A specimen inside a code span or a fenced block is permitted**, and it has
+to be: a page that bans a character cannot otherwise show a reader which
+character it means.
+
+⚠ **The linter owns the allowlist. It does not own the tiers.** Nothing
+mechanical can tell a result table from a paragraph, so a glyph used as a marker
+passes the check and fails the review. That split is the same one already true
+of sparingness, and it is why both are written here rather than only in the
+check.
+
+---
+
+## Amend in place. Do not stack banners.
+
+⛔ **When a rule changes, rewrite the rule.** Do not append a dated box under
+the old text saying the text above is retired.
+
+This is the correction with the most evidence behind it. A document written by
+accretion, where the paragraph says one thing and a box below it says the
+opposite, has a documented failure mode: an agent reads the first paragraph of
+the box, stops, and acts on the retired rule. It happened, it broke a rule
+about publishing, and the incident report is the reason this section exists.
+
+What to do instead:
+
+1. **Rewrite the rule to what it is now.** The current text is the only text.
+2. **Move the superseded wording to the history directory**, with the date and
+   why it changed. A separate file, not a box on the live page.
+   ⭐ [`../methodology/history.md`](../methodology/history.md) says where that
+   is and what the directory's own rules are. It exists because this
+   instruction used to say "a history file" without saying where, so the
+   superseded wording went into the page that was superseding it, and a whole
+   document set filled up with narrative.
+3. **Link to it once**, from the rule, in a sentence.
+
+The story of a change belongs in the changelog or the history file. The
+document says what is true now. A reader reaching for a rule needs one answer,
+and a page that offers two makes them guess which is live.
+
+⚠ This is not licence to delete. A superseded rule is moved, never dropped, so
+a future session that wonders why the rule is what it is can find out instead of
+re-deriving it wrongly.
+
+---
+
+## Say what is not true
+
+Reserve an explicit place for the truths that are tempting to hide. This is
+slower than it looks. This feature has a known gap. This estimate excludes
+something that cannot be measured.
+
+⛔ **Never a fabricated number.** When the real value is unknown, write a dash.
+A wrong number on a report is worse than no number, because a blank gets
+checked and a number gets used.
+
+⚠ **A measurement carries its conditions or it is not a measurement.** A rate
+with no date, no machine, no sample count and no input size cannot be compared
+to anything, which makes it worse than an absence: it invites a comparison that
+means nothing.
+
+---
+
+## Every claim is verified before it is written
+
+Writing the documentation is the audit. Being forced to state precisely what
+something does, and then checking whether that is true, is where a startling
+share of real defects are found. Expect the documentation pass to generate
+findings, and treat that as the feature rather than as a delay.
+
+⚠ Do not copy a number out of another document. Derive it, or name where it
+came from. A value in two places with no check between them drifts, and the
+copy a reader trusts is the wrong one.
+
+---
+
+## One fact, one home
+
+Every fact lives in exactly one document. If it must appear in a second place,
+derive it there or have a check assert that the two agree.
+
+⛔ **This is checked now, and it had drifted badly while it was only a
+sentence.** `cargo xtask check one-home`
+refuses a sentence of 12 words or more that appears in two documents. Its first
+run over this repository found **42** duplicates, five of them in the skeleton
+that template ships for recording a project's rules.
+
+⚠ **Two exemptions, both narrow.**
+
+⭐ **The router is exempt for the absolutes, and for nothing else.**
+[`../AGENTS.md`](../AGENTS.md) states every absolute in full because a session
+may be handed exactly that file and nothing else, which is how this project is
+started. ⛔ **The exemption covers the numbered absolutes and the two
+project-specific rules beside them.** A router sharing any other sentence with
+any other page is still refused, and the check names the sentence.
+
+⚠ **The upstream wording said "the routers are exempt from each other", which
+is vacuous here**: this project has one router, so the rule as written exempted
+nothing and refused the absolutes it exists to state. Amended 2026-09-15; the
+superseded wording is in
+[`../history/README.md`](../history/README.md).
+
+And the history directory is exempt entirely, because a superseded page states
+things the live pages now state differently, which is the point of it.
+[`../methodology/history.md`](../methodology/history.md).
+
+When two documents conflict, the technical reference wins and the other one is
+the defect. Fix it in the same change and say so.
+
+---
+
+## What a document is not
+
+**A document says what the thing does. It does not say what the project did.**
+
+A fixed defect belongs in a reference page only when a reader needs it to use
+the thing correctly. "The allocator takes a write lock now" is history and
+belongs in the work record. "Two lints exist because another client will refuse
+the file" is a constraint and stays.
+
+⛔ **The history goes to the history directory, and there is one.**
+[`../methodology/history.md`](../methodology/history.md). An agent working from
+the template this repository started from wrote its project's history into
+every document it touched;
+nothing it wrote was untrue and the result was unreadable. ⚠ The instinct is
+right, which is why forbidding it does not work: a superseded explanation is
+often the only record of why a design has its shape. It needed a destination,
+not a prohibition.
+
+⚠ An unlinked page is not read, so it is not corrected, and that is the state
+every stale document passes through on the way to being wrong. A page nothing
+links to is a finding.
+
+---
+
+## The mechanical half, which a linter checks
+
+A documentation linter catches the things that rot silently and that no other
+check sees:
+
+1. **Every fenced shell block parses.** A block that does not parse is a block
+   nobody can copy and paste.
+2. **No angle-bracket placeholders inside a shell block.** A human reads
+   `<deployment-id>` as "fill this in" and bash reads it as a redirect, so the
+   reader gets a cryptic syntax error instead of an obvious instruction. Use an
+   upper-case name or a quoted variable.
+3. **No literal control bytes.** Documentation about escape sequences has a
+   proven habit of containing the character it is warning about.
+4. **Every relative link resolves**, and every cited path exists.
+5. **No page under the docs directory that nothing links to.**
+
+⚠ **The character rules are checked by a different script, over a wider
+scope.** No em dash, nothing outside the five, and the density ceiling belong
+to `cargo xtask check markers`, which reads
+every tracked text file rather than the documents alone. ⭐ **One rule gets one
+enforcer**: two checks holding one rule is two places for it to be wrong, and
+these two would have been wrong differently.
+
+⛔ **What a linter cannot check is whether a claim is true.** That is a reading,
+and it belongs to the review pass. A guard that tried to verify prose would
+either pass vacuously or refuse legitimate writing, and both are worse than an
+honest scope.
+
+---
+
+## The register: Simplified Technical English
+
+⭐ **Write the way a maintenance manual is written.** The standard is
+**ASD-STE100, Simplified Technical English**: a controlled language written so
+that a procedure means one thing to every reader, including one reading it in a
+second language and one reading it under pressure. What it asks for is what
+this page has been asking for in pieces:
+
+| STE asks for | which here means |
+| --- | --- |
+| one word, one meaning | a term is not a synonym for a different term two paragraphs later |
+| short sentences | a rule a reader has to re-read is a rule they will act on wrongly |
+| the active voice, present tense | "the check refuses it", not "it will have been refused" |
+| ⛔ no figurative language | no metaphor doing a technical term's job |
+| a real noun instead of a noun made from a verb | "it fails" beats "a failure occurs" |
+
+⛔ **The failure mode here is metaphor used as jargon, not marketing copy.**
+This is worth stating precisely, because the obvious guess is wrong and the
+repository proved it wrong: a list of quality-asserting adjectives was written
+into this page and never enforced. Armed on 2026-09-10 over this tree it found
+**one** hit, `bulletproof`, in a table cell. The same tree writes
+**`load-bearing` twelve times, across ten documents**, as if it were a technical
+term. ⭐ That is the register that actually goes wrong, and no word list holds
+it: the offending words are ordinary until they are asked to carry a meaning
+they do not have.
+
+⚠ **So this rule is a reading, and the linter declines it on purpose.** A guard
+over prose either passes vacuously or refuses legitimate writing.
+`cargo xtask check docs` says so in its own header
+rather than leaving the next session to rediscover it. ⭐ It is one of the three
+review lenses instead: [`../methodology/reviews.md`](../methodology/reviews.md).
+
+**The two substitutions that do most of the work:**
+
+- **Replace the adjective with the measurement.** "Fast" becomes the number and
+  its conditions. "Robust" becomes what it survives.
+- ⭐ **Replace the metaphor with the mechanism.** "Load-bearing" becomes what
+  breaks when it moves. "Surgical" becomes what it touches and what it does
+  not.
+
+⚠ **`simply`, `just`, `obviously` and `of course` are the words to watch
+hardest**, and they are ordinary English, which is why no check can have them.
+They tell a reader who is stuck that the thing they cannot do is easy. This
+tree uses `just` twenty-two times and almost every one of them means "only",
+which is exactly why matching the word would have been useless.
+
+---
+
+## Defensive framing is not neutral
+
+⛔ **Describe what code does in plain technical terms.** Do not write up-front
+disclaimers arguing that something is legitimate, and do not tell a future
+reader not to re-open a question.
+
+Both backfire, in opposite directions. A defensive paragraph primes a skeptical
+reader to look for the thing it denies. And a grepping agent trips on the
+reassurance words themselves and spends its budget reading the matched line.
+
+State the mechanism and its constraints. Name prior art briefly if it helps.
+Stop there. The same applies to identifiers: prefer a neutral accurate name to
+an evocative one.
